@@ -2,15 +2,10 @@
     "name": "VITTY",
     "version": "1.0",  
     "description": "Time Table",  
-    // "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'; connect-src 'self' wss://*.firebaseio.com;",
     "permissions": ["activeTab", "declarativeContent", "storage","contextMenus", "<all_urls>"],
     "browser_action": {  
         "default_popup": "dist/popup.html"  
     },
-    // "background":{
-    //     "page":"dist/bg.html",
-    //     "persistent":false
-    // },
     "web_accessible_resources": ["images/Vector.svg","images/Vector 1.svg","images/Illustration.svg","images/Mask Group.svg","images/google.svg"],
     "manifest_version": 2
   }
