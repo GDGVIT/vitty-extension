@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+    <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyCm61E2xdQgQJGaOupsnEiARFhk2FNmub4",
+          authDomain: "vitty-dscvit.firebaseapp.com",
+          projectId: "vitty-dscvit",
+          databaseURL: "https://vitty-dscvit.firebaseio.com",
+          storageBucket: "vitty-dscvit.appspot.com",
+          messagingSenderId: "272763363329",
+          appId: "1:272763363329:web:03c63b25f47d2414e2e000",
+          measurementId: "G-8KRDV5SK87"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db=firebase.firestore();
+        db.settings({timestampsInSnapshots: true});
+      </script>
+</body>
+</html>
