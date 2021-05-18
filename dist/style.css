@@ -90,6 +90,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  color: #000;
 }
 
 .upload1 {
@@ -138,7 +139,7 @@ h2 {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
-  width: 60%;
+  width: 70%;
 }
 
 .name {
@@ -147,6 +148,16 @@ h2 {
 
 .time {
   color: #488dda;
+}
+
+.det {
+  color: #488dda;
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit {
+  margin-right: 20px;
 }
 
 #special1 {
