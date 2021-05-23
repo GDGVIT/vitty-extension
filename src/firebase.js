@@ -498,12 +498,21 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     })
     sendResponse('Success')
   }
+  if (message === 'delete-data') {
+    const userid = window.localStorage.getItem('uid')
+    db.collection('users').doc(userid).delete().then(() => {
+      console.log('deleted data successfully')
+    }).catch((error) => {
+      console.error('Error removing document: ', error)
+    })
+    sendResponse('successfully')
+  }
 })
 
 chrome.alarms.onAlarm.addListener((alarm) => {
   chrome.notifications.create('classupcoming', {
     type: 'basic',
-    iconUrl: '../images/google.svg',
+    iconUrl: '../images/logo.png',
     title: 'Class Upcoming in 5 minutes',
     message: alarm.name,
     priority: 2

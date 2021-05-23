@@ -8,6 +8,7 @@ const sun = document.querySelectorAll('.sun')[0]
 const main = document.querySelectorAll('.main')[0]
 const upload = document.querySelectorAll('.upload1')[0]
 const change = document.querySelectorAll('.upload4')[0]
+const logout = document.querySelectorAll('.upload6')[0]
 const courseName = {
   CSE1003: 'Digital Logic and Design',
   CSE1004: 'Network and Communication',
@@ -937,5 +938,13 @@ upload.addEventListener('click', function () {
 
 change.addEventListener('click', function () {
   window.localStorage.setItem('found', 'false')
-  window.location.assign('instructions.html')
+  chrome.runtime.sendMessage('delete-data', (response) => {
+    console.log('deleted data ', response)
+    window.location.assign('instructions.html')
+  })
+})
+
+logout.addEventListener('click', function () {
+  window.localStorage.removeItem('uid')
+  window.location.assign('popup.html')
 })
