@@ -124,21 +124,21 @@ h2 {
 }
 
 .upload4:hover {
-  background-color: #03c;
+  background-color: #126afc;
   color: #fff;
-  border: 2px solid #03c;
+  border: 2px solid #126afc;
 }
 
 .upload1:hover {
-  background-color: #03c;
+  background-color: #126afc;
   color: #fff;
-  border: 2px solid #03c;
+  border: 2px solid #126afc;
 }
 
 .upload6:hover {
-  background-color: #03c;
+  background-color: #126afc;
   color: #fff;
-  border: 2px solid #03c;
+  border: 2px solid #126afc;
 }
 
 .upload3 {
@@ -148,20 +148,29 @@ h2 {
   align-items: center;
 }
 
-.login2,
-.login3 {
+.login2 {
   width: 240px;
   height: 50px;
-  background-color: #fff;
-  margin-bottom: 20px;
-  margin-top: 40px;
+  background-color: #126afc;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #126afc;
+  color: #fff;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+}
+
+.login3 {
+  background-color: transparent;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #fff;
   cursor: pointer;
 }
 
