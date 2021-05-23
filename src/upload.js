@@ -13,132 +13,130 @@ const mon11 = {
   A1: '08:00',
   L1: '08:00',
   F1: '09:00',
-  L2: '08:46',
+  // L2: '08:45',
   D1: '10:00',
   L3: '10:00',
   TB1: '11:00',
-  L4: '10:46',
+  // L4: '10:45',
   TG1: '12:00',
-  L5: '11:31',
-  L6: '12:16',
+  L5: '11:30',
+  // L6: '12:15',
   A2: '14:00',
   L31: '14:00',
   F2: '15:00',
-  L32: '14:46',
+  // L32: '14:45',
   D2: '16:00',
   L33: '16:00',
   TB2: '17:00',
-  L34: '16:46',
+  // L34: '16:45',
   TG2: '18:00',
-  L35: '17:31',
-  V3: '19:01',
-  L36: '18:16'
+  L35: '17:30',
+  V3: '19:00'
+  // L36: '18:15'
 }
 const tue11 = {
   B1: '08:00',
   L7: '08:00',
   G1: '09:00',
-  L8: '08:46',
+  // L8: '08:45',
   E1: '10:00',
   L9: '10:00',
   TC1: '11:00',
-  L10: '10:46',
+  // L10: '10:45',
   TAA1: '12:00',
-  L11: '11:31',
-  L12: '12:16',
+  L11: '11:30',
+  // L12: '12:15',
   B2: '14:00',
   L37: '14:00',
   G2: '15:00',
-  L38: '14:46',
+  // L38: '14:45',
   E2: '16:00',
   L39: '16:00',
   TC2: '17:00',
-  L40: '16:46',
+  // L40: '16:45',
   TAA2: '18:00',
-  L41: '17:31',
-  V4: '19:01',
-  L42: '18:16'
+  L41: '17:30',
+  V4: '19:00'
+  // L42: '18:15'
 }
 const wed11 = {
   C1: '08:00',
   L13: '08:00',
   A1: '09:00',
-  L14: '08:46',
+  // L14: '08:45',
   F1: '10:00',
   L15: '10:00',
   V1: '11:00',
-  L16: '10:46',
+  // L16: '10:45',
   V2: '12:00',
-  L17: '11:31',
-  L18: '12:16',
+  L17: '11:30',
+  // L18: '12:15',
   C2: '14:00',
   L43: '14:00',
   A2: '15:00',
-  L44: '14:46',
+  // L44: '14:45',
   F2: '16:00',
   L45: '16:00',
   TD2: '17:00',
-  L46: '16:46',
+  // L46: '16:45',
   TBB2: '18:00',
-  L47: '17:31',
-  V5: '19:01',
-  L48: '18:16'
+  L47: '17:30',
+  V5: '19:00'
+  // L48: '18:15'
 }
 const thu11 = {
   D1: '08:00',
   L19: '08:00',
   B1: '09:00',
-  L20: '08:46',
+  // L20: '08:45',
   G1: '10:00',
   L21: '10:00',
   TE1: '11:00',
-  L22: '10:46',
+  // L22: '10:45',
   TCC1: '12:00',
-  L23: '11:31',
-  L24: '12:16',
+  L23: '11:30',
+  // L24: '12:15',
   D2: '14:00',
   L49: '14:00',
   B2: '15:00',
-  L50: '14:46',
+  // L50: '14:45',
   G2: '16:00',
   L51: '16:00',
   TE2: '17:00',
-  L52: '16:46',
+  // L52: '16:45',
   TCC2: '18:00',
-  L53: '17:31',
-  V6: '19:01',
-  L54: '18:16'
+  L53: '17:30',
+  V6: '19:00'
+  // L54: '18:15'
 }
 const fri11 = {
   E1: '08:00',
   L25: '08:00',
   C1: '09:00',
-  L26: '08:46',
+  // L26: '08:45',
   TA1: '10:00',
   L27: '10:00',
   TF1: '11:00',
-  L28: '10:46',
+  // L28: '10:45',
   TD1: '12:00',
-  L29: '11:31',
-  L30: '12:16',
+  L29: '11:30',
+  // L30: '12:15',
   E2: '14:00',
   L55: '14:00',
   C2: '15:00',
-  L56: '14:46',
+  // L56: '14:45',
   TA2: '16:00',
   L57: '16:00',
   TF2: '17:00',
-  L58: '16:46',
+  // L58: '16:45',
   TDD2: '18:00',
-  L59: '17:31',
-  V7: '19:01',
-  L60: '18:16'
+  L59: '17:30',
+  V7: '19:00'
+  // L60: '18:15'
 }
 window.onload = function () {
-  if (window.localStorage.getItem('found') !== null) {
-    if (window.localStorage.getItem('found') === 'true') {
-      window.location.assign('index.html')
-    }
+  if (window.localStorage.getItem('monday') !== null) {
+    window.location.assign('index.html')
   }
 }
 
@@ -171,19 +169,29 @@ form.addEventListener('submit', (e) => {
         if (filled.includes(element.Slot) === false) {
           filled.push(element.Slot)
           if (mon.includes(element.Slot)) {
-            mon1.push(element)
+            if (mon11[element.Slot] !== undefined) {
+              mon1.push(element)
+            }
           }
           if (tue.includes(element.Slot)) {
-            tue1.push(element)
+            if (tue11[element.Slot] !== undefined) {
+              tue1.push(element)
+            }
           }
           if (wed.includes(element.Slot)) {
-            wed1.push(element)
+            if (wed11[element.Slot] !== undefined) {
+              wed1.push(element)
+            }
           }
           if (thu.includes(element.Slot)) {
-            thu1.push(element)
+            if (thu11[element.Slot] !== undefined) {
+              thu1.push(element)
+            }
           }
           if (fri.includes(element.Slot)) {
-            fri1.push(element)
+            if (fri11[element.Slot] !== undefined) {
+              fri1.push(element)
+            }
           }
         }
       })
@@ -248,19 +256,29 @@ document.querySelector('.login3').addEventListener('click', (e) => {
         if (filled.includes(element.Slot) === false) {
           filled.push(element.Slot)
           if (mon.includes(element.Slot)) {
-            mon1.push(element)
+            if (mon11[element.Slot] !== undefined) {
+              mon1.push(element)
+            }
           }
           if (tue.includes(element.Slot)) {
-            tue1.push(element)
+            if (tue11[element.Slot] !== undefined) {
+              tue1.push(element)
+            }
           }
           if (wed.includes(element.Slot)) {
-            wed1.push(element)
+            if (wed11[element.Slot] !== undefined) {
+              wed1.push(element)
+            }
           }
           if (thu.includes(element.Slot)) {
-            thu1.push(element)
+            if (thu11[element.Slot] !== undefined) {
+              thu1.push(element)
+            }
           }
           if (fri.includes(element.Slot)) {
-            fri1.push(element)
+            if (fri11[element.Slot] !== undefined) {
+              fri1.push(element)
+            }
           }
         }
       })
@@ -279,6 +297,10 @@ document.querySelector('.login3').addEventListener('click', (e) => {
       wed1.reverse()
       thu1.reverse()
       fri1.reverse()
+      const exc = wed1[2]
+      wed1[2] = wed1[1]
+      wed1[1] = wed1[0]
+      wed1[0] = exc
       window.localStorage.setItem('monday', JSON.stringify(mon1))
       window.localStorage.setItem('tuesday', JSON.stringify(tue1))
       window.localStorage.setItem('wednesday', JSON.stringify(wed1))

@@ -304,3 +304,17 @@ h2 {
   align-items: center;
   justify-content: flex-start;
 }
+
+.bold {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.holiday {
+  font-size: 17.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}

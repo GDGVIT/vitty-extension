@@ -1,14 +1,14 @@
 const firebaseConfig = {
   apiKey: 'AIzaSyCm61E2xdQgQJGaOupsnEiARFhk2FNmub4',
-  authDomain: 'vitty-dscvit.window.firebaseapp.com',
+  authDomain: 'vitty-dscvit.firebaseapp.com',
   projectId: 'vitty-dscvit',
-  databaseURL: 'https://vitty-dscvit.window.firebaseio.com',
+  databaseURL: 'https://vitty-dscvit.firebaseio.com',
   storageBucket: 'vitty-dscvit.appspot.com',
   messagingSenderId: '272763363329',
   appId: '1:272763363329:web:03c63b25f47d2414e2e000',
   measurementId: 'G-8KRDV5SK87'
 }
-const provider = new window.firebase.auth.GoogleAuthProvider()
+const provider = new firebase.auth.GoogleAuthProvider()
 const courseName = {
   CSE1003: 'Digital Logic and Design',
   CSE1004: 'Network and Communication',
@@ -205,130 +205,130 @@ const mon1 = {
   A1: '08:00',
   L1: '08:00',
   F1: '09:00',
-  L2: '08:46',
+  L2: '08:45',
   D1: '10:00',
   L3: '10:00',
   TB1: '11:00',
-  L4: '10:46',
+  L4: '10:45',
   TG1: '12:00',
-  L5: '11:31',
-  L6: '12:16',
+  L5: '11:30',
+  L6: '12:15',
   A2: '14:00',
   L31: '14:00',
   F2: '15:00',
-  L32: '14:46',
+  L32: '14:45',
   D2: '16:00',
   L33: '16:00',
   TB2: '17:00',
-  L34: '16:46',
+  L34: '16:45',
   TG2: '18:00',
-  L35: '17:31',
-  V3: '19:01',
-  L36: '18:16'
+  L35: '17:30',
+  V3: '19:00',
+  L36: '18:15'
 }
 const tue1 = {
   B1: '08:00',
   L7: '08:00',
   G1: '09:00',
-  L8: '08:46',
+  L8: '08:45',
   E1: '10:00',
   L9: '10:00',
   TC1: '11:00',
-  L10: '10:46',
+  L10: '10:45',
   TAA1: '12:00',
-  L11: '11:31',
-  L12: '12:16',
+  L11: '11:30',
+  L12: '12:15',
   B2: '14:00',
   L37: '14:00',
   G2: '15:00',
-  L38: '14:46',
+  L38: '14:45',
   E2: '16:00',
   L39: '16:00',
   TC2: '17:00',
-  L40: '16:46',
+  L40: '16:45',
   TAA2: '18:00',
-  L41: '17:31',
-  V4: '19:01',
-  L42: '18:16'
+  L41: '17:30',
+  V4: '19:00',
+  L42: '18:15'
 }
 const wed1 = {
   C1: '08:00',
   L13: '08:00',
   A1: '09:00',
-  L14: '08:46',
+  L14: '08:45',
   F1: '10:00',
   L15: '10:00',
   V1: '11:00',
-  L16: '10:46',
+  L16: '10:45',
   V2: '12:00',
-  L17: '11:31',
-  L18: '12:16',
+  L17: '11:30',
+  L18: '12:15',
   C2: '14:00',
   L43: '14:00',
   A2: '15:00',
-  L44: '14:46',
+  L44: '14:45',
   F2: '16:00',
   L45: '16:00',
   TD2: '17:00',
-  L46: '16:46',
+  L46: '16:45',
   TBB2: '18:00',
-  L47: '17:31',
-  V5: '19:01',
-  L48: '18:16'
+  L47: '17:30',
+  V5: '19:00',
+  L48: '18:15'
 }
 const thu1 = {
   D1: '08:00',
   L19: '08:00',
   B1: '09:00',
-  L20: '08:46',
+  L20: '08:45',
   G1: '10:00',
   L21: '10:00',
   TE1: '11:00',
-  L22: '10:46',
+  L22: '10:45',
   TCC1: '12:00',
-  L23: '11:31',
-  L24: '12:16',
+  L23: '11:30',
+  L24: '12:15',
   D2: '14:00',
   L49: '14:00',
   B2: '15:00',
-  L50: '14:46',
+  L50: '14:45',
   G2: '16:00',
   L51: '16:00',
   TE2: '17:00',
-  L52: '16:46',
+  L52: '16:45',
   TCC2: '18:00',
-  L53: '17:31',
-  V6: '19:01',
-  L54: '18:16'
+  L53: '17:30',
+  V6: '19:00',
+  L54: '18:15'
 }
 const fri1 = {
   E1: '08:00',
   L25: '08:00',
   C1: '09:00',
-  L26: '08:46',
+  L26: '08:45',
   TA1: '10:00',
   L27: '10:00',
   TF1: '11:00',
-  L28: '10:46',
+  L28: '10:45',
   TD1: '12:00',
-  L29: '11:31',
-  L30: '12:16',
+  L29: '11:30',
+  L30: '12:15',
   E2: '14:00',
   L55: '14:00',
   C2: '15:00',
-  L56: '14:46',
+  L56: '14:45',
   TA2: '16:00',
   L57: '16:00',
   TF2: '17:00',
-  L58: '16:46',
+  L58: '16:45',
   TDD2: '18:00',
-  L59: '17:31',
-  V7: '19:01',
-  L60: '18:16'
+  L59: '17:30',
+  V7: '19:00',
+  L60: '18:15'
 }
-window.firebase.initializeApp(firebaseConfig)
-window.firebase.analytics()
-const db = window.firebase.firestore()
+firebase.initializeApp(firebaseConfig)
+firebase.analytics()
+const db = firebase.firestore()
 db.settings({ timestampsInSnapshots: true })
 
 window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -344,12 +344,29 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       const addMinutes = function (dt, minutes) {
         return new Date(dt.getTime() + minutes * 60000)
       }
-      const time1 = addMinutes(time, 45)
+      let time1
+      if (monday[i].Course_type === 'Lab') {
+        time1 = addMinutes(time, 90)
+      } else {
+        time1 = addMinutes(time, 45)
+      }
       let course
       if (courseName[monday[i].Course_Name] === undefined) {
         course = monday[i].Course_Name
       } else {
         course = courseName[monday[i].Course_Name]
+      }
+      const time2 = addMinutes(time, -5)
+      window.chrome.alarms.create(course, {
+        when: time2.getTime(),
+        periodInMinutes: 10080
+      })
+      function nullcheck (a) {
+        if (a == null) {
+          return ''
+        } else {
+          return a
+        }
       }
       db.collection('users')
         .doc(userid)
@@ -357,11 +374,11 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         .doc('monday')
         .collection('periods')
         .doc('P' + i).set({
-          slot: monday[i].Slot,
-          courseCode: monday[i].Course_Name,
-          courseName: course,
-          Course_type: monday[i].Course_type,
-          location: monday[i].Venue,
+          slot: nullcheck(monday[i].Slot),
+          courseCode: nullcheck(monday[i].Course_Name),
+          courseName: nullcheck(course),
+          Course_type: nullcheck(monday[i].Course_type),
+          location: nullcheck(monday[i].Venue),
           endTime: time1,
           startTime: time
         })
@@ -371,12 +388,29 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       const addMinutes = function (dt, minutes) {
         return new Date(dt.getTime() + minutes * 60000)
       }
-      const time1 = addMinutes(time, 45)
+      let time1
+      if (tuesday[i].Course_type === 'Lab') {
+        time1 = addMinutes(time, 90)
+      } else {
+        time1 = addMinutes(time, 45)
+      }
       let course
       if (courseName[tuesday[i].Course_Name] === undefined) {
         course = tuesday[i].Course_Name
       } else {
         course = courseName[tuesday[i].Course_Name]
+      }
+      const time2 = addMinutes(time, -5)
+      window.chrome.alarms.create(course, {
+        when: time2.getTime(),
+        periodInMinutes: 10080
+      })
+      function nullcheck (a) {
+        if (a == null) {
+          return ''
+        } else {
+          return a
+        }
       }
       db.collection('users')
         .doc(userid)
@@ -384,11 +418,11 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         .doc('tuesday')
         .collection('periods')
         .doc('P' + i).set({
-          slot: tuesday[i].Slot,
-          courseCode: tuesday[i].Course_Name,
-          courseName: course,
-          Course_type: tuesday[i].Course_type,
-          location: tuesday[i].Venue,
+          slot: nullcheck(tuesday[i].Slot),
+          courseCode: nullcheck(tuesday[i].Course_Name),
+          courseName: nullcheck(course),
+          Course_type: nullcheck(tuesday[i].Course_type),
+          location: nullcheck(tuesday[i].Venue),
           endTime: time1,
           startTime: time
         })
@@ -398,12 +432,29 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       const addMinutes = function (dt, minutes) {
         return new Date(dt.getTime() + minutes * 60000)
       }
-      const time1 = addMinutes(time, 45)
+      let time1
+      if (wednesday[i].Course_type === 'Lab') {
+        time1 = addMinutes(time, 90)
+      } else {
+        time1 = addMinutes(time, 45)
+      }
       let course
       if (courseName[wednesday[i].Course_Name] === undefined) {
         course = wednesday[i].Course_Name
       } else {
         course = courseName[wednesday[i].Course_Name]
+      }
+      const time2 = addMinutes(time, -5)
+      window.chrome.alarms.create(course, {
+        when: time2.getTime(),
+        periodInMinutes: 10080
+      })
+      function nullcheck (a) {
+        if (a == null) {
+          return ''
+        } else {
+          return a
+        }
       }
       db.collection('users')
         .doc(userid)
@@ -411,11 +462,11 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         .doc('wednesday')
         .collection('periods')
         .doc('P' + i).set({
-          slot: wednesday[i].Slot,
-          courseCode: wednesday[i].Course_Name,
-          courseName: course,
-          Course_type: wednesday[i].Course_type,
-          location: wednesday[i].Venue,
+          slot: nullcheck(wednesday[i].Slot),
+          courseCode: nullcheck(wednesday[i].Course_Name),
+          courseName: nullcheck(course),
+          Course_type: nullcheck(wednesday[i].Course_type),
+          location: nullcheck(wednesday[i].Venue),
           endTime: time1,
           startTime: time
         })
@@ -425,12 +476,29 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       const addMinutes = function (dt, minutes) {
         return new Date(dt.getTime() + minutes * 60000)
       }
-      const time1 = addMinutes(time, 45)
+      let time1
+      if (thursday[i].Course_type === 'Lab') {
+        time1 = addMinutes(time, 90)
+      } else {
+        time1 = addMinutes(time, 45)
+      }
       let course
       if (courseName[thursday[i].Course_Name] === undefined) {
         course = thursday[i].Course_Name
       } else {
         course = courseName[thursday[i].Course_Name]
+      }
+      const time2 = addMinutes(time, -5)
+      window.chrome.alarms.create(course, {
+        when: time2.getTime(),
+        periodInMinutes: 10080
+      })
+      function nullcheck (a) {
+        if (a == null) {
+          return ''
+        } else {
+          return a
+        }
       }
       db.collection('users')
         .doc(userid)
@@ -438,11 +506,11 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         .doc('thursday')
         .collection('periods')
         .doc('P' + i).set({
-          slot: thursday[i].Slot,
-          courseCode: thursday[i].Course_Name,
-          courseName: course,
-          Course_type: thursday[i].Course_type,
-          location: thursday[i].Venue,
+          slot: nullcheck(thursday[i].Slot),
+          courseCode: nullcheck(thursday[i].Course_Name),
+          courseName: nullcheck(course),
+          Course_type: nullcheck(thursday[i].Course_type),
+          location: nullcheck(thursday[i].Venue),
           endTime: time1,
           startTime: time
         })
@@ -452,12 +520,29 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       const addMinutes = function (dt, minutes) {
         return new Date(dt.getTime() + minutes * 60000)
       }
-      const time1 = addMinutes(time, 45)
+      let time1
+      if (friday[i].Course_type === 'Lab') {
+        time1 = addMinutes(time, 90)
+      } else {
+        time1 = addMinutes(time, 45)
+      }
       let course
       if (courseName[friday[i].Course_Name] === undefined) {
         course = friday[i].Course_Name
       } else {
         course = courseName[friday[i].Course_Name]
+      }
+      const time2 = addMinutes(time, -5)
+      window.chrome.alarms.create(course, {
+        when: time2.getTime(),
+        periodInMinutes: 10080
+      })
+      function nullcheck (a) {
+        if (a == null) {
+          return ''
+        } else {
+          return a
+        }
       }
       db.collection('users')
         .doc(userid)
@@ -465,11 +550,11 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         .doc('friday')
         .collection('periods')
         .doc('P' + i).set({
-          slot: friday[i].Slot,
-          courseCode: friday[i].Course_Name,
-          courseName: course,
-          Course_type: friday[i].Course_type,
-          location: friday[i].Venue,
+          slot: nullcheck(friday[i].Slot),
+          courseCode: nullcheck(friday[i].Course_Name),
+          courseName: nullcheck(course),
+          Course_type: nullcheck(friday[i].Course_type),
+          location: nullcheck(friday[i].Venue),
           endTime: time1,
           startTime: time
         })
@@ -482,7 +567,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     sendResponse('successfully')
   }
   if (message === 'login') {
-    window.firebase.auth().signInWithPopup(provider).then(res => {
+    firebase.auth().signInWithPopup(provider).then(res => {
       console.log(res.user.uid.toString())
       window.localStorage.setItem('uid', res.user.uid.toString())
       // const user = db.collection('users').doc(res.user.uid.toString())
