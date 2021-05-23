@@ -7,7 +7,7 @@ window.onload = function () {
 
 document.querySelector('.login').addEventListener('click', googleLogin)
 function googleLogin () {
-  chrome.runtime.sendMessage('login', (response) => {
+  window.chrome.runtime.sendMessage('login', (response) => {
     console.log(response)
     window.location.assign('instructions.html')
   })

@@ -361,7 +361,7 @@ window.onload = function () {
       course = courseName[monday[i].Course_Name]
     }
     const time2 = addMinutes(time, -5)
-    chrome.alarms.create(course, {
+    window.chrome.alarms.create(course, {
       when: time2.getTime(),
       periodInMinutes: 1440
     })
@@ -470,7 +470,7 @@ mon.addEventListener('click', function () {
       course = courseName[monday[i].Course_Name]
     }
     const time2 = addMinutes(time, -5)
-    chrome.alarms.create(course, {
+    window.chrome.alarms.create(course, {
       when: time2.getTime(),
       periodInMinutes: 1440
     })
@@ -563,7 +563,7 @@ tue.addEventListener('click', function () {
       course = courseName[tuesday[i].Course_Name]
     }
     const time2 = addMinutes(time, -5)
-    chrome.alarms.create(course, {
+    window.chrome.alarms.create(course, {
       when: time2.getTime(),
       periodInMinutes: 1440
     })
@@ -656,7 +656,7 @@ wed.addEventListener('click', function () {
       course = courseName[wednesday[i].Course_Name]
     }
     const time2 = addMinutes(time, -5)
-    chrome.alarms.create(course, {
+    window.chrome.alarms.create(course, {
       when: time2.getTime(),
       periodInMinutes: 1440
     })
@@ -749,7 +749,7 @@ thu.addEventListener('click', function () {
       course = courseName[thursday[i].Course_Name]
     }
     const time2 = addMinutes(time, -5)
-    chrome.alarms.create(course, {
+    window.chrome.alarms.create(course, {
       when: time2.getTime(),
       periodInMinutes: 1440
     })
@@ -842,7 +842,7 @@ fri.addEventListener('click', function () {
       course = courseName[friday[i].Course_Name]
     }
     const time2 = addMinutes(time, -5)
-    chrome.alarms.create(course, {
+    window.chrome.alarms.create(course, {
       when: time2.getTime(),
       periodInMinutes: 1440
     })
@@ -918,7 +918,7 @@ sun.addEventListener('click', function () {
 })
 
 upload.addEventListener('click', function () {
-  chrome.runtime.sendMessage('upload-data', (response) => {
+  window.chrome.runtime.sendMessage('upload-data', (response) => {
     console.log('uploaded data ', response)
     if (window.localStorage.getItem('found') !== null) {
       if (window.localStorage.getItem('found') === 'true') {
@@ -938,7 +938,7 @@ upload.addEventListener('click', function () {
 
 change.addEventListener('click', function () {
   window.localStorage.setItem('found', 'false')
-  chrome.runtime.sendMessage('delete-data', (response) => {
+  window.chrome.runtime.sendMessage('delete-data', (response) => {
     console.log('deleted data ', response)
     window.location.assign('instructions.html')
   })

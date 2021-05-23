@@ -1,14 +1,14 @@
 const firebaseConfig = {
   apiKey: 'AIzaSyCm61E2xdQgQJGaOupsnEiARFhk2FNmub4',
-  authDomain: 'vitty-dscvit.firebaseapp.com',
+  authDomain: 'vitty-dscvit.window.firebaseapp.com',
   projectId: 'vitty-dscvit',
-  databaseURL: 'https://vitty-dscvit.firebaseio.com',
+  databaseURL: 'https://vitty-dscvit.window.firebaseio.com',
   storageBucket: 'vitty-dscvit.appspot.com',
   messagingSenderId: '272763363329',
   appId: '1:272763363329:web:03c63b25f47d2414e2e000',
   measurementId: 'G-8KRDV5SK87'
 }
-const provider = new firebase.auth.GoogleAuthProvider()
+const provider = new window.firebase.auth.GoogleAuthProvider()
 const courseName = {
   CSE1003: 'Digital Logic and Design',
   CSE1004: 'Network and Communication',
@@ -326,12 +326,12 @@ const fri1 = {
   V7: '19:01',
   L60: '18:16'
 }
-firebase.initializeApp(firebaseConfig)
-firebase.analytics()
-const db = firebase.firestore()
+window.firebase.initializeApp(firebaseConfig)
+window.firebase.analytics()
+const db = window.firebase.firestore()
 db.settings({ timestampsInSnapshots: true })
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message === 'upload-data') {
     const userid = window.localStorage.getItem('uid')
     const monday = JSON.parse(window.localStorage.getItem('monday'))
@@ -482,7 +482,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     sendResponse('successfully')
   }
   if (message === 'login') {
-    firebase.auth().signInWithPopup(provider).then(res => {
+    window.firebase.auth().signInWithPopup(provider).then(res => {
       console.log(res.user.uid.toString())
       window.localStorage.setItem('uid', res.user.uid.toString())
       // const user = db.collection('users').doc(res.user.uid.toString())
@@ -500,6 +500,46 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
   if (message === 'delete-data') {
     const userid = window.localStorage.getItem('uid')
+    db.collection('users').doc(userid).collection('timetable').doc('monday').collection('periods').get().then((val) => {
+      val.forEach((val) => {
+        val.ref.delete()
+      })
+      console.log('deleted data successfully')
+    }).catch((error) => {
+      console.error('Error removing document: ', error)
+    })
+    db.collection('users').doc(userid).collection('timetable').doc('tuesday').collection('periods').get().then((val) => {
+      val.forEach((val) => {
+        val.ref.delete()
+      })
+      console.log('deleted data successfully')
+    }).catch((error) => {
+      console.error('Error removing document: ', error)
+    })
+    db.collection('users').doc(userid).collection('timetable').doc('wednesday').collection('periods').get().then((val) => {
+      val.forEach((val) => {
+        val.ref.delete()
+      })
+      console.log('deleted data successfully')
+    }).catch((error) => {
+      console.error('Error removing document: ', error)
+    })
+    db.collection('users').doc(userid).collection('timetable').doc('thursday').collection('periods').get().then((val) => {
+      val.forEach((val) => {
+        val.ref.delete()
+      })
+      console.log('deleted data successfully')
+    }).catch((error) => {
+      console.error('Error removing document: ', error)
+    })
+    db.collection('users').doc(userid).collection('timetable').doc('friday').collection('periods').get().then((val) => {
+      val.forEach((val) => {
+        val.ref.delete()
+      })
+      console.log('deleted data successfully')
+    }).catch((error) => {
+      console.error('Error removing document: ', error)
+    })
     db.collection('users').doc(userid).delete().then(() => {
       console.log('deleted data successfully')
     }).catch((error) => {
@@ -509,8 +549,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 })
 
-chrome.alarms.onAlarm.addListener((alarm) => {
-  chrome.notifications.create('classupcoming', {
+window.chrome.alarms.onAlarm.addListener((alarm) => {
+  window.chrome.notifications.create('classupcoming', {
     type: 'basic',
     iconUrl: '../images/logo.png',
     title: 'Class Upcoming in 5 minutes',
