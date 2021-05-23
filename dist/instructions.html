@@ -11,6 +11,9 @@
     <link href="style.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
+    <div class="loader hidden">
+      <img src="..\images\giphy.gif" alt="Loading..." />
+    </div>
     <div class="container">
       <img src="../images/Mask Group.svg" alt="back" class="back" />
       <div class="vitty1">
@@ -20,11 +23,14 @@
         <br /><br /><br /><br />
         <div class="never">How to use?</div>
         <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <form method="POST" enctype="multipart/form-data">
+        <form method="POST" enctype="multipart/form-data" class="form1">
           <input type="file" name="file" />
           <!-- <a href="index.html" style="text-decoration: none"> -->
             <button type="submit" role="button" class="login2">
-              Upload
+              Upload Image
+            </button>
+            <button class="login3">
+              Upload Text
             </button>
           <!-- </a> -->
         </form>

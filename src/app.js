@@ -7,6 +7,198 @@ const sat = document.querySelectorAll('.sat')[0]
 const sun = document.querySelectorAll('.sun')[0]
 const main = document.querySelectorAll('.main')[0]
 const upload = document.querySelectorAll('.upload1')[0]
+const change = document.querySelectorAll('.upload4')[0]
+const courseName = {
+  CSE1003: 'Digital Logic and Design',
+  CSE1004: 'Network and Communication',
+  CSE1007: 'Java Programming',
+  CSE2001: 'Computer Architecture and Organization',
+  CSE2004: 'Database Management Systems',
+  CSE2005: 'Operating Systems',
+  CSE2006: 'Microprocessor and Interfacing',
+  CSE2011: 'Data Structures and Algorithms',
+  CSE2012: 'Design and Analysis of Algorithms',
+  CSE2013: 'Theory of Computation',
+  CSE3001: 'Software Engineering',
+  CSE3002: 'Internet and Web Programming',
+  CSE4001: 'Parallel and Distributed Computing',
+  EEE1001: 'Basic Electrical and Electronics Engineering',
+  MAT1014: 'Discrete Mathematics and Graph Theory',
+  MAT3004: 'Applied Linear Algebra',
+  CSE1006: 'Blockchain and Cryptocurrency Technologies',
+  CSE2014: 'Compiler Design',
+  CSE3006: 'Embedded System Design',
+  CSE3009: 'Internet of Things',
+  CSE3011: 'Robotics and its Applications',
+  CSE3013: 'Artificial Intelligence',
+  CSE3016: 'Computer Graphics and Multimedia',
+  CSE3018: 'Content Based Image and Video Retrieval',
+  CSE3020: 'Data Visualization',
+  CSE3021: 'Social and Information Networks',
+  CSE3024: 'Web Mining',
+  CSE3025: 'Large Scale Data Processing',
+  CSE3029: 'Game Programming',
+  CSE3035: 'Principles of Cloud Computing',
+  CSE3501: 'Information Security Analysis and Audit',
+  CSE3502: 'Information Security Management',
+  CSE4003: 'Cyber Security',
+  CSE4004: 'Digital Forensics',
+  CSE4011: 'Virtualization',
+  CSE4014: 'High Performance Computing',
+  CSE4015: 'Human Computer Interaction',
+  CSE4019: 'Image Processing',
+  CSE4020: 'Machine Learning',
+  CSE4022: 'Natural Language Processing',
+  CSE4027: 'Mobile Programming',
+  CSE4028: 'Object Oriented Software Development',
+  MAT2002: 'Applications of Differential and Difference Equations',
+  CHY1701: 'Engineering Chemistry',
+  CSE1001: 'Problem Solving and Programming',
+  CSE1002: 'Problem Solving and Object Oriented Programming',
+  CSE1901: 'Technical Answers for Real World Problems (TARP)',
+  CSE1902: 'Industrial Internship',
+  CSE1903: 'Comprehensive Examination',
+  CSE1904: 'Capstone Project',
+  ENG1901: 'Technical English - I',
+  ENG1902: 'Technical English - II',
+  ENG1903: 'Advanced Technical English',
+  HUM1021: 'Ethics and Values',
+  MAT1011: 'Calculus for Engineers',
+  MAT2001: 'Statistics for Engineers',
+  MGT1022: 'Lean Start-up Management',
+  PHY1701: 'Engineering Physics',
+  PHY1901: 'Introduction to Innovative Projects',
+  FLC4097: 'Foreign Language Course Basket',
+  ESP1001: 'ESPANOL FUNDAMENTAL',
+  ESP2001: 'ESPANOL INTERMEDIO',
+  FRE1001: 'Francais quotidien',
+  FRE2001: 'Francais progressif',
+  GER1001: 'Grundstufe Deutsch',
+  GER2001: 'Mittelstufe Deutsch',
+  GRE1001: 'Modern Greek',
+  JAP1001: 'Japanese for Beginners',
+  RUS1001: 'Russian for Beginners',
+  STS1001: 'Introduction to Soft Skills',
+  STS1002: 'Introduction to Business Communication',
+  STS1101: 'Fundamentals of Aptitude',
+  STS1102: 'Arithmetic Problem Solving',
+  STS1201: 'Introduction to Problem Solving',
+  STS1202: 'Introduction to Quantitative, Logical and Verbal Ability',
+  STS2001: 'Reasoning Skill Enhancement',
+  STS2002: 'Introduction to Etiquette - SS',
+  STS2101: 'Getting Started to Skill Enhancement - SS	',
+  STS2102: 'Enhancing Problem Solving Skills - SS	',
+  STS2201: 'Numerical Ability and Cognitive Intelligence - SS	',
+  STS2202: 'Advanced Aptitude and Reasoning Skills - SS	',
+  STS3001: 'Preparedness for External Opportunities - SS	',
+  STS3004: 'Data Structures and Algorithms',
+  STS3005: 'Code Mithra',
+  STS3006: 'Preparedness for External Opportunities - SS	',
+  STS3007: 'Preparedness for Career Opportunities - SS	',
+  STS3101: 'Introduction to Programming Skills - SS	',
+  STS3104: 'Enhancing Programming Ability - SS	',
+  STS3105: 'Computational Thinking - SS	',
+  STS3201: 'Programming Skills for Employment - SS	',
+  STS3204: 'JAVA Programming and Software Engineering Fundamentals - SS',
+  STS3205: 'Advanced JAVA Programming - SS	',
+  STS3301: 'JAVA for Beginners - SS	',
+  STS3401: 'Foundation to Programming Skills - SS	',
+  STS5002: 'Preparing for Industry - SS	',
+  CHY1002: 'Environmental Sciences',
+  ENG1000: 'Foundation English - I',
+  ENG2000: 'Foundation English - II',
+  EXC4097: 'Co-Extra Curricular Basket',
+  EXC1001: 'Service to the Society',
+  EXC1002: 'Youth Red Cross - ECA	',
+  // EXC1002: 'Red Cross - ECA	',
+  EXC1003: 'ABCD-AnyBody Can Dance - ECA	',
+  EXC1004: 'Entrepreneurs Cell - ECA	',
+  // EXC1004: 'Building Entrepreneurship Competencies and Skills - ECA	',
+  EXC1005: 'Energy and Environmental Protection Club - ECA	',
+  EXC1006: 'Music - The Art of Culture - ECA	',
+  EXC1007: 'Sports for Healthy Life - ECA	',
+  EXC1008: 'Instrumentation for Engineers - ECA	',
+  EXC1009: 'Debating Skills - ECA	',
+  EXC1010: 'Mobility Engineering- Land, Air and Sea - ECA	',
+  EXC1011: 'Skills in Competitive Coding - ECA	',
+  EXC1012: 'Basics of Space Sciences - ECA	',
+  EXC1013: 'Roadmap to a Connected World - ECA	',
+  EXC1014: 'Dramatics Club - ECA	',
+  // EXC1014: 'The Art of Acting - ECA	',
+  EXC1016: 'ASCE - VIT Student Chapter - ECA	',
+  EXC1017: 'Health Club - ECA	',
+  // EXC1017: 'Health and Wellness - ECA	',
+  EXC1018: 'IETE - Student Chapter - ECA	',
+  // EXC1018: 'Electronics and Telecommunication for Skill Development - ECA',
+  EXC1019: 'The Fine Arts Club - ECA	',
+  // EXC1019: 'Basic Art and Craft Techniques - ECA	',
+  EXC1020: 'Skills on Creativity - ECA	',
+  EXC1021: 'Computer Society of India',
+  // EXC1021: 'Computer in Society - ECA	',
+  EXC1023: 'Hindi Literary Association - ECA	',
+  // EXC1023: 'Hindi Arts and Literature - ECA	',
+  EXC1025: 'Toastmasters International - VIT Chapter - ECA	',
+  EXC1027: 'Power and Energy for Societal Development - ECA	',
+  EXC1028: 'VIT Community Radio - ECA	',
+  EXC1030: 'Make a Difference - ECA	',
+  // EXC1030: 'Child Empowerment and Development - ECA	',
+  EXC1032: 'Fifth Pillar - ECA	',
+  // EXC1032: 'Building Blocks of Democracy - ECA	',
+  EXC1033: 'Robotics for Engineers - ECA	',
+  EXC1034: 'Techloop - ECA	',
+  EXC1035: 'Association for Computing Machinery - ECA	',
+  // EXC1035: 'Computing in Science and Engineering - ECA	',
+  EXC1049: 'Innovation for Engineering Applications - ECA	',
+  EXC1054: 'The Art and Skills of Photography - ECA	',
+  EXC1061: 'Skill Development in Manufacturing - ECA	',
+  EXC1068: 'Discussion through Media - ECA	',
+  EXC1069: 'Fep-Si - ECA	',
+  EXC1070: 'Working to Engineer a Better World - ECA	',
+  EXC1071: 'Culinary Crusade - ECA	',
+  EXC1072: 'VIT Film Society - ECA	',
+  // EXC1072: 'The Art and Skills of Film Making - ECA	',
+  EXC1073: 'Women Engineers and Society - ECA		',
+  // EXC1075: 'The Institution of Engineers (India) - ECA	',
+  EXC1075: 'ENGINEERING SKILLSET - ECA	',
+  EXC1076: 'Tamil Arts and Literature - ECA	',
+  EXC1077: 'National Cadet Corps (NCC) - ECA	',
+  EXC1078: 'VIT Spartans - ECA	',
+  // EXC1078: 'Learning with Spartans - ECA	',
+  EXC1079: 'Anokha - ECA	',
+  // EXC1079: 'Inception of Change - ECA	',
+  EXC1080: 'American Society of Mechanical Engineers - ECA	',
+  EXC1081: 'Open Source Development for Google Applications',
+  EXC1082: 'Telugu Literary Association - ECA	',
+  EXC1083: 'Mozilla Firefox - ECA	',
+  // EXC1083: 'Open Source User Interface - ECA	',
+  EXC1084: 'Apple Developers Group - ECA	',
+  // EXC1084: 'IOS Platform - ECA	',
+  EXC1085: 'Technology And Gaming Club (TAG) - ECA	',
+  EXC1087: 'Engineering in Medicine and Biology - ECA	',
+  EXC1088: 'Energy for Societal Development - ECA	',
+  EXC1090: 'Economic Development and Commercial Sciences - ECA	',
+  EXC1095: 'Skills in Financial Investment - ECA	',
+  EXC1097: 'Practical Fundamentals of Chemical Engineering - ECA	',
+  EXC1100: 'Experiential Learning of Energy Engineers - ECA	',
+  EXC1101: 'Mathsomania - ECA	',
+  EXC1102: 'Art of Research and Publication - ECA	',
+  EXC1107: 'Skills on Chemical Engineering - ECA	',
+  EXC1110: 'Engineering for Industrial Applications - ECA	',
+  EXC1111: 'TechEd - ECA	',
+  EXC1112: 'Research for Biotechnology - ECA	',
+  EXC1114: 'Communication in Technology and Networking - ECA	',
+  EXC1120: 'Creativity Club - ECA	',
+  EXC1121: 'Social Entrepreneurship - ECA	',
+  EXC1124: 'Humanitarian Service - ECA	',
+  EXC1127: 'Debating on Internal Issues - ECA	',
+  EXC1129: 'Uddeshya - ECA	',
+  // EXC1129: 'Peer Educator Training Programme - ECA	',
+  EXC1132: 'The way of Living - ECA	',
+  EXC1134: 'Child Care and Education - ECA	',
+  EXC1135: 'Kannada Arts and Literature - ECA	',
+  EXC1157: 'Trekking Club - ECA	'
+  // EXC4097: 'Extra Curricular'
+}
 const mon1 = {
   A1: '08:00',
   L1: '08:00',
@@ -161,12 +353,23 @@ window.onload = function () {
     }
     const etime = eth.toString() + ':' + etm
     const fintime = stime.toString() + ' - ' + etime
+    let course
+    if (courseName[monday[i].Course_Name] === undefined) {
+      course = monday[i].Course_Name
+    } else {
+      course = courseName[monday[i].Course_Name]
+    }
+    const time2 = addMinutes(time, -5)
+    chrome.alarms.create(course, {
+      when: time2.getTime(),
+      periodInMinutes: 1440
+    })
     text =
       text +
       `
   <div class="main1">
   <div class="details">
-      <div class="name">${monday[i].Course_Name}</div>
+      <div class="name">${course}</div>
       <div class="time">${fintime}</div>
       <div class="det">
         <div class="detcont1">${monday[i].Slot}</div>
@@ -178,6 +381,19 @@ window.onload = function () {
   `
   }
   main.innerHTML = text
+  if (window.localStorage.getItem('found') !== null) {
+    if (window.localStorage.getItem('found') === 'true') {
+      console.log(document.querySelectorAll('.edit'))
+      document.querySelectorAll('.edit').forEach(function (a) {
+        a.remove()
+      })
+      document.querySelectorAll('.details').forEach(function (a) {
+        a.style.width = '100%'
+        a.style.marginRight = '20px'
+      })
+      document.querySelector('.upload').remove()
+    }
+  }
   for (let j = 0; j < monday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt('Enter details')
@@ -200,7 +416,7 @@ window.onload = function () {
         .then((response) => response.json())
         .then((result) => {
           document.querySelectorAll('.name')[j].innerHTML =
-            result.Slots[0].Course_Name
+          courseName[result.Slots[0].Course_Name]
           document.querySelectorAll('.detcont1')[j].innerHTML =
             result.Slots[0].Slot
           document.querySelectorAll('.detcont2')[j].innerHTML =
@@ -246,12 +462,23 @@ mon.addEventListener('click', function () {
     }
     const etime = eth.toString() + ':' + etm
     const fintime = stime.toString() + ' - ' + etime
+    let course
+    if (courseName[monday[i].Course_Name] === undefined) {
+      course = monday[i].Course_Name
+    } else {
+      course = courseName[monday[i].Course_Name]
+    }
+    const time2 = addMinutes(time, -5)
+    chrome.alarms.create(course, {
+      when: time2.getTime(),
+      periodInMinutes: 1440
+    })
     text =
       text +
       `
   <div class="main1">
   <div class="details">
-      <div class="name">${monday[i].Course_Name}</div>
+      <div class="name">${course}</div>
       <div class="time">${fintime}</div>
       <div class="det">
         <div class="detcont">${monday[i].Slot}</div>
@@ -263,6 +490,18 @@ mon.addEventListener('click', function () {
   `
   }
   main.innerHTML = text
+  if (window.localStorage.getItem('found') !== null) {
+    if (window.localStorage.getItem('found') === 'true') {
+      console.log(document.querySelectorAll('.edit'))
+      document.querySelectorAll('.edit').forEach(function (a) {
+        a.remove()
+      })
+      document.querySelectorAll('.details').forEach(function (a) {
+        a.style.width = '100%'
+        a.style.marginRight = '20px'
+      })
+    }
+  }
   for (let j = 0; j < monday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt('Enter details')
@@ -285,7 +524,7 @@ mon.addEventListener('click', function () {
         .then((response) => response.json())
         .then((result) => {
           document.querySelectorAll('.name')[j].innerHTML =
-            result.Slots[0].Course_Name
+          courseName[result.Slots[0].Course_Name]
           monday[j] = result.Slots[0]
           console.log(monday)
           window.localStorage.setItem('monday', JSON.stringify(monday))
@@ -316,12 +555,23 @@ tue.addEventListener('click', function () {
     }
     const etime = eth.toString() + ':' + etm
     const fintime = stime.toString() + ' - ' + etime
+    let course
+    if (courseName[tuesday[i].Course_Name] === undefined) {
+      course = tuesday[i].Course_Name
+    } else {
+      course = courseName[tuesday[i].Course_Name]
+    }
+    const time2 = addMinutes(time, -5)
+    chrome.alarms.create(course, {
+      when: time2.getTime(),
+      periodInMinutes: 1440
+    })
     text =
       text +
       `
   <div class="main1">
   <div class="details">
-      <div class="name">${tuesday[i].Course_Name}</div>
+      <div class="name">${course}</div>
       <div class="time">${fintime}</div>
       <div class="det">
         <div class="detcont">${tuesday[i].Slot}</div>
@@ -333,6 +583,18 @@ tue.addEventListener('click', function () {
   `
   }
   main.innerHTML = text
+  if (window.localStorage.getItem('found') !== null) {
+    if (window.localStorage.getItem('found') === 'true') {
+      console.log(document.querySelectorAll('.edit'))
+      document.querySelectorAll('.edit').forEach(function (a) {
+        a.remove()
+      })
+      document.querySelectorAll('.details').forEach(function (a) {
+        a.style.width = '100%'
+        a.style.marginRight = '20px'
+      })
+    }
+  }
   for (let j = 0; j < tuesday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt('Enter details')
@@ -355,7 +617,7 @@ tue.addEventListener('click', function () {
         .then((response) => response.json())
         .then((result) => {
           document.querySelectorAll('.name')[j].innerHTML =
-            result.Slots[0].Course_Name
+          courseName[result.Slots[0].Course_Name]
           tuesday[j] = result.Slots[0]
           console.log(tuesday)
           window.localStorage.setItem('tuesday', JSON.stringify(tuesday))
@@ -386,12 +648,23 @@ wed.addEventListener('click', function () {
     }
     const etime = eth.toString() + ':' + etm
     const fintime = stime.toString() + ' - ' + etime
+    let course
+    if (courseName[wednesday[i].Course_Name] === undefined) {
+      course = wednesday[i].Course_Name
+    } else {
+      course = courseName[wednesday[i].Course_Name]
+    }
+    const time2 = addMinutes(time, -5)
+    chrome.alarms.create(course, {
+      when: time2.getTime(),
+      periodInMinutes: 1440
+    })
     text =
       text +
       `
   <div class="main1">
   <div class="details">
-      <div class="name">${wednesday[i].Course_Name}</div>
+      <div class="name">${course}</div>
       <div class="time">${fintime}</div>
       <div class="det">
         <div class="detcont">${wednesday[i].Slot}</div>
@@ -403,6 +676,18 @@ wed.addEventListener('click', function () {
   `
   }
   main.innerHTML = text
+  if (window.localStorage.getItem('found') !== null) {
+    if (window.localStorage.getItem('found') === 'true') {
+      console.log(document.querySelectorAll('.edit'))
+      document.querySelectorAll('.edit').forEach(function (a) {
+        a.remove()
+      })
+      document.querySelectorAll('.details').forEach(function (a) {
+        a.style.width = '100%'
+        a.style.marginRight = '20px'
+      })
+    }
+  }
   for (let j = 0; j < wednesday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt('Enter details')
@@ -425,7 +710,7 @@ wed.addEventListener('click', function () {
         .then((response) => response.json())
         .then((result) => {
           document.querySelectorAll('.name')[j].innerHTML =
-            result.Slots[0].Course_Name
+          courseName[result.Slots[0].Course_Name]
           wednesday[j] = result.Slots[0]
           console.log(wednesday)
           window.localStorage.setItem('wednesday', JSON.stringify(wednesday))
@@ -456,12 +741,23 @@ thu.addEventListener('click', function () {
     }
     const etime = eth.toString() + ':' + etm
     const fintime = stime.toString() + ' - ' + etime
+    let course
+    if (courseName[thursday[i].Course_Name] === undefined) {
+      course = thursday[i].Course_Name
+    } else {
+      course = courseName[thursday[i].Course_Name]
+    }
+    const time2 = addMinutes(time, -5)
+    chrome.alarms.create(course, {
+      when: time2.getTime(),
+      periodInMinutes: 1440
+    })
     text =
       text +
       `
   <div class="main1">
   <div class="details">
-      <div class="name">${thursday[i].Course_Name}</div>
+      <div class="name">${course}</div>
       <div class="time">${fintime}</div>
       <div class="det">
         <div class="detcont">${thursday[i].Slot}</div>
@@ -473,6 +769,18 @@ thu.addEventListener('click', function () {
   `
   }
   main.innerHTML = text
+  if (window.localStorage.getItem('found') !== null) {
+    if (window.localStorage.getItem('found') === 'true') {
+      console.log(document.querySelectorAll('.edit'))
+      document.querySelectorAll('.edit').forEach(function (a) {
+        a.remove()
+      })
+      document.querySelectorAll('.details').forEach(function (a) {
+        a.style.width = '100%'
+        a.style.marginRight = '20px'
+      })
+    }
+  }
   for (let j = 0; j < thursday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt('Enter details')
@@ -495,7 +803,7 @@ thu.addEventListener('click', function () {
         .then((response) => response.json())
         .then((result) => {
           document.querySelectorAll('.name')[j].innerHTML =
-            result.Slots[0].Course_Name
+          courseName[result.Slots[0].Course_Name]
           thursday[j] = result.Slots[0]
           console.log(thursday)
           window.localStorage.setItem('thursday', JSON.stringify(thursday))
@@ -526,12 +834,23 @@ fri.addEventListener('click', function () {
     }
     const etime = eth.toString() + ':' + etm
     const fintime = stime.toString() + ' - ' + etime
+    let course
+    if (courseName[friday[i].Course_Name] === undefined) {
+      course = friday[i].Course_Name
+    } else {
+      course = courseName[friday[i].Course_Name]
+    }
+    const time2 = addMinutes(time, -5)
+    chrome.alarms.create(course, {
+      when: time2.getTime(),
+      periodInMinutes: 1440
+    })
     text =
       text +
       `
   <div class="main1">
   <div class="details">
-      <div class="name">${friday[i].Course_Name}</div>
+      <div class="name">${course}</div>
       <div class="time">${fintime}</div>
       <div class="det">
         <div class="detcont">${friday[i].Slot}</div>
@@ -543,6 +862,18 @@ fri.addEventListener('click', function () {
   `
   }
   main.innerHTML = text
+  if (window.localStorage.getItem('found') !== null) {
+    if (window.localStorage.getItem('found') === 'true') {
+      console.log(document.querySelectorAll('.edit'))
+      document.querySelectorAll('.edit').forEach(function (a) {
+        a.remove()
+      })
+      document.querySelectorAll('.details').forEach(function (a) {
+        a.style.width = '100%'
+        a.style.marginRight = '20px'
+      })
+    }
+  }
   for (let j = 0; j < friday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt('Enter details')
@@ -565,7 +896,7 @@ fri.addEventListener('click', function () {
         .then((response) => response.json())
         .then((result) => {
           document.querySelectorAll('.name')[j].innerHTML =
-            result.Slots[0].Course_Name
+          courseName[result.Slots[0].Course_Name]
           friday[j] = result.Slots[0]
           console.log(friday)
           window.localStorage.setItem('friday', JSON.stringify(friday))
@@ -588,5 +919,23 @@ sun.addEventListener('click', function () {
 upload.addEventListener('click', function () {
   chrome.runtime.sendMessage('upload-data', (response) => {
     console.log('uploaded data ', response)
+    if (window.localStorage.getItem('found') !== null) {
+      if (window.localStorage.getItem('found') === 'true') {
+        console.log(document.querySelectorAll('.edit'))
+        document.querySelectorAll('.edit').forEach(function (a) {
+          a.remove()
+        })
+        document.querySelectorAll('.details').forEach(function (a) {
+          a.style.width = '100%'
+          a.style.marginRight = '20px'
+        })
+        document.querySelector('.upload').remove()
+      }
+    }
   })
+})
+
+change.addEventListener('click', function () {
+  window.localStorage.setItem('found', 'false')
+  window.location.assign('instructions.html')
 })
