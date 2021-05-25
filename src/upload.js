@@ -136,7 +136,11 @@ const fri11 = {
 }
 window.onload = function () {
   if (window.localStorage.getItem('monday') !== null) {
-    window.location.assign('index.html')
+    if (window.localStorage.getItem('foundof') !== null) {
+      if (window.localStorage.getItem('foundof') === window.localStorage.getItem('uid')) {
+        window.location.assign('index.html')
+      }
+    }
   }
 }
 

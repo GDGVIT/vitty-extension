@@ -17,13 +17,13 @@ function googleLogin () {
   })
 }
 
-function check() {
+function check () {
   if (window.localStorage.getItem('uid') !== null) {
     loader.className += ' hidden'
     window.location.assign('instructions.html')
   } else {
-    setTimeout(check, 100);
+    setTimeout(check, 100)
   }
 }
 
-setTimeout(check, 0);
+setTimeout(check, 0)

@@ -570,6 +570,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       isUpdated: true
     })
     window.localStorage.setItem('found', 'true')
+    window.localStorage.setItem('foundof', userid.toString())
     alarms1()
     sendResponse('successfully')
   }
