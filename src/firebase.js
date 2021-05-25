@@ -331,7 +331,7 @@ firebase.analytics()
 const db = firebase.firestore()
 db.settings({ timestampsInSnapshots: true })
 
-window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message === 'upload-data') {
     const userid = window.localStorage.getItem('uid')
     const monday = JSON.parse(window.localStorage.getItem('monday'))
@@ -356,11 +356,13 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       } else {
         course = courseName[monday[i].Course_Name]
       }
-      const time2 = addMinutes(time, -5)
-      window.chrome.alarms.create(course, {
-        when: time2.getTime(),
-        periodInMinutes: 10080
-      })
+      // const timea = new Date('April 5 2021 ' + mon1[monday[i].Slot] + ':00')
+      // const time2 = addMinutes(timea, -5)
+      // console.log(time2)
+      // chrome.alarms.create(course, {
+      //   when: time2.getTime(),
+      //   periodInMinutes: 10080
+      // })
       function nullcheck (a) {
         if (a == null) {
           return ''
@@ -400,11 +402,12 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       } else {
         course = courseName[tuesday[i].Course_Name]
       }
-      const time2 = addMinutes(time, -5)
-      window.chrome.alarms.create(course, {
-        when: time2.getTime(),
-        periodInMinutes: 10080
-      })
+      // const timea = new Date('April 6 2021 ' + tue1[tuesday[i].Slot] + ':00')
+      // const time2 = addMinutes(timea, -5)
+      // chrome.alarms.create(course, {
+      //   when: time2.getTime(),
+      //   periodInMinutes: 10080
+      // })
       function nullcheck (a) {
         if (a == null) {
           return ''
@@ -444,11 +447,12 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       } else {
         course = courseName[wednesday[i].Course_Name]
       }
-      const time2 = addMinutes(time, -5)
-      window.chrome.alarms.create(course, {
-        when: time2.getTime(),
-        periodInMinutes: 10080
-      })
+      // const timea = new Date('April 7 2021 ' + wed1[wednesday[i].Slot] + ':00')
+      // const time2 = addMinutes(timea, -5)
+      // chrome.alarms.create(course, {
+      //   when: time2.getTime(),
+      //   periodInMinutes: 10080
+      // })
       function nullcheck (a) {
         if (a == null) {
           return ''
@@ -488,11 +492,12 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       } else {
         course = courseName[thursday[i].Course_Name]
       }
-      const time2 = addMinutes(time, -5)
-      window.chrome.alarms.create(course, {
-        when: time2.getTime(),
-        periodInMinutes: 10080
-      })
+      // const timea = new Date('April 8 2021 ' + thu1[thursday[i].Slot] + ':00')
+      // const time2 = addMinutes(timea, -5)
+      // chrome.alarms.create(course, {
+      //   when: time2.getTime(),
+      //   periodInMinutes: 10080
+      // })
       function nullcheck (a) {
         if (a == null) {
           return ''
@@ -532,11 +537,12 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       } else {
         course = courseName[friday[i].Course_Name]
       }
-      const time2 = addMinutes(time, -5)
-      window.chrome.alarms.create(course, {
-        when: time2.getTime(),
-        periodInMinutes: 10080
-      })
+      // const timea = new Date('April 9 2021 ' + fri1[friday[i].Slot] + ':00')
+      // const time2 = addMinutes(timea, -5)
+      // chrome.alarms.create(course, {
+      //   when: time2.getTime(),
+      //   periodInMinutes: 10080
+      // })
       function nullcheck (a) {
         if (a == null) {
           return ''
@@ -564,6 +570,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       isUpdated: true
     })
     window.localStorage.setItem('found', 'true')
+    alarms1()
     sendResponse('successfully')
   }
   if (message === 'login') {
@@ -632,14 +639,203 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     })
     sendResponse('successfully')
   }
+  if (message === 'logout') {
+    firebase.auth().signOut().then(() => {
+    }).catch(() => {
+    })
+    sendResponse('successfully')
+  }
 })
 
-window.chrome.alarms.onAlarm.addListener((alarm) => {
-  window.chrome.notifications.create('classupcoming', {
+chrome.alarms.onAlarm.addListener((alarm) => {
+  console.log(alarm)
+  chrome.notifications.create('classupcoming', {
     type: 'basic',
     iconUrl: '../images/logo.png',
     title: 'Class Upcoming in 5 minutes',
-    message: alarm.name,
+    message: alarm.name.substring(2),
     priority: 2
   })
 })
+
+// const addMinutes = function (dt, minutes) {
+//   return new Date(dt.getTime() + minutes * 60000)
+// }
+// const a = new Date()
+// const b = addMinutes(a, -1)
+// console.log(b)
+// chrome.alarms.create('test', {
+//   when: b.getTime(),
+//   periodInMinutes: 1
+// })
+
+function alarms1 () {
+  chrome.alarms.clearAll()
+  let count = 10
+  if (window.localStorage.getItem('found') !== null) {
+    if (window.localStorage.getItem('found') === 'true') {
+      const monday = JSON.parse(window.localStorage.getItem('monday'))
+      const tuesday = JSON.parse(window.localStorage.getItem('tuesday'))
+      const wednesday = JSON.parse(window.localStorage.getItem('wednesday'))
+      const thursday = JSON.parse(window.localStorage.getItem('thursday'))
+      const friday = JSON.parse(window.localStorage.getItem('friday'))
+      for (let i = 0; i < monday.length; i++) {
+        const addMinutes = function (dt, minutes) {
+          return new Date(dt.getTime() + minutes * 60000)
+        }
+        let course
+        if (courseName[monday[i].Course_Name] === undefined) {
+          course = monday[i].Course_Name
+        } else {
+          course = courseName[monday[i].Course_Name]
+        }
+        const today = new Date()
+        const timea = new Date('April 5 2021 ' + mon1[monday[i].Slot] + ':00')
+        const time2 = addMinutes(timea, -5)
+        let d = new Date(today.getFullYear(), today.getMonth(), today.getDate(), time2.getHours(), time2.getMinutes(), time2.getSeconds())
+        d.setDate(d.getDate() + (1 + 7 - d.getDay()) % 7)
+        if (d < today) {
+          d = addMinutes(d, 10080)
+        }
+        console.log(d)
+        chrome.alarms.create(count.toString() + course, {
+          when: d.getTime(),
+          periodInMinutes: 10080
+        })
+        count = count + 1
+      }
+      for (let i = 0; i < tuesday.length; i++) {
+        const addMinutes = function (dt, minutes) {
+          return new Date(dt.getTime() + minutes * 60000)
+        }
+        let course
+        if (courseName[tuesday[i].Course_Name] === undefined) {
+          course = tuesday[i].Course_Name
+        } else {
+          course = courseName[tuesday[i].Course_Name]
+        }
+        const today = new Date()
+        const timea = new Date('April 6 2021 ' + tue1[tuesday[i].Slot] + ':00')
+        const time2 = addMinutes(timea, -5)
+        let d = new Date(today.getFullYear(), today.getMonth(), today.getDate(), time2.getHours(), time2.getMinutes(), time2.getSeconds())
+        d.setDate(d.getDate() + (2 + 7 - d.getDay()) % 7)
+        if (d < today) {
+          d = addMinutes(d, 10080)
+        }
+        console.log(d)
+        chrome.alarms.create(count.toString() + course, {
+          when: d.getTime(),
+          periodInMinutes: 10080
+        })
+        count = count + 1
+      }
+      for (let i = 0; i < wednesday.length; i++) {
+        const addMinutes = function (dt, minutes) {
+          return new Date(dt.getTime() + minutes * 60000)
+        }
+        let course
+        if (courseName[wednesday[i].Course_Name] === undefined) {
+          course = wednesday[i].Course_Name
+        } else {
+          course = courseName[wednesday[i].Course_Name]
+        }
+        const today = new Date()
+        const timea = new Date('April 7 2021 ' + wed1[wednesday[i].Slot] + ':00')
+        const time2 = addMinutes(timea, -5)
+        let d = new Date(today.getFullYear(), today.getMonth(), today.getDate(), time2.getHours(), time2.getMinutes(), time2.getSeconds())
+        d.setDate(d.getDate() + (3 + 7 - d.getDay()) % 7)
+        if (d < today) {
+          d = addMinutes(d, 10080)
+        }
+        console.log(d)
+        chrome.alarms.create(count.toString() + course, {
+          when: d.getTime(),
+          periodInMinutes: 10080
+        })
+        count = count + 1
+      }
+      for (let i = 0; i < thursday.length; i++) {
+        const addMinutes = function (dt, minutes) {
+          return new Date(dt.getTime() + minutes * 60000)
+        }
+        let course
+        if (courseName[thursday[i].Course_Name] === undefined) {
+          course = thursday[i].Course_Name
+        } else {
+          course = courseName[thursday[i].Course_Name]
+        }
+        const today = new Date()
+        const timea = new Date('April 8 2021 ' + thu1[thursday[i].Slot] + ':00')
+        const time2 = addMinutes(timea, -5)
+        let d = new Date(today.getFullYear(), today.getMonth(), today.getDate(), time2.getHours(), time2.getMinutes(), time2.getSeconds())
+        d.setDate(d.getDate() + (4 + 7 - d.getDay()) % 7)
+        if (d < today) {
+          d = addMinutes(d, 10080)
+        }
+        console.log(d)
+        chrome.alarms.create(count.toString() + course, {
+          when: d.getTime(),
+          periodInMinutes: 10080
+        })
+        count = count + 1
+      }
+      for (let i = 0; i < friday.length; i++) {
+        const addMinutes = function (dt, minutes) {
+          return new Date(dt.getTime() + minutes * 60000)
+        }
+        let course
+        if (courseName[friday[i].Course_Name] === undefined) {
+          course = friday[i].Course_Name
+        } else {
+          course = courseName[friday[i].Course_Name]
+        }
+        const today = new Date()
+        const timea = new Date('April 9 2021 ' + fri1[friday[i].Slot] + ':00')
+        const time2 = addMinutes(timea, -5)
+        let d = new Date(today.getFullYear(), today.getMonth(), today.getDate(), time2.getHours(), time2.getMinutes(), time2.getSeconds())
+        d.setDate(d.getDate() + (5 + 7 - d.getDay()) % 7)
+        if (d < today) {
+          d = addMinutes(d, 10080)
+        }
+        console.log(d)
+        chrome.alarms.create(count.toString() + course, {
+          when: d.getTime(),
+          periodInMinutes: 10080
+        })
+        count = count + 1
+      }
+    }
+  }
+}
+
+alarms1()
+
+// chrome.alarms.clearAll()
+// const addMinutes = function (dt, minutes) {
+//   return new Date(dt.getTime() + minutes * 60000)
+// }
+// const today = new Date()
+// const timea = new Date('April 6 2021 ' + tue1.B2 + ':00')
+// const time2 = addMinutes(timea, 13)
+// let d = new Date(today.getFullYear(), today.getMonth(), today.getDate(), time2.getHours(), time2.getMinutes(), time2.getSeconds())
+// d.setDate(d.getDate() + (2 + 7 - d.getDay()) % 7)
+// if (d < today) {
+//   d = addMinutes(d, 10080)
+// }
+// console.log(d)
+// // console.log(time2)
+// chrome.alarms.create('test', {
+//   when: d.getTime(),
+//   periodInMinutes: 10080
+// })
+
+// const addMinutes = function (dt, minutes) {
+//   return new Date(dt.getTime() + minutes * 60000)
+// }
+
+// const timea = new Date('April 6 2021 ' + tue1.B2 + ':00')
+
+function gotAll (alarms) {
+  console.log(alarms)
+}
+const get = chrome.alarms.getAll(gotAll)

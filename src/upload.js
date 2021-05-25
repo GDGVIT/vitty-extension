@@ -210,6 +210,10 @@ form.addEventListener('submit', (e) => {
       wed1.reverse()
       thu1.reverse()
       fri1.reverse()
+      const exc = wed1[2]
+      wed1[2] = wed1[1]
+      wed1[1] = wed1[0]
+      wed1[0] = exc
       window.localStorage.setItem('monday', JSON.stringify(mon1))
       window.localStorage.setItem('tuesday', JSON.stringify(tue1))
       window.localStorage.setItem('wednesday', JSON.stringify(wed1))

@@ -972,5 +972,10 @@ change.addEventListener('click', function () {
 
 logout.addEventListener('click', function () {
   window.localStorage.removeItem('uid')
-  window.location.assign('popup.html')
+  window.chrome.runtime.sendMessage('logout', (response) => {
+    console.log('Logged out ', response)
+    if (response === 'successfully') {
+      window.location.assign('popup.html')
+    }
+  })
 })
