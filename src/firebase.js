@@ -804,6 +804,10 @@ function alarms1 () {
         })
         count = count + 1
       }
+      function gotAll (alarms) {
+        console.log(alarms)
+      }
+      chrome.alarms.getAll(gotAll)
     }
   }
 }
@@ -834,8 +838,3 @@ alarms1()
 // }
 
 // const timea = new Date('April 6 2021 ' + tue1.B2 + ':00')
-
-function gotAll (alarms) {
-  console.log(alarms)
-}
-const get = chrome.alarms.getAll(gotAll)

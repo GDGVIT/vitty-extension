@@ -200,20 +200,11 @@ form.addEventListener('submit', (e) => {
       console.log(wed1)
       console.log(thu1)
       console.log(fri1)
-      mon1.sort((a, b) => (new Date(mon11[a.Slot]) > new Date(mon11[b.Slot])) ? 1 : -1)
-      tue1.sort((a, b) => (new Date(tue11[a.Slot]) > new Date(tue11[b.Slot])) ? 1 : -1)
-      wed1.sort((a, b) => (new Date(wed11[a.Slot]) > new Date(wed11[b.Slot])) ? 1 : -1)
-      thu1.sort((a, b) => (new Date(thu11[a.Slot]) > new Date(thu11[b.Slot])) ? 1 : -1)
-      fri1.sort((a, b) => (new Date(fri11[a.Slot]) > new Date(fri11[b.Slot])) ? 1 : -1)
-      mon1.reverse()
-      tue1.reverse()
-      wed1.reverse()
-      thu1.reverse()
-      fri1.reverse()
-      const exc = wed1[2]
-      wed1[2] = wed1[1]
-      wed1[1] = wed1[0]
-      wed1[0] = exc
+      mon1.sort((a, b) => (mon11[a.Slot] > mon11[b.Slot]) ? 1 : -1)
+      tue1.sort((a, b) => (tue11[a.Slot] > tue11[b.Slot]) ? 1 : -1)
+      wed1.sort((a, b) => (wed11[a.Slot] > wed11[b.Slot]) ? 1 : -1)
+      thu1.sort((a, b) => (thu11[a.Slot] > thu11[b.Slot]) ? 1 : -1)
+      fri1.sort((a, b) => (fri11[a.Slot] > fri11[b.Slot]) ? 1 : -1)
       window.localStorage.setItem('monday', JSON.stringify(mon1))
       window.localStorage.setItem('tuesday', JSON.stringify(tue1))
       window.localStorage.setItem('wednesday', JSON.stringify(wed1))
@@ -291,20 +282,11 @@ document.querySelector('.login3').addEventListener('click', (e) => {
       console.log(wed1)
       console.log(thu1)
       console.log(fri1)
-      mon1.sort((a, b) => (new Date(mon11[a.Slot]) > new Date(mon11[b.Slot])) ? 1 : -1)
-      tue1.sort((a, b) => (new Date(tue11[a.Slot]) > new Date(tue11[b.Slot])) ? 1 : -1)
-      wed1.sort((a, b) => (new Date(wed11[a.Slot]) > new Date(wed11[b.Slot])) ? 1 : -1)
-      thu1.sort((a, b) => (new Date(thu11[a.Slot]) > new Date(thu11[b.Slot])) ? 1 : -1)
-      fri1.sort((a, b) => (new Date(fri11[a.Slot]) > new Date(fri11[b.Slot])) ? 1 : -1)
-      mon1.reverse()
-      tue1.reverse()
-      wed1.reverse()
-      thu1.reverse()
-      fri1.reverse()
-      const exc = wed1[2]
-      wed1[2] = wed1[1]
-      wed1[1] = wed1[0]
-      wed1[0] = exc
+      mon1.sort((a, b) => (mon11[a.Slot] > mon11[b.Slot]) ? 1 : -1)
+      tue1.sort((a, b) => (tue11[a.Slot] > tue11[b.Slot]) ? 1 : -1)
+      wed1.sort((a, b) => (wed11[a.Slot] > wed11[b.Slot]) ? 1 : -1)
+      thu1.sort((a, b) => (thu11[a.Slot] > thu11[b.Slot]) ? 1 : -1)
+      fri1.sort((a, b) => (fri11[a.Slot] > fri11[b.Slot]) ? 1 : -1)
       window.localStorage.setItem('monday', JSON.stringify(mon1))
       window.localStorage.setItem('tuesday', JSON.stringify(tue1))
       window.localStorage.setItem('wednesday', JSON.stringify(wed1))
