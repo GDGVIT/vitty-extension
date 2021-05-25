@@ -166,6 +166,7 @@ form.addEventListener('submit', (e) => {
   fetch('http://13.233.74.155/uploadfile/', requestOptions)
     .then(response => response.json())
     .then(result => {
+      const userid = window.localStorage.getItem('uid')
       window.localStorage.setItem('foundof', userid.toString())
       if (result !== undefined) {
         loader.className += ' hidden'
