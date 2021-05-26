@@ -93,8 +93,7 @@ h2 {
   color: #000;
 }
 
-.upload1,
-.upload6 {
+.upload1 {
   width: 180px;
   height: 50px;
   margin-bottom: 20px;
@@ -106,27 +105,27 @@ h2 {
   cursor: pointer;
 }
 
-.top {
+/* .top {
   display: flex;
   align-items: center;
   justify-content: space-around;
-}
+} */
 
-.upload4 {
-  width: 140px;
+.upload4, .upload6 {
+  width: 160px;
   height: 40px;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #488dda;
+  /* border: 2px solid #488dda; */
   cursor: pointer;
 }
 
 .upload4:hover {
   background-color: #126afc;
   color: #fff;
-  border: 2px solid #126afc;
+  /* border: 2px solid #126afc; */
 }
 
 .upload1:hover {
@@ -138,10 +137,10 @@ h2 {
 .upload6:hover {
   background-color: #126afc;
   color: #fff;
-  border: 2px solid #126afc;
+  /* border: 2px solid #126afc; */
 }
 
-.upload3 {
+.upload3, .upload5 {
   display: flex;
   justify-content: center;
   font-size: 15px;
@@ -264,8 +263,7 @@ h2 {
   margin-left: 30px;
 }
 
-.upload,
-.upload5 {
+.upload {
   display: flex;
   justify-content: center;
   font-size: 20px;
@@ -334,4 +332,33 @@ h2 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #5b7ca1;
+}
+
+.menu {
+  width: 160px;
+  height: 0px;
+  position: absolute;
+  background-color: #041727;
+  right: 15px;
+  top: 45px;
+  z-index: 100;
+  overflow-y: hidden;
+  transition: height 0.1s;
+}
+
+.toggle {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  z-index: 10;
+}
+
+.menu-active {
+  height: 120px;
+}
+
+.three {
+  width: 20px;
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
 }

@@ -8,6 +8,7 @@ const sun = document.querySelectorAll('.sun')[0]
 const main = document.querySelectorAll('.main')[0]
 const upload = document.querySelectorAll('.upload1')[0]
 const change = document.querySelectorAll('.upload4')[0]
+const change1 = document.querySelectorAll('.upload4')[1]
 const logout = document.querySelectorAll('.upload6')[0]
 const courseName = {
   CSE1003: 'Digital Logic and Design',
@@ -1165,6 +1166,19 @@ change.addEventListener('click', function () {
   })
 })
 
+change1.addEventListener('click', function () {
+  window.localStorage.setItem('found', 'false')
+  window.localStorage.removeItem('monday')
+  window.localStorage.removeItem('tuesday')
+  window.localStorage.removeItem('wednesday')
+  window.localStorage.removeItem('thursday')
+  window.localStorage.removeItem('friday')
+  window.chrome.runtime.sendMessage('delete-data', (response) => {
+    console.log('deleted data ', response)
+    window.location.assign('instructions.html')
+  })
+})
+
 logout.addEventListener('click', function () {
   window.localStorage.removeItem('uid')
   window.chrome.runtime.sendMessage('logout', (response) => {
@@ -1173,4 +1187,10 @@ logout.addEventListener('click', function () {
       window.location.assign('popup.html')
     }
   })
+})
+
+const dot = document.querySelector('.toggle')
+const menu = document.querySelector('.menu')
+dot.addEventListener('click',()=>{
+  menu.classList.toggle('menu-active')
 })
