@@ -318,3 +318,20 @@ h2 {
   align-items: center;
   height: 350px;
 }
+
+::-webkit-scrollbar {
+  width: 7.5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #a1c1e4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #488dda;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5b7ca1;
+}
