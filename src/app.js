@@ -383,19 +383,7 @@ window.onload = function () {
   `
   }
   main.innerHTML = text
-  if (window.localStorage.getItem('found') !== null) {
-    if (window.localStorage.getItem('found') === 'true') {
-      console.log(document.querySelectorAll('.edit'))
-      document.querySelectorAll('.edit').forEach(function (a) {
-        a.remove()
-      })
-      document.querySelectorAll('.details').forEach(function (a) {
-        a.style.width = '100%'
-        a.style.marginRight = '20px'
-      })
-      document.querySelector('.upload').remove()
-    }
-  }
+
   for (let j = 0; j < monday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt('Enter details')
@@ -458,6 +446,19 @@ window.onload = function () {
         })
         .catch((error) => console.log('error', error))
     })
+  }
+  if (window.localStorage.getItem('found') !== null) {
+    if (window.localStorage.getItem('found') === 'true') {
+      console.log(document.querySelectorAll('.edit'))
+      document.querySelectorAll('.edit').forEach(function (a) {
+        a.remove()
+      })
+      document.querySelectorAll('.details').forEach(function (a) {
+        a.style.width = '100%'
+        a.style.marginRight = '20px'
+      })
+      document.querySelector('.upload').remove()
+    }
   }
 }
 
@@ -522,18 +523,7 @@ mon.addEventListener('click', function () {
   `
   }
   main.innerHTML = text
-  if (window.localStorage.getItem('found') !== null) {
-    if (window.localStorage.getItem('found') === 'true') {
-      console.log(document.querySelectorAll('.edit'))
-      document.querySelectorAll('.edit').forEach(function (a) {
-        a.remove()
-      })
-      document.querySelectorAll('.details').forEach(function (a) {
-        a.style.width = '100%'
-        a.style.marginRight = '20px'
-      })
-    }
-  }
+
   for (let j = 0; j < monday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt('Enter details')
@@ -598,6 +588,18 @@ mon.addEventListener('click', function () {
         .catch((error) => console.log('error', error))
     })
   }
+  if (window.localStorage.getItem('found') !== null) {
+    if (window.localStorage.getItem('found') === 'true') {
+      console.log(document.querySelectorAll('.edit'))
+      document.querySelectorAll('.edit').forEach(function (a) {
+        a.remove()
+      })
+      document.querySelectorAll('.details').forEach(function (a) {
+        a.style.width = '100%'
+        a.style.marginRight = '20px'
+      })
+    }
+  }
 })
 tue.addEventListener('click', function () {
   remove()
@@ -650,18 +652,7 @@ tue.addEventListener('click', function () {
   `
   }
   main.innerHTML = text
-  if (window.localStorage.getItem('found') !== null) {
-    if (window.localStorage.getItem('found') === 'true') {
-      console.log(document.querySelectorAll('.edit'))
-      document.querySelectorAll('.edit').forEach(function (a) {
-        a.remove()
-      })
-      document.querySelectorAll('.details').forEach(function (a) {
-        a.style.width = '100%'
-        a.style.marginRight = '20px'
-      })
-    }
-  }
+
   for (let j = 0; j < tuesday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt('Enter details')
@@ -725,6 +716,18 @@ tue.addEventListener('click', function () {
         .catch((error) => console.log('error', error))
     })
   }
+  if (window.localStorage.getItem('found') !== null) {
+    if (window.localStorage.getItem('found') === 'true') {
+      console.log(document.querySelectorAll('.edit'))
+      document.querySelectorAll('.edit').forEach(function (a) {
+        a.remove()
+      })
+      document.querySelectorAll('.details').forEach(function (a) {
+        a.style.width = '100%'
+        a.style.marginRight = '20px'
+      })
+    }
+  }
 })
 wed.addEventListener('click', function () {
   remove()
@@ -777,18 +780,7 @@ wed.addEventListener('click', function () {
   `
   }
   main.innerHTML = text
-  if (window.localStorage.getItem('found') !== null) {
-    if (window.localStorage.getItem('found') === 'true') {
-      console.log(document.querySelectorAll('.edit'))
-      document.querySelectorAll('.edit').forEach(function (a) {
-        a.remove()
-      })
-      document.querySelectorAll('.details').forEach(function (a) {
-        a.style.width = '100%'
-        a.style.marginRight = '20px'
-      })
-    }
-  }
+
   for (let j = 0; j < wednesday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt('Enter details')
@@ -852,6 +844,18 @@ wed.addEventListener('click', function () {
         .catch((error) => console.log('error', error))
     })
   }
+  if (window.localStorage.getItem('found') !== null) {
+    if (window.localStorage.getItem('found') === 'true') {
+      console.log(document.querySelectorAll('.edit'))
+      document.querySelectorAll('.edit').forEach(function (a) {
+        a.remove()
+      })
+      document.querySelectorAll('.details').forEach(function (a) {
+        a.style.width = '100%'
+        a.style.marginRight = '20px'
+      })
+    }
+  }
 })
 thu.addEventListener('click', function () {
   remove()
@@ -904,18 +908,7 @@ thu.addEventListener('click', function () {
   `
   }
   main.innerHTML = text
-  if (window.localStorage.getItem('found') !== null) {
-    if (window.localStorage.getItem('found') === 'true') {
-      console.log(document.querySelectorAll('.edit'))
-      document.querySelectorAll('.edit').forEach(function (a) {
-        a.remove()
-      })
-      document.querySelectorAll('.details').forEach(function (a) {
-        a.style.width = '100%'
-        a.style.marginRight = '20px'
-      })
-    }
-  }
+
   for (let j = 0; j < thursday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt('Enter details')
@@ -979,6 +972,18 @@ thu.addEventListener('click', function () {
         .catch((error) => console.log('error', error))
     })
   }
+  if (window.localStorage.getItem('found') !== null) {
+    if (window.localStorage.getItem('found') === 'true') {
+      console.log(document.querySelectorAll('.edit'))
+      document.querySelectorAll('.edit').forEach(function (a) {
+        a.remove()
+      })
+      document.querySelectorAll('.details').forEach(function (a) {
+        a.style.width = '100%'
+        a.style.marginRight = '20px'
+      })
+    }
+  }
 })
 fri.addEventListener('click', function () {
   remove()
@@ -1031,18 +1036,7 @@ fri.addEventListener('click', function () {
   `
   }
   main.innerHTML = text
-  if (window.localStorage.getItem('found') !== null) {
-    if (window.localStorage.getItem('found') === 'true') {
-      console.log(document.querySelectorAll('.edit'))
-      document.querySelectorAll('.edit').forEach(function (a) {
-        a.remove()
-      })
-      document.querySelectorAll('.details').forEach(function (a) {
-        a.style.width = '100%'
-        a.style.marginRight = '20px'
-      })
-    }
-  }
+
   for (let j = 0; j < friday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt('Enter details')
@@ -1105,6 +1099,18 @@ fri.addEventListener('click', function () {
         })
         .catch((error) => console.log('error', error))
     })
+  }
+  if (window.localStorage.getItem('found') !== null) {
+    if (window.localStorage.getItem('found') === 'true') {
+      console.log(document.querySelectorAll('.edit'))
+      document.querySelectorAll('.edit').forEach(function (a) {
+        a.remove()
+      })
+      document.querySelectorAll('.details').forEach(function (a) {
+        a.style.width = '100%'
+        a.style.marginRight = '20px'
+      })
+    }
   }
 })
 sat.addEventListener('click', function () {
