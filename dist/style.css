@@ -50,7 +50,7 @@ h2 {
 
 .nav-links li a {
   text-decoration: none;
-  color: #488dda;
+  color: #5b7ca1;
 }
 
 #special {
@@ -102,7 +102,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #488dda;
+  border: 2px solid #5b7ca1;
   cursor: pointer;
 }
 
@@ -122,7 +122,7 @@ h2 {
   align-items: center;
   justify-content: center;
 
-  /* border: 2px solid #488dda; */
+  /* border: 2px solid #5B7CA1; */
   cursor: pointer;
 }
 
@@ -208,11 +208,11 @@ h2 {
 }
 
 .time {
-  color: #488dda;
+  color: #5b7ca1;
 }
 
 .det {
-  color: #488dda;
+  color: #5b7ca1;
   display: flex;
   justify-content: space-between;
 }
@@ -266,7 +266,8 @@ h2 {
 .vitty1 {
   font-family: 'Metropolis', sans-serif;
   font-size: 40px;
-  margin-top: 20px;
+
+  /* margin-top: 20px; */
   z-index: 6;
   margin-left: 30px;
   display: flex;
@@ -321,6 +322,10 @@ h2 {
   justify-content: flex-start;
 }
 
+.uploadimage {
+  width: 47%;
+}
+
 .bold {
   font-weight: 600;
   font-size: 20px;
@@ -344,12 +349,12 @@ h2 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #488dda;
+  background: #5b7ca1;
   border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #5b7ca1;
+  background: #4f6b8b;
 }
 
 .menu {
@@ -401,5 +406,5 @@ li a {
 }
 
 li {
-  margin: 5px 0px;
+  margin: 5px 0;
 }
