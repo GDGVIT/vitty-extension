@@ -368,3 +368,22 @@ h2 {
   -webkit-filter: brightness(0) invert(1);
   filter: brightness(0) invert(1);
 }
+
+.inst {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #a1c1e4;
+}
+
+.inst ol {
+  margin-left: 20px;
+}
+
+li ul {
+  margin-left: 20px;
+}
+
+li a {
+  color: #a1c1e4;
+}
