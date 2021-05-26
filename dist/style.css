@@ -91,6 +91,7 @@ h2 {
   align-items: center;
   justify-content: flex-start;
   color: #000;
+  cursor: pointer;
 }
 
 .upload1 {
@@ -218,6 +219,7 @@ h2 {
 
 .edit {
   margin-right: 20px;
+  cursor: pointer;
 }
 
 #special1 {
