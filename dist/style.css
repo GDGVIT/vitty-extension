@@ -111,13 +111,16 @@ h2 {
   justify-content: space-around;
 } */
 
-.upload4, .upload6 {
+.upload4,
+.upload6 {
   width: 160px;
   height: 40px;
+
   /* border-radius: 15px; */
   display: flex;
   align-items: center;
   justify-content: center;
+
   /* border: 2px solid #488dda; */
   cursor: pointer;
 }
@@ -125,6 +128,7 @@ h2 {
 .upload4:hover {
   background-color: #126afc;
   color: #fff;
+
   /* border: 2px solid #126afc; */
 }
 
@@ -137,10 +141,12 @@ h2 {
 .upload6:hover {
   background-color: #126afc;
   color: #fff;
+
   /* border: 2px solid #126afc; */
 }
 
-.upload3, .upload5 {
+.upload3,
+.upload5 {
   display: flex;
   justify-content: center;
   font-size: 15px;
@@ -336,7 +342,7 @@ h2 {
 
 .menu {
   width: 160px;
-  height: 0px;
+  height: 0;
   position: absolute;
   background-color: #041727;
   right: 15px;

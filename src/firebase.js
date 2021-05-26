@@ -8,6 +8,7 @@ const firebaseConfig = {
   appId: '1:272763363329:web:03c63b25f47d2414e2e000',
   measurementId: 'G-8KRDV5SK87'
 }
+// const chrome = window.chrome
 const provider = new firebase.auth.GoogleAuthProvider()
 const courseName = {
   CSE1003: 'Digital Logic and Design',
