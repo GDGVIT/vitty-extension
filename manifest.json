@@ -12,7 +12,7 @@
         "page": "dist/bg.html",
         "persistent": false
     },
-    "web_accessible_resources": ["images/Vector.svg","images/Vector 1.svg","images/Illustration.svg","images/Mask Group.svg","images/google.svg","images/giphy.gif","images/logo.png","images/menu.png"],
+    "web_accessible_resources": ["images/Vector.svg","images/Vector 1.svg","images/Illustration.svg","images/Mask Group.svg","images/google.svg","images/giphy.gif","images/logo.png","images/menu.png","images/logo.svg"],
     "oauth2": {
         "client_id": "272763363329-otncr2l9anvue11ps66r8f6uvdr7cr4j.apps.googleusercontent.com",
         "scopes": ["https://www.googleapis.com/auth/userinfo.email"]

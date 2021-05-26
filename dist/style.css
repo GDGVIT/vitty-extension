@@ -267,6 +267,16 @@ h2 {
   margin-top: 20px;
   z-index: 6;
   margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo1 {
+  /* border: 1px solid red; */
+  width: 80px;
+  margin-bottom: 10px;
+  margin-right: 25px;
 }
 
 .upload {
@@ -386,4 +396,8 @@ li ul {
 
 li a {
   color: #a1c1e4;
+}
+
+li {
+  margin: 5px 0px;
 }
