@@ -39,6 +39,14 @@ h2 {
   height: 50px;
 }
 
+li a {
+  color: #a1c1e4;
+}
+
+li {
+  margin: 5px 0;
+}
+
 .nav-links li {
   list-style-type: none;
   height: 50px;
@@ -50,7 +58,7 @@ h2 {
 
 .nav-links li a {
   text-decoration: none;
-  color: #488dda;
+  color: #5b7ca1;
 }
 
 #special {
@@ -90,6 +98,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  color: #000;
+  cursor: pointer;
 }
 
 .upload1 {
@@ -100,22 +110,82 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #488dda;
+  border: 2px solid #5b7ca1;
+  cursor: pointer;
+}
+
+/* .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+} */
+
+.upload4,
+.upload6 {
+  width: 160px;
+  height: 40px;
+
+  /* border-radius: 15px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* border: 2px solid #5B7CA1; */
+  cursor: pointer;
+}
+
+.upload4:hover {
+  background-color: #126afc;
+  color: #fff;
+
+  /* border: 2px solid #126afc; */
+}
+
+.upload1:hover {
+  background-color: #126afc;
+  color: #fff;
+  border: 2px solid #126afc;
+}
+
+.upload6:hover {
+  background-color: #126afc;
+  color: #fff;
+
+  /* border: 2px solid #126afc; */
+}
+
+.upload3,
+.upload5 {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  align-items: center;
 }
 
 .login2 {
   width: 240px;
   height: 50px;
-  background-color: #fff;
-  margin-bottom: 20px;
-  margin-top: 40px;
+  background-color: #126afc;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #126afc;
+  color: #fff;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+}
+
+.login3 {
+  background-color: transparent;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
 }
 
 .google {
@@ -138,7 +208,7 @@ h2 {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
-  width: 60%;
+  width: 70%;
 }
 
 .name {
@@ -146,7 +216,18 @@ h2 {
 }
 
 .time {
-  color: #488dda;
+  color: #5b7ca1;
+}
+
+.det {
+  color: #5b7ca1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit {
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 #special1 {
@@ -193,9 +274,20 @@ h2 {
 .vitty1 {
   font-family: 'Metropolis', sans-serif;
   font-size: 40px;
-  margin-top: 20px;
+
+  /* margin-top: 20px; */
   z-index: 6;
   margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo1 {
+  /* border: 1px solid red; */
+  width: 80px;
+  margin-bottom: 10px;
+  margin-right: 25px;
 }
 
 .upload {
@@ -203,4 +295,116 @@ h2 {
   justify-content: center;
   font-size: 20px;
   align-items: center;
+}
+
+.loader {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader.hidden {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.form1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.uploadimage {
+  width: 47%;
+}
+
+.bold {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.holiday {
+  font-size: 17.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+
+::-webkit-scrollbar {
+  width: 7.5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #a1c1e4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5b7ca1;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4f6b8b;
+}
+
+.menu {
+  width: 160px;
+  height: 0;
+  position: absolute;
+  background-color: #041727;
+  right: 15px;
+  top: 45px;
+  z-index: 100;
+  overflow-y: hidden;
+  transition: height 0.1s;
+}
+
+.toggle {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  z-index: 10;
+}
+
+.menu-active {
+  height: 120px;
+}
+
+.three {
+  width: 20px;
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
+
+.inst {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #a1c1e4;
+}
+
+.inst ol {
+  margin-left: 20px;
+}
+
+li ul {
+  margin-left: 20px;
 }
