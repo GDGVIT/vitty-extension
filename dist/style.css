@@ -39,6 +39,14 @@ h2 {
   height: 50px;
 }
 
+li a {
+  color: #a1c1e4;
+}
+
+li {
+  margin: 5px 0;
+}
+
 .nav-links li {
   list-style-type: none;
   height: 50px;
@@ -399,12 +407,4 @@ h2 {
 
 li ul {
   margin-left: 20px;
-}
-
-li a {
-  color: #a1c1e4;
-}
-
-li {
-  margin: 5px 0;
 }
