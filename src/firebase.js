@@ -9,7 +9,7 @@ const firebaseConfig = {
   measurementId: 'G-8KRDV5SK87'
 }
 // const chrome = window.chrome
-const provider = new firebase.auth.GoogleAuthProvider()
+const provider = new window.firebase.auth.GoogleAuthProvider()
 const courseName = {
   CSE1003: 'Digital Logic and Design',
   CSE1004: 'Network and Communication',
@@ -327,12 +327,12 @@ const fri1 = {
   V7: '19:00',
   L60: '18:15'
 }
-firebase.initializeApp(firebaseConfig)
-firebase.analytics()
-const db = firebase.firestore()
+window.firebase.initializeApp(firebaseConfig)
+window.firebase.analytics()
+const db = window.firebase.firestore()
 db.settings({ timestampsInSnapshots: true })
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message === 'upload-data') {
     const userid = window.localStorage.getItem('uid')
     const monday = JSON.parse(window.localStorage.getItem('monday'))
@@ -360,7 +360,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       // const timea = new Date('April 5 2021 ' + mon1[monday[i].Slot] + ':00')
       // const time2 = addMinutes(timea, -5)
       // console.log(time2)
-      // chrome.alarms.create(course, {
+      // window.chrome.alarms.create(course, {
       //   when: time2.getTime(),
       //   periodInMinutes: 10080
       // })
@@ -405,7 +405,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       }
       // const timea = new Date('April 6 2021 ' + tue1[tuesday[i].Slot] + ':00')
       // const time2 = addMinutes(timea, -5)
-      // chrome.alarms.create(course, {
+      // window.chrome.alarms.create(course, {
       //   when: time2.getTime(),
       //   periodInMinutes: 10080
       // })
@@ -450,7 +450,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       }
       // const timea = new Date('April 7 2021 ' + wed1[wednesday[i].Slot] + ':00')
       // const time2 = addMinutes(timea, -5)
-      // chrome.alarms.create(course, {
+      // window.chrome.alarms.create(course, {
       //   when: time2.getTime(),
       //   periodInMinutes: 10080
       // })
@@ -495,7 +495,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       }
       // const timea = new Date('April 8 2021 ' + thu1[thursday[i].Slot] + ':00')
       // const time2 = addMinutes(timea, -5)
-      // chrome.alarms.create(course, {
+      // window.chrome.alarms.create(course, {
       //   when: time2.getTime(),
       //   periodInMinutes: 10080
       // })
@@ -540,7 +540,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       }
       // const timea = new Date('April 9 2021 ' + fri1[friday[i].Slot] + ':00')
       // const time2 = addMinutes(timea, -5)
-      // chrome.alarms.create(course, {
+      // window.chrome.alarms.create(course, {
       //   when: time2.getTime(),
       //   periodInMinutes: 10080
       // })
@@ -575,7 +575,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     sendResponse('successfully')
   }
   if (message === 'login') {
-    firebase.auth().signInWithPopup(provider).then(res => {
+    window.firebase.auth().signInWithPopup(provider).then(res => {
       console.log(res.user.uid.toString())
       window.localStorage.setItem('uid', res.user.uid.toString())
       // const user = db.collection('users').doc(res.user.uid.toString())
@@ -641,16 +641,16 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     sendResponse('successfully')
   }
   if (message === 'logout') {
-    firebase.auth().signOut().then(() => {
+    window.firebase.auth().signOut().then(() => {
     }).catch(() => {
     })
     sendResponse('successfully')
   }
 })
 
-chrome.alarms.onAlarm.addListener((alarm) => {
+window.chrome.alarms.onAlarm.addListener((alarm) => {
   console.log(alarm)
-  chrome.notifications.create('classupcoming', {
+  window.chrome.notifications.create('classupcoming', {
     type: 'basic',
     iconUrl: '../images/logo.png',
     title: 'Class Upcoming in 5 minutes',
@@ -665,13 +665,13 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 // const a = new Date()
 // const b = addMinutes(a, -1)
 // console.log(b)
-// chrome.alarms.create('test', {
+// window.chrome.alarms.create('test', {
 //   when: b.getTime(),
 //   periodInMinutes: 1
 // })
 
 function alarms1 () {
-  chrome.alarms.clearAll()
+  window.chrome.alarms.clearAll()
   let count = 10
   if (window.localStorage.getItem('found') !== null) {
     if (window.localStorage.getItem('found') === 'true') {
@@ -699,7 +699,7 @@ function alarms1 () {
           d = addMinutes(d, 10080)
         }
         console.log(d)
-        chrome.alarms.create(count.toString() + course, {
+        window.chrome.alarms.create(count.toString() + course, {
           when: d.getTime(),
           periodInMinutes: 10080
         })
@@ -724,7 +724,7 @@ function alarms1 () {
           d = addMinutes(d, 10080)
         }
         console.log(d)
-        chrome.alarms.create(count.toString() + course, {
+        window.chrome.alarms.create(count.toString() + course, {
           when: d.getTime(),
           periodInMinutes: 10080
         })
@@ -749,7 +749,7 @@ function alarms1 () {
           d = addMinutes(d, 10080)
         }
         console.log(d)
-        chrome.alarms.create(count.toString() + course, {
+        window.chrome.alarms.create(count.toString() + course, {
           when: d.getTime(),
           periodInMinutes: 10080
         })
@@ -774,7 +774,7 @@ function alarms1 () {
           d = addMinutes(d, 10080)
         }
         console.log(d)
-        chrome.alarms.create(count.toString() + course, {
+        window.chrome.alarms.create(count.toString() + course, {
           when: d.getTime(),
           periodInMinutes: 10080
         })
@@ -799,7 +799,7 @@ function alarms1 () {
           d = addMinutes(d, 10080)
         }
         console.log(d)
-        chrome.alarms.create(count.toString() + course, {
+        window.chrome.alarms.create(count.toString() + course, {
           when: d.getTime(),
           periodInMinutes: 10080
         })
@@ -808,14 +808,14 @@ function alarms1 () {
       function gotAll (alarms) {
         console.log(alarms)
       }
-      chrome.alarms.getAll(gotAll)
+      window.chrome.alarms.getAll(gotAll)
     }
   }
 }
 
 alarms1()
 
-// chrome.alarms.clearAll()
+// window.chrome.alarms.clearAll()
 // const addMinutes = function (dt, minutes) {
 //   return new Date(dt.getTime() + minutes * 60000)
 // }
@@ -829,7 +829,7 @@ alarms1()
 // }
 // console.log(d)
 // // console.log(time2)
-// chrome.alarms.create('test', {
+// window.chrome.alarms.create('test', {
 //   when: d.getTime(),
 //   periodInMinutes: 10080
 // })
