@@ -2,8 +2,8 @@
 <a href="https://dscvit.com">
 	<img src="https://user-images.githubusercontent.com/30529572/92081025-fabe6f00-edb1-11ea-9169-4a8a61a5dd45.png" alt="DSC VIT"/>
 </a>
-	<h2 align="center"> < Insert Project Title Here > </h2>
-	<h4 align="center"> < Insert Project Description Here > <h4>
+	<h2 align="center"> VITTY Frontend </h2>
+	<h4 align="center"> A chrome extension where users can upload their VIT Timetable and view it easily along with receiving chrome notifications for upcoming classes. <h4>
 </p>
 
 ---
@@ -15,46 +15,44 @@
 
 
 ## Features
-- [ ]  < feature >
-- [ ]  < feature >
-- [ ]  < feature >
-- [ ]  < feature >
+- [X]  Upload timetable in text or image format
+- [X]  View timetable whenever needed
+- [X]  Receive chrome notifications 5 minutes before the next scheduled class
 
 <br>
-
-## Dependencies
- - < dependency >
- - < dependency >
-
 
 ## Running
 
 
-< directions to install > 
+### Directions to install
+	
+- Clone the repository on your local system
 ```bash
-< insert code >
+git clone https://github.com/GDGVIT/vitty-frontend.git
 ```
 
-< directions to execute >
+### Directions to execute
 
-```bash
-< insert code >
-```
+- Open chrome://extensions in the chrome browser.
+- Turn on developer mode.
+- Click Load Unpacked.
+- Go to the directory where the repository was cloned and click Select Folder.
+
 
 ## Contributors
 
 <table>
 	<tr align="center">
 		<td>
-		John Doe
+		Pratham Jain
 		<p align="center">
-			<img src = "https://dscvit.com/images/dsc-logo-square.svg" width="150" height="150" alt="Your Name Here (Insert Your Image Link In Src">
+			<img src = "https://i.ibb.co/wYrMKM5/Pratham-Jain.jpg" width="150" height="150" alt="Pratham Jain">
 		</p>
 			<p align="center">
-				<a href = "https://github.com/person1">
+				<a href = "https://github.com/pratham31012002">
 					<img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36" alt="GitHub"/>
 				</a>
-				<a href = "https://www.linkedin.com/in/person1">
+				<a href = "https://www.linkedin.com/in/prathamjain31/">
 					<img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36" alt="LinkedIn"/>
 				</a>
 			</p>
