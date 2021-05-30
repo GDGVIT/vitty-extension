@@ -577,15 +577,116 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message === 'login') {
     window.firebase.auth().signInWithPopup(provider).then(res => {
       console.log(res.user.uid.toString())
-      window.localStorage.setItem('uid', res.user.uid.toString())
-      // const user = db.collection('users').doc(res.user.uid.toString())
-      // user.get().then((snapshot) => {
-      //   if (snapshot.exists) {
-      //     window.localStorage.setItem('found', 'true')
-      //   } else {
-      //     window.localStorage.setItem('found', 'false')
-      //   }
-      // })
+      const user = db.collection('users').doc(res.user.uid.toString())
+      user.get().then((snapshot) => {
+        if (snapshot.exists) {
+          const mon111 = []
+          const tue111 = []
+          const wed111 = []
+          const thu111 = []
+          const fri111 = []
+          db.collection('users')
+            .doc(res.user.uid.toString())
+            .collection('timetable')
+            .doc('monday')
+            .collection('periods').get().then((snap) => {
+              for (const doc of snap.docs) {
+                console.log(doc)
+                const a = {}
+                a.Slot = doc.data().slot
+                a.Course_Name = doc.data().courseCode
+                a.Course_type = doc.data().Course_type
+                a.Venue = doc.data().location
+                mon111.push(a)
+              }
+              console.log(mon111)
+              window.localStorage.setItem('monday', JSON.stringify(mon111))
+            }).catch((error) => {
+              console.error(error)
+            })
+          db.collection('users')
+            .doc(res.user.uid.toString())
+            .collection('timetable')
+            .doc('tuesday')
+            .collection('periods').get().then((snap) => {
+              for (const doc of snap.docs) {
+                console.log(doc)
+                const a = {}
+                a.Slot = doc.data().slot
+                a.Course_Name = doc.data().courseCode
+                a.Course_type = doc.data().Course_type
+                a.Venue = doc.data().location
+                tue111.push(a)
+              }
+              console.log(tue111)
+              window.localStorage.setItem('tuesday', JSON.stringify(tue111))
+            }).catch((error) => {
+              console.error(error)
+            })
+          db.collection('users')
+            .doc(res.user.uid.toString())
+            .collection('timetable')
+            .doc('wednesday')
+            .collection('periods').get().then((snap) => {
+              for (const doc of snap.docs) {
+                console.log(doc)
+                const a = {}
+                a.Slot = doc.data().slot
+                a.Course_Name = doc.data().courseCode
+                a.Course_type = doc.data().Course_type
+                a.Venue = doc.data().location
+                wed111.push(a)
+              }
+              console.log(wed111)
+              window.localStorage.setItem('wednesday', JSON.stringify(wed111))
+            }).catch((error) => {
+              console.error(error)
+            })
+          db.collection('users')
+            .doc(res.user.uid.toString())
+            .collection('timetable')
+            .doc('thursday')
+            .collection('periods').get().then((snap) => {
+              for (const doc of snap.docs) {
+                console.log(doc)
+                const a = {}
+                a.Slot = doc.data().slot
+                a.Course_Name = doc.data().courseCode
+                a.Course_type = doc.data().Course_type
+                a.Venue = doc.data().location
+                thu111.push(a)
+              }
+              console.log(thu111)
+              window.localStorage.setItem('thursday', JSON.stringify(thu111))
+            }).catch((error) => {
+              console.error(error)
+            })
+          db.collection('users')
+            .doc(res.user.uid.toString())
+            .collection('timetable')
+            .doc('friday')
+            .collection('periods').get().then((snap) => {
+              for (const doc of snap.docs) {
+                console.log(doc)
+                const a = {}
+                a.Slot = doc.data().slot
+                a.Course_Name = doc.data().courseCode
+                a.Course_type = doc.data().Course_type
+                a.Venue = doc.data().location
+                fri111.push(a)
+              }
+              console.log(fri111)
+              window.localStorage.setItem('friday', JSON.stringify(fri111))
+              window.localStorage.setItem('uid', res.user.uid.toString())
+            }).catch((error) => {
+              console.error(error)
+            })
+          window.localStorage.setItem('found', 'true')
+        } else {
+          window.localStorage.setItem('found', 'false')
+          window.localStorage.setItem('uid', res.user.uid.toString())
+        }
+      })
     }).catch(e => {
       console.log(e)
     })
