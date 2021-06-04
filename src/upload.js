@@ -1,8 +1,128 @@
-const mon = ['A1', 'L1', 'F1', 'L2', 'D1', 'L3', 'TB1', 'L4', 'TG1', 'L5', 'L6', 'A2', 'L31', 'F2', 'L32', 'D2', 'L33', 'TB2', 'L34', 'TG2', 'L35', 'V3', 'L36']
-const tue = ['B1', 'L7', 'G1', 'L8', 'E1', 'L9', 'TC1', 'L10', 'TAA1', 'L11', 'L12', 'B2', 'L37', 'G2', 'L38', 'E2', 'L39', 'TC2', 'L40', 'TAA2', 'L41', 'V4', 'L42']
-const wed = ['C1', 'L13', 'A1', 'L14', 'F1', 'L15', 'V1', 'L16', 'V2', 'C2', 'L43', 'A2', 'L44', 'F2', 'L45', 'TD2', 'L46', 'TBB2', 'L47', 'V5', 'L48', 'L17', 'L18']
-const thu = ['D1', 'L19', 'B1', 'L20', 'G1', 'L21', 'TE1', 'L22', 'TCC1', 'L23', 'L24', 'D2', 'L49', 'B2', 'L50', 'G2', 'L51', 'TE2', 'L52', 'TCC2', 'L53', 'V6', 'L54']
-const fri = ['E1', 'L25', 'C1', 'L26', 'TA1', 'L27', 'TF1', 'L28', 'TD1', 'L29', 'L30', 'E2', 'L55', 'C2', 'L56', 'TA2', 'L57', 'TF2', 'L58', 'TDD2', 'L59', 'V7', 'L60']
+const mon = [
+  'A1',
+  'L1',
+  'F1',
+  'L2',
+  'D1',
+  'L3',
+  'TB1',
+  'L4',
+  'TG1',
+  'L5',
+  'L6',
+  'A2',
+  'L31',
+  'F2',
+  'L32',
+  'D2',
+  'L33',
+  'TB2',
+  'L34',
+  'TG2',
+  'L35',
+  'V3',
+  'L36'
+]
+const tue = [
+  'B1',
+  'L7',
+  'G1',
+  'L8',
+  'E1',
+  'L9',
+  'TC1',
+  'L10',
+  'TAA1',
+  'L11',
+  'L12',
+  'B2',
+  'L37',
+  'G2',
+  'L38',
+  'E2',
+  'L39',
+  'TC2',
+  'L40',
+  'TAA2',
+  'L41',
+  'V4',
+  'L42'
+]
+const wed = [
+  'C1',
+  'L13',
+  'A1',
+  'L14',
+  'F1',
+  'L15',
+  'V1',
+  'L16',
+  'V2',
+  'C2',
+  'L43',
+  'A2',
+  'L44',
+  'F2',
+  'L45',
+  'TD2',
+  'L46',
+  'TBB2',
+  'L47',
+  'V5',
+  'L48',
+  'L17',
+  'L18'
+]
+const thu = [
+  'D1',
+  'L19',
+  'B1',
+  'L20',
+  'G1',
+  'L21',
+  'TE1',
+  'L22',
+  'TCC1',
+  'L23',
+  'L24',
+  'D2',
+  'L49',
+  'B2',
+  'L50',
+  'G2',
+  'L51',
+  'TE2',
+  'L52',
+  'TCC2',
+  'L53',
+  'V6',
+  'L54'
+]
+const fri = [
+  'E1',
+  'L25',
+  'C1',
+  'L26',
+  'TA1',
+  'L27',
+  'TF1',
+  'L28',
+  'TD1',
+  'L29',
+  'L30',
+  'E2',
+  'L55',
+  'C2',
+  'L56',
+  'TA2',
+  'L57',
+  'TF2',
+  'L58',
+  'TDD2',
+  'L59',
+  'V7',
+  'L60'
+]
 const filled = []
 const mon1 = []
 const tue1 = []
@@ -160,12 +280,12 @@ form.addEventListener('submit', (e) => {
   }
 
   fetch('http://13.233.74.155/uploadfile/', requestOptions)
-    .then(response => response.json())
-    .then(result => {
+    .then((response) => response.json())
+    .then((result) => {
       if (result !== undefined) {
         loader.className += ' hidden'
       }
-      result.Slots.forEach(element => {
+      result.Slots.forEach((element) => {
         if (filled.includes(element.Slot) === false) {
           filled.push(element.Slot)
           if (mon.includes(element.Slot)) {
@@ -200,11 +320,11 @@ form.addEventListener('submit', (e) => {
       console.log(wed1)
       console.log(thu1)
       console.log(fri1)
-      mon1.sort((a, b) => (mon11[a.Slot] > mon11[b.Slot]) ? 1 : -1)
-      tue1.sort((a, b) => (tue11[a.Slot] > tue11[b.Slot]) ? 1 : -1)
-      wed1.sort((a, b) => (wed11[a.Slot] > wed11[b.Slot]) ? 1 : -1)
-      thu1.sort((a, b) => (thu11[a.Slot] > thu11[b.Slot]) ? 1 : -1)
-      fri1.sort((a, b) => (fri11[a.Slot] > fri11[b.Slot]) ? 1 : -1)
+      mon1.sort((a, b) => (mon11[a.Slot] > mon11[b.Slot] ? 1 : -1))
+      tue1.sort((a, b) => (tue11[a.Slot] > tue11[b.Slot] ? 1 : -1))
+      wed1.sort((a, b) => (wed11[a.Slot] > wed11[b.Slot] ? 1 : -1))
+      thu1.sort((a, b) => (thu11[a.Slot] > thu11[b.Slot] ? 1 : -1))
+      fri1.sort((a, b) => (fri11[a.Slot] > fri11[b.Slot] ? 1 : -1))
       window.localStorage.setItem('monday', JSON.stringify(mon1))
       window.localStorage.setItem('tuesday', JSON.stringify(tue1))
       window.localStorage.setItem('wednesday', JSON.stringify(wed1))
@@ -212,7 +332,7 @@ form.addEventListener('submit', (e) => {
       window.localStorage.setItem('friday', JSON.stringify(fri1))
       window.location.assign('index.html')
     })
-    .catch(error => console.log('error', error))
+    .catch((error) => console.log('error', error))
 })
 
 // db.collection('timings').get().then((snapshot) => {
@@ -248,52 +368,54 @@ document.querySelector('.login3').addEventListener('click', (e) => {
         if (result !== undefined) {
           loader.className += ' hidden'
         }
-        result.Slots.forEach(element => {
-          if (filled.includes(element.Slot) === false) {
-            filled.push(element.Slot)
-            if (mon.includes(element.Slot)) {
-              if (mon11[element.Slot] !== undefined) {
-                mon1.push(element)
+        if (result.Slots.length !== 0) {
+          result.Slots.forEach((element) => {
+            if (filled.includes(element.Slot) === false) {
+              filled.push(element.Slot)
+              if (mon.includes(element.Slot)) {
+                if (mon11[element.Slot] !== undefined) {
+                  mon1.push(element)
+                }
+              }
+              if (tue.includes(element.Slot)) {
+                if (tue11[element.Slot] !== undefined) {
+                  tue1.push(element)
+                }
+              }
+              if (wed.includes(element.Slot)) {
+                if (wed11[element.Slot] !== undefined) {
+                  wed1.push(element)
+                }
+              }
+              if (thu.includes(element.Slot)) {
+                if (thu11[element.Slot] !== undefined) {
+                  thu1.push(element)
+                }
+              }
+              if (fri.includes(element.Slot)) {
+                if (fri11[element.Slot] !== undefined) {
+                  fri1.push(element)
+                }
               }
             }
-            if (tue.includes(element.Slot)) {
-              if (tue11[element.Slot] !== undefined) {
-                tue1.push(element)
-              }
-            }
-            if (wed.includes(element.Slot)) {
-              if (wed11[element.Slot] !== undefined) {
-                wed1.push(element)
-              }
-            }
-            if (thu.includes(element.Slot)) {
-              if (thu11[element.Slot] !== undefined) {
-                thu1.push(element)
-              }
-            }
-            if (fri.includes(element.Slot)) {
-              if (fri11[element.Slot] !== undefined) {
-                fri1.push(element)
-              }
-            }
-          }
-        })
-        console.log(mon1)
-        console.log(tue1)
-        console.log(wed1)
-        console.log(thu1)
-        console.log(fri1)
-        mon1.sort((a, b) => (mon11[a.Slot] > mon11[b.Slot]) ? 1 : -1)
-        tue1.sort((a, b) => (tue11[a.Slot] > tue11[b.Slot]) ? 1 : -1)
-        wed1.sort((a, b) => (wed11[a.Slot] > wed11[b.Slot]) ? 1 : -1)
-        thu1.sort((a, b) => (thu11[a.Slot] > thu11[b.Slot]) ? 1 : -1)
-        fri1.sort((a, b) => (fri11[a.Slot] > fri11[b.Slot]) ? 1 : -1)
-        window.localStorage.setItem('monday', JSON.stringify(mon1))
-        window.localStorage.setItem('tuesday', JSON.stringify(tue1))
-        window.localStorage.setItem('wednesday', JSON.stringify(wed1))
-        window.localStorage.setItem('thursday', JSON.stringify(thu1))
-        window.localStorage.setItem('friday', JSON.stringify(fri1))
-        window.location.assign('index.html')
+          })
+          console.log(mon1)
+          console.log(tue1)
+          console.log(wed1)
+          console.log(thu1)
+          console.log(fri1)
+          mon1.sort((a, b) => (mon11[a.Slot] > mon11[b.Slot] ? 1 : -1))
+          tue1.sort((a, b) => (tue11[a.Slot] > tue11[b.Slot] ? 1 : -1))
+          wed1.sort((a, b) => (wed11[a.Slot] > wed11[b.Slot] ? 1 : -1))
+          thu1.sort((a, b) => (thu11[a.Slot] > thu11[b.Slot] ? 1 : -1))
+          fri1.sort((a, b) => (fri11[a.Slot] > fri11[b.Slot] ? 1 : -1))
+          window.localStorage.setItem('monday', JSON.stringify(mon1))
+          window.localStorage.setItem('tuesday', JSON.stringify(tue1))
+          window.localStorage.setItem('wednesday', JSON.stringify(wed1))
+          window.localStorage.setItem('thursday', JSON.stringify(thu1))
+          window.localStorage.setItem('friday', JSON.stringify(fri1))
+          window.location.assign('index.html')
+        }
       })
       .catch((error) => console.log('error', error))
   }

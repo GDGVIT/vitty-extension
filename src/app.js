@@ -406,44 +406,48 @@ window.onload = function () {
         fetch('http://13.233.74.155/uploadtext/', requestOptions)
           .then((response) => response.json())
           .then((result) => {
-            monday[j] = result.Slots[0]
-            console.log(monday)
-            window.localStorage.setItem('monday', JSON.stringify(monday))
-            const stime = mon1[monday[j].Slot]
-            const time = new Date('April 1 2021 ' + mon1[monday[j].Slot] + ':00')
-            const addMinutes = function (dt, minutes) {
-              return new Date(dt.getTime() + minutes * 60000)
+            if (result.Slots.length !== 0) {
+              if (result.Slots[0].Slot in mon1) {
+                monday[j] = result.Slots[0]
+                console.log(monday)
+                window.localStorage.setItem('monday', JSON.stringify(monday))
+                const stime = mon1[monday[j].Slot]
+                const time = new Date(
+                  'April 1 2021 ' + mon1[monday[j].Slot] + ':00'
+                )
+                const addMinutes = function (dt, minutes) {
+                  return new Date(dt.getTime() + minutes * 60000)
+                }
+                let time1
+                if (monday[j].Course_type === 'Lab') {
+                  time1 = addMinutes(time, 90)
+                } else {
+                  time1 = addMinutes(time, 45)
+                }
+                const eth = time1.getHours()
+                const rep = time1.getMinutes().toString().length % 2
+                let etm = ''
+                if (rep === 1) {
+                  etm = '0' + time1.getMinutes().toString()
+                } else {
+                  etm = time1.getMinutes().toString()
+                }
+                const etime = eth.toString() + ':' + etm
+                const fintime = stime.toString() + ' - ' + etime
+                let course
+                if (courseName[monday[j].Course_Name] === undefined) {
+                  course = monday[j].Course_Name
+                } else {
+                  course = courseName[monday[j].Course_Name]
+                }
+                document.querySelectorAll('.name')[j].innerHTML = course
+                document.querySelectorAll('.time')[j].innerHTML = fintime
+                document.querySelectorAll('.detcont1')[j].innerHTML =
+                  result.Slots[0].Slot
+                document.querySelectorAll('.detcont2')[j].innerHTML =
+                  result.Slots[0].Venue
+              }
             }
-            let time1
-            if (monday[j].Course_type === 'Lab') {
-              time1 = addMinutes(time, 90)
-            } else {
-              time1 = addMinutes(time, 45)
-            }
-            const eth = time1.getHours()
-            const rep = time1.getMinutes().toString().length % 2
-            let etm = ''
-            if (rep === 1) {
-              etm = '0' + time1.getMinutes().toString()
-            } else {
-              etm = time1.getMinutes().toString()
-            }
-            const etime = eth.toString() + ':' + etm
-            const fintime = stime.toString() + ' - ' + etime
-            let course
-            if (courseName[monday[j].Course_Name] === undefined) {
-              course = monday[j].Course_Name
-            } else {
-              course = courseName[monday[j].Course_Name]
-            }
-            document.querySelectorAll('.name')[j].innerHTML =
-          course
-            document.querySelectorAll('.time')[j].innerHTML =
-          fintime
-            document.querySelectorAll('.detcont1')[j].innerHTML =
-            result.Slots[0].Slot
-            document.querySelectorAll('.detcont2')[j].innerHTML =
-            result.Slots[0].Venue
           })
           .catch((error) => console.log('error', error))
       }
@@ -464,7 +468,7 @@ window.onload = function () {
   }
 }
 
-function remove () {
+function remove() {
   mon.removeAttribute('id')
   tue.removeAttribute('id')
   wed.removeAttribute('id')
@@ -548,45 +552,49 @@ mon.addEventListener('click', function () {
         fetch('http://13.233.74.155/uploadtext/', requestOptions)
           .then((response) => response.json())
           .then((result) => {
-            console.log(result)
-            monday[j] = result.Slots[0]
-            console.log(monday)
-            window.localStorage.setItem('monday', JSON.stringify(monday))
-            const stime = mon1[monday[j].Slot]
-            const time = new Date('April 1 2021 ' + mon1[monday[j].Slot] + ':00')
-            const addMinutes = function (dt, minutes) {
-              return new Date(dt.getTime() + minutes * 60000)
+            if (result.Slots.length !== 0) {
+              if (result.Slots[0].Slot in mon1) {
+                console.log(result)
+                monday[j] = result.Slots[0]
+                console.log(monday)
+                window.localStorage.setItem('monday', JSON.stringify(monday))
+                const stime = mon1[monday[j].Slot]
+                const time = new Date(
+                  'April 1 2021 ' + mon1[monday[j].Slot] + ':00'
+                )
+                const addMinutes = function (dt, minutes) {
+                  return new Date(dt.getTime() + minutes * 60000)
+                }
+                let time1
+                if (monday[j].Course_type === 'Lab') {
+                  time1 = addMinutes(time, 90)
+                } else {
+                  time1 = addMinutes(time, 45)
+                }
+                const eth = time1.getHours()
+                const rep = time1.getMinutes().toString().length % 2
+                let etm = ''
+                if (rep === 1) {
+                  etm = '0' + time1.getMinutes().toString()
+                } else {
+                  etm = time1.getMinutes().toString()
+                }
+                const etime = eth.toString() + ':' + etm
+                const fintime = stime.toString() + ' - ' + etime
+                let course
+                if (courseName[monday[j].Course_Name] === undefined) {
+                  course = monday[j].Course_Name
+                } else {
+                  course = courseName[monday[j].Course_Name]
+                }
+                document.querySelectorAll('.name')[j].innerHTML = course
+                document.querySelectorAll('.time')[j].innerHTML = fintime
+                document.querySelectorAll('.detcont1')[j].innerHTML =
+                  result.Slots[0].Slot
+                document.querySelectorAll('.detcont2')[j].innerHTML =
+                  result.Slots[0].Venue
+              }
             }
-            let time1
-            if (monday[j].Course_type === 'Lab') {
-              time1 = addMinutes(time, 90)
-            } else {
-              time1 = addMinutes(time, 45)
-            }
-            const eth = time1.getHours()
-            const rep = time1.getMinutes().toString().length % 2
-            let etm = ''
-            if (rep === 1) {
-              etm = '0' + time1.getMinutes().toString()
-            } else {
-              etm = time1.getMinutes().toString()
-            }
-            const etime = eth.toString() + ':' + etm
-            const fintime = stime.toString() + ' - ' + etime
-            let course
-            if (courseName[monday[j].Course_Name] === undefined) {
-              course = monday[j].Course_Name
-            } else {
-              course = courseName[monday[j].Course_Name]
-            }
-            document.querySelectorAll('.name')[j].innerHTML =
-          course
-            document.querySelectorAll('.time')[j].innerHTML =
-          fintime
-            document.querySelectorAll('.detcont1')[j].innerHTML =
-            result.Slots[0].Slot
-            document.querySelectorAll('.detcont2')[j].innerHTML =
-            result.Slots[0].Venue
           })
           .catch((error) => console.log('error', error))
       }
@@ -679,44 +687,48 @@ tue.addEventListener('click', function () {
         fetch('http://13.233.74.155/uploadtext/', requestOptions)
           .then((response) => response.json())
           .then((result) => {
-            tuesday[j] = result.Slots[0]
-            console.log(tuesday)
-            window.localStorage.setItem('tuesday', JSON.stringify(tuesday))
-            const stime = tue1[tuesday[j].Slot]
-            const time = new Date('April 1 2021 ' + tue1[tuesday[j].Slot] + ':00')
-            const addMinutes = function (dt, minutes) {
-              return new Date(dt.getTime() + minutes * 60000)
+            if (result.Slots.length !== 0) {
+              if (result.Slots[0].Slot in tue1) {
+                tuesday[j] = result.Slots[0]
+                console.log(tuesday)
+                window.localStorage.setItem('tuesday', JSON.stringify(tuesday))
+                const stime = tue1[tuesday[j].Slot]
+                const time = new Date(
+                  'April 1 2021 ' + tue1[tuesday[j].Slot] + ':00'
+                )
+                const addMinutes = function (dt, minutes) {
+                  return new Date(dt.getTime() + minutes * 60000)
+                }
+                let time1
+                if (tuesday[j].Course_type === 'Lab') {
+                  time1 = addMinutes(time, 90)
+                } else {
+                  time1 = addMinutes(time, 45)
+                }
+                const eth = time1.getHours()
+                const rep = time1.getMinutes().toString().length % 2
+                let etm = ''
+                if (rep === 1) {
+                  etm = '0' + time1.getMinutes().toString()
+                } else {
+                  etm = time1.getMinutes().toString()
+                }
+                const etime = eth.toString() + ':' + etm
+                const fintime = stime.toString() + ' - ' + etime
+                let course
+                if (courseName[tuesday[j].Course_Name] === undefined) {
+                  course = tuesday[j].Course_Name
+                } else {
+                  course = courseName[tuesday[j].Course_Name]
+                }
+                document.querySelectorAll('.name')[j].innerHTML = course
+                document.querySelectorAll('.time')[j].innerHTML = fintime
+                document.querySelectorAll('.detcont1')[j].innerHTML =
+                  result.Slots[0].Slot
+                document.querySelectorAll('.detcont2')[j].innerHTML =
+                  result.Slots[0].Venue
+              }
             }
-            let time1
-            if (tuesday[j].Course_type === 'Lab') {
-              time1 = addMinutes(time, 90)
-            } else {
-              time1 = addMinutes(time, 45)
-            }
-            const eth = time1.getHours()
-            const rep = time1.getMinutes().toString().length % 2
-            let etm = ''
-            if (rep === 1) {
-              etm = '0' + time1.getMinutes().toString()
-            } else {
-              etm = time1.getMinutes().toString()
-            }
-            const etime = eth.toString() + ':' + etm
-            const fintime = stime.toString() + ' - ' + etime
-            let course
-            if (courseName[tuesday[j].Course_Name] === undefined) {
-              course = tuesday[j].Course_Name
-            } else {
-              course = courseName[tuesday[j].Course_Name]
-            }
-            document.querySelectorAll('.name')[j].innerHTML =
-          course
-            document.querySelectorAll('.time')[j].innerHTML =
-          fintime
-            document.querySelectorAll('.detcont1')[j].innerHTML =
-            result.Slots[0].Slot
-            document.querySelectorAll('.detcont2')[j].innerHTML =
-            result.Slots[0].Venue
           })
           .catch((error) => console.log('error', error))
       }
@@ -809,44 +821,51 @@ wed.addEventListener('click', function () {
         fetch('http://13.233.74.155/uploadtext/', requestOptions)
           .then((response) => response.json())
           .then((result) => {
-            wednesday[j] = result.Slots[0]
-            console.log(wednesday)
-            window.localStorage.setItem('wednesday', JSON.stringify(wednesday))
-            const stime = wed1[wednesday[j].Slot]
-            const time = new Date('April 1 2021 ' + wed1[wednesday[j].Slot] + ':00')
-            const addMinutes = function (dt, minutes) {
-              return new Date(dt.getTime() + minutes * 60000)
+            if (result.Slots.length !== 0) {
+              if (result.Slots[0].Slot in wed1) {
+                wednesday[j] = result.Slots[0]
+                console.log(wednesday)
+                window.localStorage.setItem(
+                  'wednesday',
+                  JSON.stringify(wednesday)
+                )
+                const stime = wed1[wednesday[j].Slot]
+                const time = new Date(
+                  'April 1 2021 ' + wed1[wednesday[j].Slot] + ':00'
+                )
+                const addMinutes = function (dt, minutes) {
+                  return new Date(dt.getTime() + minutes * 60000)
+                }
+                let time1
+                if (wednesday[j].Course_type === 'Lab') {
+                  time1 = addMinutes(time, 90)
+                } else {
+                  time1 = addMinutes(time, 45)
+                }
+                const eth = time1.getHours()
+                const rep = time1.getMinutes().toString().length % 2
+                let etm = ''
+                if (rep === 1) {
+                  etm = '0' + time1.getMinutes().toString()
+                } else {
+                  etm = time1.getMinutes().toString()
+                }
+                const etime = eth.toString() + ':' + etm
+                const fintime = stime.toString() + ' - ' + etime
+                let course
+                if (courseName[wednesday[j].Course_Name] === undefined) {
+                  course = wednesday[j].Course_Name
+                } else {
+                  course = courseName[wednesday[j].Course_Name]
+                }
+                document.querySelectorAll('.name')[j].innerHTML = course
+                document.querySelectorAll('.time')[j].innerHTML = fintime
+                document.querySelectorAll('.detcont1')[j].innerHTML =
+                  result.Slots[0].Slot
+                document.querySelectorAll('.detcont2')[j].innerHTML =
+                  result.Slots[0].Venue
+              }
             }
-            let time1
-            if (wednesday[j].Course_type === 'Lab') {
-              time1 = addMinutes(time, 90)
-            } else {
-              time1 = addMinutes(time, 45)
-            }
-            const eth = time1.getHours()
-            const rep = time1.getMinutes().toString().length % 2
-            let etm = ''
-            if (rep === 1) {
-              etm = '0' + time1.getMinutes().toString()
-            } else {
-              etm = time1.getMinutes().toString()
-            }
-            const etime = eth.toString() + ':' + etm
-            const fintime = stime.toString() + ' - ' + etime
-            let course
-            if (courseName[wednesday[j].Course_Name] === undefined) {
-              course = wednesday[j].Course_Name
-            } else {
-              course = courseName[wednesday[j].Course_Name]
-            }
-            document.querySelectorAll('.name')[j].innerHTML =
-          course
-            document.querySelectorAll('.time')[j].innerHTML =
-          fintime
-            document.querySelectorAll('.detcont1')[j].innerHTML =
-            result.Slots[0].Slot
-            document.querySelectorAll('.detcont2')[j].innerHTML =
-            result.Slots[0].Venue
           })
           .catch((error) => console.log('error', error))
       }
@@ -939,44 +958,51 @@ thu.addEventListener('click', function () {
         fetch('http://13.233.74.155/uploadtext/', requestOptions)
           .then((response) => response.json())
           .then((result) => {
-            thursday[j] = result.Slots[0]
-            console.log(thursday)
-            window.localStorage.setItem('thursday', JSON.stringify(thursday))
-            const stime = thu1[thursday[j].Slot]
-            const time = new Date('April 1 2021 ' + thu1[thursday[j].Slot] + ':00')
-            const addMinutes = function (dt, minutes) {
-              return new Date(dt.getTime() + minutes * 60000)
+            if (result.Slots.length !== 0) {
+              if (result.Slots[0].Slot in thu1) {
+                thursday[j] = result.Slots[0]
+                console.log(thursday)
+                window.localStorage.setItem(
+                  'thursday',
+                  JSON.stringify(thursday)
+                )
+                const stime = thu1[thursday[j].Slot]
+                const time = new Date(
+                  'April 1 2021 ' + thu1[thursday[j].Slot] + ':00'
+                )
+                const addMinutes = function (dt, minutes) {
+                  return new Date(dt.getTime() + minutes * 60000)
+                }
+                let time1
+                if (thursday[j].Course_type === 'Lab') {
+                  time1 = addMinutes(time, 90)
+                } else {
+                  time1 = addMinutes(time, 45)
+                }
+                const eth = time1.getHours()
+                const rep = time1.getMinutes().toString().length % 2
+                let etm = ''
+                if (rep === 1) {
+                  etm = '0' + time1.getMinutes().toString()
+                } else {
+                  etm = time1.getMinutes().toString()
+                }
+                const etime = eth.toString() + ':' + etm
+                const fintime = stime.toString() + ' - ' + etime
+                let course
+                if (courseName[thursday[j].Course_Name] === undefined) {
+                  course = thursday[j].Course_Name
+                } else {
+                  course = courseName[thursday[j].Course_Name]
+                }
+                document.querySelectorAll('.name')[j].innerHTML = course
+                document.querySelectorAll('.time')[j].innerHTML = fintime
+                document.querySelectorAll('.detcont1')[j].innerHTML =
+                  result.Slots[0].Slot
+                document.querySelectorAll('.detcont2')[j].innerHTML =
+                  result.Slots[0].Venue
+              }
             }
-            let time1
-            if (thursday[j].Course_type === 'Lab') {
-              time1 = addMinutes(time, 90)
-            } else {
-              time1 = addMinutes(time, 45)
-            }
-            const eth = time1.getHours()
-            const rep = time1.getMinutes().toString().length % 2
-            let etm = ''
-            if (rep === 1) {
-              etm = '0' + time1.getMinutes().toString()
-            } else {
-              etm = time1.getMinutes().toString()
-            }
-            const etime = eth.toString() + ':' + etm
-            const fintime = stime.toString() + ' - ' + etime
-            let course
-            if (courseName[thursday[j].Course_Name] === undefined) {
-              course = thursday[j].Course_Name
-            } else {
-              course = courseName[thursday[j].Course_Name]
-            }
-            document.querySelectorAll('.name')[j].innerHTML =
-          course
-            document.querySelectorAll('.time')[j].innerHTML =
-          fintime
-            document.querySelectorAll('.detcont1')[j].innerHTML =
-            result.Slots[0].Slot
-            document.querySelectorAll('.detcont2')[j].innerHTML =
-            result.Slots[0].Venue
           })
           .catch((error) => console.log('error', error))
       }
@@ -1069,44 +1095,48 @@ fri.addEventListener('click', function () {
         fetch('http://13.233.74.155/uploadtext/', requestOptions)
           .then((response) => response.json())
           .then((result) => {
-            friday[j] = result.Slots[0]
-            console.log(friday)
-            window.localStorage.setItem('friday', JSON.stringify(friday))
-            const stime = fri1[friday[j].Slot]
-            const time = new Date('April 1 2021 ' + fri1[friday[j].Slot] + ':00')
-            const addMinutes = function (dt, minutes) {
-              return new Date(dt.getTime() + minutes * 60000)
+            if (result.Slots.length !== 0) {
+              if (result.Slots[0].Slot in fri1) {
+                friday[j] = result.Slots[0]
+                console.log(friday)
+                window.localStorage.setItem('friday', JSON.stringify(friday))
+                const stime = fri1[friday[j].Slot]
+                const time = new Date(
+                  'April 1 2021 ' + fri1[friday[j].Slot] + ':00'
+                )
+                const addMinutes = function (dt, minutes) {
+                  return new Date(dt.getTime() + minutes * 60000)
+                }
+                let time1
+                if (friday[j].Course_type === 'Lab') {
+                  time1 = addMinutes(time, 90)
+                } else {
+                  time1 = addMinutes(time, 45)
+                }
+                const eth = time1.getHours()
+                const rep = time1.getMinutes().toString().length % 2
+                let etm = ''
+                if (rep === 1) {
+                  etm = '0' + time1.getMinutes().toString()
+                } else {
+                  etm = time1.getMinutes().toString()
+                }
+                const etime = eth.toString() + ':' + etm
+                const fintime = stime.toString() + ' - ' + etime
+                let course
+                if (courseName[friday[j].Course_Name] === undefined) {
+                  course = friday[j].Course_Name
+                } else {
+                  course = courseName[friday[j].Course_Name]
+                }
+                document.querySelectorAll('.name')[j].innerHTML = course
+                document.querySelectorAll('.time')[j].innerHTML = fintime
+                document.querySelectorAll('.detcont1')[j].innerHTML =
+                  result.Slots[0].Slot
+                document.querySelectorAll('.detcont2')[j].innerHTML =
+                  result.Slots[0].Venue
+              }
             }
-            let time1
-            if (friday[j].Course_type === 'Lab') {
-              time1 = addMinutes(time, 90)
-            } else {
-              time1 = addMinutes(time, 45)
-            }
-            const eth = time1.getHours()
-            const rep = time1.getMinutes().toString().length % 2
-            let etm = ''
-            if (rep === 1) {
-              etm = '0' + time1.getMinutes().toString()
-            } else {
-              etm = time1.getMinutes().toString()
-            }
-            const etime = eth.toString() + ':' + etm
-            const fintime = stime.toString() + ' - ' + etime
-            let course
-            if (courseName[friday[j].Course_Name] === undefined) {
-              course = friday[j].Course_Name
-            } else {
-              course = courseName[friday[j].Course_Name]
-            }
-            document.querySelectorAll('.name')[j].innerHTML =
-          course
-            document.querySelectorAll('.time')[j].innerHTML =
-          fintime
-            document.querySelectorAll('.detcont1')[j].innerHTML =
-            result.Slots[0].Slot
-            document.querySelectorAll('.detcont2')[j].innerHTML =
-            result.Slots[0].Venue
           })
           .catch((error) => console.log('error', error))
       }
@@ -1128,8 +1158,7 @@ fri.addEventListener('click', function () {
 sat.addEventListener('click', function () {
   remove()
   sat.id = 'special'
-  main.innerHTML =
-  `
+  main.innerHTML = `
   <div class="holiday">
   <div class="bold">
     No classes today!
@@ -1141,8 +1170,7 @@ sat.addEventListener('click', function () {
 sun.addEventListener('click', function () {
   remove()
   sun.id = 'special'
-  main.innerHTML =
-  `
+  main.innerHTML = `
   <div class="holiday">
   <div class="bold">
     No classes today!
