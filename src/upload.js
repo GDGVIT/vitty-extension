@@ -285,52 +285,54 @@ form.addEventListener('submit', (e) => {
       if (result !== undefined) {
         loader.className += ' hidden'
       }
-      result.Slots.forEach((element) => {
-        if (filled.includes(element.Slot) === false) {
-          filled.push(element.Slot)
-          if (mon.includes(element.Slot)) {
-            if (mon11[element.Slot] !== undefined) {
-              mon1.push(element)
+      if (result.Slots.length !== 0) {
+        result.Slots.forEach((element) => {
+          if (filled.includes(element.Slot) === false) {
+            filled.push(element.Slot)
+            if (mon.includes(element.Slot)) {
+              if (mon11[element.Slot] !== undefined) {
+                mon1.push(element)
+              }
+            }
+            if (tue.includes(element.Slot)) {
+              if (tue11[element.Slot] !== undefined) {
+                tue1.push(element)
+              }
+            }
+            if (wed.includes(element.Slot)) {
+              if (wed11[element.Slot] !== undefined) {
+                wed1.push(element)
+              }
+            }
+            if (thu.includes(element.Slot)) {
+              if (thu11[element.Slot] !== undefined) {
+                thu1.push(element)
+              }
+            }
+            if (fri.includes(element.Slot)) {
+              if (fri11[element.Slot] !== undefined) {
+                fri1.push(element)
+              }
             }
           }
-          if (tue.includes(element.Slot)) {
-            if (tue11[element.Slot] !== undefined) {
-              tue1.push(element)
-            }
-          }
-          if (wed.includes(element.Slot)) {
-            if (wed11[element.Slot] !== undefined) {
-              wed1.push(element)
-            }
-          }
-          if (thu.includes(element.Slot)) {
-            if (thu11[element.Slot] !== undefined) {
-              thu1.push(element)
-            }
-          }
-          if (fri.includes(element.Slot)) {
-            if (fri11[element.Slot] !== undefined) {
-              fri1.push(element)
-            }
-          }
-        }
-      })
-      console.log(mon1)
-      console.log(tue1)
-      console.log(wed1)
-      console.log(thu1)
-      console.log(fri1)
-      mon1.sort((a, b) => (mon11[a.Slot] > mon11[b.Slot] ? 1 : -1))
-      tue1.sort((a, b) => (tue11[a.Slot] > tue11[b.Slot] ? 1 : -1))
-      wed1.sort((a, b) => (wed11[a.Slot] > wed11[b.Slot] ? 1 : -1))
-      thu1.sort((a, b) => (thu11[a.Slot] > thu11[b.Slot] ? 1 : -1))
-      fri1.sort((a, b) => (fri11[a.Slot] > fri11[b.Slot] ? 1 : -1))
-      window.localStorage.setItem('monday', JSON.stringify(mon1))
-      window.localStorage.setItem('tuesday', JSON.stringify(tue1))
-      window.localStorage.setItem('wednesday', JSON.stringify(wed1))
-      window.localStorage.setItem('thursday', JSON.stringify(thu1))
-      window.localStorage.setItem('friday', JSON.stringify(fri1))
-      window.location.assign('index.html')
+        })
+        console.log(mon1)
+        console.log(tue1)
+        console.log(wed1)
+        console.log(thu1)
+        console.log(fri1)
+        mon1.sort((a, b) => (mon11[a.Slot] > mon11[b.Slot] ? 1 : -1))
+        tue1.sort((a, b) => (tue11[a.Slot] > tue11[b.Slot] ? 1 : -1))
+        wed1.sort((a, b) => (wed11[a.Slot] > wed11[b.Slot] ? 1 : -1))
+        thu1.sort((a, b) => (thu11[a.Slot] > thu11[b.Slot] ? 1 : -1))
+        fri1.sort((a, b) => (fri11[a.Slot] > fri11[b.Slot] ? 1 : -1))
+        window.localStorage.setItem('monday', JSON.stringify(mon1))
+        window.localStorage.setItem('tuesday', JSON.stringify(tue1))
+        window.localStorage.setItem('wednesday', JSON.stringify(wed1))
+        window.localStorage.setItem('thursday', JSON.stringify(thu1))
+        window.localStorage.setItem('friday', JSON.stringify(fri1))
+        window.location.assign('index.html')
+      }
     })
     .catch((error) => console.log('error', error))
 })
