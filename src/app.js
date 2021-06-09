@@ -337,138 +337,147 @@ window.onload = function () {
   window.console.log(wednesday)
   window.console.log(thursday)
   window.console.log(friday)
-  let text = ''
-  for (let i = 0; i < monday.length; i++) {
-    const stime = mon1[monday[i].Slot]
-    const time = new Date('April 1 2021 ' + mon1[monday[i].Slot] + ':00')
-    const addMinutes = function (dt, minutes) {
-      return new Date(dt.getTime() + minutes * 60000)
-    }
-    let time1
-    if (monday[i].Course_type === 'Lab') {
-      time1 = addMinutes(time, 90)
-    } else {
-      time1 = addMinutes(time, 45)
-    }
-    const eth = time1.getHours()
-    const rep = time1.getMinutes().toString().length % 2
-    let etm = ''
-    if (rep === 1) {
-      etm = '0' + time1.getMinutes().toString()
-    } else {
-      etm = time1.getMinutes().toString()
-    }
-    const etime = eth.toString() + ':' + etm
-    const fintime = stime.toString() + ' - ' + etime
-    let course
-    if (courseName[monday[i].Course_Name] === undefined) {
-      course = monday[i].Course_Name
-    } else {
-      course = courseName[monday[i].Course_Name]
-    }
-    text =
-      text +
-      `
-  <div class="main1">
-  <div class="details">
-      <div class="name">${course}</div>
-      <div class="time">${fintime}</div>
-      <div class="det">
-        <div class="detcont1">${monday[i].Slot}</div>
-        <div class="detcont2">${monday[i].Venue}</div>
-      </div>
-  </div>
-  <div class="edit">Edit</div>
-</div>
-  `
-  }
-  main.innerHTML = text
-
-  for (let j = 0; j < monday.length; j++) {
-    document.querySelectorAll('.edit')[j].addEventListener('click', () => {
-      const det = window.prompt(
-        'Enter details',
-        'Eg. A1-CSE2011-ETH-SJT405-UGF'
-      )
-      console.log(det)
-      if (det !== null) {
-        const myHeaders = new Headers()
-        myHeaders.append('Accept', 'application/json')
-        myHeaders.append('Content-Type', 'application/x-www-form-urlencoded')
-
-        const urlencoded = new URLSearchParams()
-        urlencoded.append('request', det)
-
-        const requestOptions = {
-          method: 'POST',
-          headers: myHeaders,
-          body: urlencoded,
-          redirect: 'follow'
-        }
-
-        fetch('http://13.233.74.155/uploadtext/', requestOptions)
-          .then((response) => response.json())
-          .then((result) => {
-            if (result.Slots.length !== 0) {
-              if (result.Slots[0].Slot in mon1) {
-                monday[j] = result.Slots[0]
-                console.log(monday)
-                window.localStorage.setItem('monday', JSON.stringify(monday))
-                const stime = mon1[monday[j].Slot]
-                const time = new Date(
-                  'April 1 2021 ' + mon1[monday[j].Slot] + ':00'
-                )
-                const addMinutes = function (dt, minutes) {
-                  return new Date(dt.getTime() + minutes * 60000)
-                }
-                let time1
-                if (monday[j].Course_type === 'Lab') {
-                  time1 = addMinutes(time, 90)
-                } else {
-                  time1 = addMinutes(time, 45)
-                }
-                const eth = time1.getHours()
-                const rep = time1.getMinutes().toString().length % 2
-                let etm = ''
-                if (rep === 1) {
-                  etm = '0' + time1.getMinutes().toString()
-                } else {
-                  etm = time1.getMinutes().toString()
-                }
-                const etime = eth.toString() + ':' + etm
-                const fintime = stime.toString() + ' - ' + etime
-                let course
-                if (courseName[monday[j].Course_Name] === undefined) {
-                  course = monday[j].Course_Name
-                } else {
-                  course = courseName[monday[j].Course_Name]
-                }
-                document.querySelectorAll('.name')[j].innerHTML = course
-                document.querySelectorAll('.time')[j].innerHTML = fintime
-                document.querySelectorAll('.detcont1')[j].innerHTML =
-                  result.Slots[0].Slot
-                document.querySelectorAll('.detcont2')[j].innerHTML =
-                  result.Slots[0].Venue
-              }
-            }
-          })
-          .catch((error) => console.log('error', error))
-      }
-    })
-  }
   if (window.localStorage.getItem('found') !== null) {
     if (window.localStorage.getItem('found') === 'true') {
-      console.log(document.querySelectorAll('.edit'))
-      document.querySelectorAll('.edit').forEach(function (a) {
-        a.remove()
-      })
-      document.querySelectorAll('.details').forEach(function (a) {
-        a.style.width = '100%'
-        a.style.marginRight = '20px'
-      })
       document.querySelector('.upload').remove()
     }
   }
+  const d = new Date()
+  const dayno = d.getDay()
+  if (dayno === 1) {
+    mondata()
+  }
+  if (dayno === 2) {
+    tuedata()
+  }
+  if (dayno === 3) {
+    weddata()
+  }
+  if (dayno === 4) {
+    thudata()
+  }
+  if (dayno === 5) {
+    fridata()
+  }
+  //   let text = ''
+  //   for (let i = 0; i < monday.length; i++) {
+  //     const stime = mon1[monday[i].Slot]
+  //     const time = new Date('April 1 2021 ' + mon1[monday[i].Slot] + ':00')
+  //     const addMinutes = function (dt, minutes) {
+  //       return new Date(dt.getTime() + minutes * 60000)
+  //     }
+  //     let time1
+  //     if (monday[i].Course_type === 'Lab') {
+  //       time1 = addMinutes(time, 90)
+  //     } else {
+  //       time1 = addMinutes(time, 45)
+  //     }
+  //     const eth = time1.getHours()
+  //     const rep = time1.getMinutes().toString().length % 2
+  //     let etm = ''
+  //     if (rep === 1) {
+  //       etm = '0' + time1.getMinutes().toString()
+  //     } else {
+  //       etm = time1.getMinutes().toString()
+  //     }
+  //     const etime = eth.toString() + ':' + etm
+  //     const fintime = stime.toString() + ' - ' + etime
+  //     let course
+  //     if (courseName[monday[i].Course_Name] === undefined) {
+  //       course = monday[i].Course_Name
+  //     } else {
+  //       course = courseName[monday[i].Course_Name]
+  //     }
+  //     text =
+  //       text +
+  //       `
+  //   <div class="main1">
+  //   <div class="details">
+  //       <div class="name">${course}</div>
+  //       <div class="time">${fintime}</div>
+  //       <div class="det">
+  //         <div class="detcont1">${monday[i].Slot}</div>
+  //         <div class="detcont2">${monday[i].Venue}</div>
+  //       </div>
+  //   </div>
+  //   <div class="edit">Edit</div>
+  // </div>
+  //   `
+  //   }
+  //   main.innerHTML = text
+
+  //   for (let j = 0; j < monday.length; j++) {
+  //     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
+  //       const det = window.prompt(
+  //         'Enter details',
+  //         'Eg. A1-CSE2011-ETH-SJT405-UGF'
+  //       )
+  //       console.log(det)
+  //       if (det !== null) {
+  //         const myHeaders = new Headers()
+  //         myHeaders.append('Accept', 'application/json')
+  //         myHeaders.append('Content-Type', 'application/x-www-form-urlencoded')
+
+  //         const urlencoded = new URLSearchParams()
+  //         urlencoded.append('request', det)
+
+  //         const requestOptions = {
+  //           method: 'POST',
+  //           headers: myHeaders,
+  //           body: urlencoded,
+  //           redirect: 'follow'
+  //         }
+
+  //         fetch('http://13.233.74.155/uploadtext/', requestOptions)
+  //           .then((response) => response.json())
+  //           .then((result) => {
+  //             if (result.Slots.length !== 0) {
+  //               if (result.Slots[0].Slot in mon1) {
+  //                 monday[j] = result.Slots[0]
+  //                 console.log(monday)
+  //                 window.localStorage.setItem('monday', JSON.stringify(monday))
+  //                 const stime = mon1[monday[j].Slot]
+  //                 const time = new Date(
+  //                   'April 1 2021 ' + mon1[monday[j].Slot] + ':00'
+  //                 )
+  //                 const addMinutes = function (dt, minutes) {
+  //                   return new Date(dt.getTime() + minutes * 60000)
+  //                 }
+  //                 let time1
+  //                 if (monday[j].Course_type === 'Lab') {
+  //                   time1 = addMinutes(time, 90)
+  //                 } else {
+  //                   time1 = addMinutes(time, 45)
+  //                 }
+  //                 const eth = time1.getHours()
+  //                 const rep = time1.getMinutes().toString().length % 2
+  //                 let etm = ''
+  //                 if (rep === 1) {
+  //                   etm = '0' + time1.getMinutes().toString()
+  //                 } else {
+  //                   etm = time1.getMinutes().toString()
+  //                 }
+  //                 const etime = eth.toString() + ':' + etm
+  //                 const fintime = stime.toString() + ' - ' + etime
+  //                 let course
+  //                 if (courseName[monday[j].Course_Name] === undefined) {
+  //                   course = monday[j].Course_Name
+  //                 } else {
+  //                   course = courseName[monday[j].Course_Name]
+  //                 }
+  //                 document.querySelectorAll('.name')[j].innerHTML = course
+  //                 document.querySelectorAll('.time')[j].innerHTML = fintime
+  //                 document.querySelectorAll('.detcont1')[j].innerHTML =
+  //                   result.Slots[0].Slot
+  //                 document.querySelectorAll('.detcont2')[j].innerHTML =
+  //                   result.Slots[0].Venue
+  //               }
+  //             }
+  //           })
+  //           .catch((error) => console.log('error', error))
+  //       }
+  //     })
+  //   }
 }
 
 function remove() {
@@ -481,7 +490,13 @@ function remove() {
   sun.removeAttribute('id')
 }
 
-mon.addEventListener('click', function () {
+mon.addEventListener('click', mondata)
+tue.addEventListener('click', tuedata)
+wed.addEventListener('click', weddata)
+thu.addEventListener('click', thudata)
+fri.addEventListener('click', fridata)
+
+function mondata() {
   remove()
   mon.id = 'special'
   const monday = JSON.parse(window.localStorage.getItem('monday'))
@@ -618,8 +633,8 @@ mon.addEventListener('click', function () {
       })
     }
   }
-})
-tue.addEventListener('click', function () {
+}
+function tuedata() {
   remove()
   tue.id = 'special'
   const tuesday = JSON.parse(window.localStorage.getItem('tuesday'))
@@ -755,8 +770,8 @@ tue.addEventListener('click', function () {
       })
     }
   }
-})
-wed.addEventListener('click', function () {
+}
+function weddata() {
   remove()
   wed.id = 'special'
   const wednesday = JSON.parse(window.localStorage.getItem('wednesday'))
@@ -895,8 +910,8 @@ wed.addEventListener('click', function () {
       })
     }
   }
-})
-thu.addEventListener('click', function () {
+}
+function thudata() {
   remove()
   thu.id = 'special'
   const thursday = JSON.parse(window.localStorage.getItem('thursday'))
@@ -1035,8 +1050,8 @@ thu.addEventListener('click', function () {
       })
     }
   }
-})
-fri.addEventListener('click', function () {
+}
+function fridata() {
   remove()
   fri.id = 'special'
   const friday = JSON.parse(window.localStorage.getItem('friday'))
@@ -1172,7 +1187,7 @@ fri.addEventListener('click', function () {
       })
     }
   }
-})
+}
 sat.addEventListener('click', function () {
   remove()
   sat.id = 'special'
