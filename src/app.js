@@ -386,7 +386,10 @@ window.onload = function () {
 
   for (let j = 0; j < monday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
-      const det = window.prompt('Enter details')
+      const det = window.prompt(
+        'Enter details',
+        'Eg. A1-CSE2011-ETH-SJT405-UGF'
+      )
       console.log(det)
       if (det !== null) {
         const myHeaders = new Headers()
@@ -532,7 +535,10 @@ mon.addEventListener('click', function () {
 
   for (let j = 0; j < monday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
-      const det = window.prompt('Enter details')
+      const det = window.prompt(
+        'Enter details',
+        'Eg. A1-CSE2011-ETH-SJT405-UGF'
+      )
       console.log(det)
       if (det !== null) {
         const myHeaders = new Headers()
@@ -667,7 +673,10 @@ tue.addEventListener('click', function () {
 
   for (let j = 0; j < tuesday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
-      const det = window.prompt('Enter details')
+      const det = window.prompt(
+        'Enter details',
+        'Eg. A1-CSE2011-ETH-SJT405-UGF'
+      )
       console.log(det)
       if (det !== null) {
         const myHeaders = new Headers()
@@ -801,7 +810,10 @@ wed.addEventListener('click', function () {
 
   for (let j = 0; j < wednesday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
-      const det = window.prompt('Enter details')
+      const det = window.prompt(
+        'Enter details',
+        'Eg. A1-CSE2011-ETH-SJT405-UGF'
+      )
       console.log(det)
       if (det !== null) {
         const myHeaders = new Headers()
@@ -938,7 +950,10 @@ thu.addEventListener('click', function () {
 
   for (let j = 0; j < thursday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
-      const det = window.prompt('Enter details')
+      const det = window.prompt(
+        'Enter details',
+        'Eg. A1-CSE2011-ETH-SJT405-UGF'
+      )
       console.log(det)
       if (det !== null) {
         const myHeaders = new Headers()
@@ -1075,7 +1090,10 @@ fri.addEventListener('click', function () {
 
   for (let j = 0; j < friday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
-      const det = window.prompt('Enter details')
+      const det = window.prompt(
+        'Enter details',
+        'Eg. A1-CSE2011-ETH-SJT405-UGF'
+      )
       console.log(det)
       if (det !== null) {
         const myHeaders = new Headers()
