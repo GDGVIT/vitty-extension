@@ -359,6 +359,12 @@ window.onload = function () {
   if (dayno === 5) {
     fridata()
   }
+  if (dayno === 0) {
+    sundata()
+  }
+  if (dayno === 6) {
+    satdata()
+  }
   //   let text = ''
   //   for (let i = 0; i < monday.length; i++) {
   //     const stime = mon1[monday[i].Slot]
@@ -495,6 +501,8 @@ tue.addEventListener('click', tuedata)
 wed.addEventListener('click', weddata)
 thu.addEventListener('click', thudata)
 fri.addEventListener('click', fridata)
+sat.addEventListener('click', satdata)
+sun.addEventListener('click', sundata)
 
 function mondata() {
   remove()
@@ -1188,7 +1196,7 @@ function fridata() {
     }
   }
 }
-sat.addEventListener('click', function () {
+function satdata() {
   remove()
   sat.id = 'special'
   main.innerHTML = `
@@ -1199,8 +1207,8 @@ sat.addEventListener('click', function () {
   Up for some Valorant grind?
   </div>
   `
-})
-sun.addEventListener('click', function () {
+}
+function sundata() {
   remove()
   sun.id = 'special'
   main.innerHTML = `
@@ -1211,7 +1219,7 @@ sun.addEventListener('click', function () {
   Up for some Valorant grind?
   </div>
   `
-})
+}
 
 upload.addEventListener('click', function () {
   window.chrome.runtime.sendMessage('upload-data', (response) => {
