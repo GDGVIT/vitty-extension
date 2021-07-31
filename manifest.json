@@ -1,24 +1,52 @@
-{  
-    "name": "VITTY",
-    "version": "1.0",  
-    "description": "Upload your VIT timetable and view it whenever required and receive notifications",  
-    "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com https://apis.google.com https://www.googleapis.com https://securetoken.googleapis.com; object-src 'self'",
-    "permissions": ["activeTab", "declarativeContent", "storage","contextMenus", "<all_urls>", "tabs", "alarms", "notifications"],
-    "browser_action": {  
-        "default_popup": "dist/popup.html"  
-    },
-    "background":{
-        "page": "dist/bg.html",
-        "persistent": false
-    },
-    "web_accessible_resources": ["images/Vector.svg","images/Vector 1.svg","images/Illustration.svg","images/Mask Group.svg","images/google.svg","images/giphy.gif","images/logo.png","images/menu.png","images/logo.svg"],
-    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoiS5VhgCUY8S4WGnDamXCDKy/9C9Ix2d0FkwTk6jmucOhdv9jDdH9SwkcGCyZsGyTv3uRh+Sp7xXNqilPss1wIS/Ht1hXB4Wob6v4vWxwr+hd30MR8FOFeb8SUdmAjzGpCgjYquTE17R4xURyu67boUU5LaVAysxNvlA7IcaVexLi0VCsOXmCnRVCT4tOkpUPmXcIDXevUTvsLqtVZxxPaZooWVKRILbxvvm9jereS5M9caSLCM5x34yRxGHMorUyYwWUaJhbzheWFYaAYFsulYEz76gvxoFlk3+t6XiIOQjIUe4M9O/0pAEBETBBlf/yIpIPju5MNaQHepHhd41OwIDAQAB",
-    "oauth2": {
-        "client_id": "272763363329-otncr2l9anvue11ps66r8f6uvdr7cr4j.apps.googleusercontent.com",
-        "scopes": ["https://www.googleapis.com/auth/userinfo.email"]
-      },
-    "icons": { "16": "images/logo.png",
-        "48": "images/logo.png",
-       "128": "images/logo.png" },
-    "manifest_version": 2
-  }
+{
+  "name": "VITTY",
+  "version": "1.0.1",
+  "description": "Upload your VIT timetable and view it whenever required and receive notifications",
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com https://apis.google.com https://www.googleapis.com https://securetoken.googleapis.com; object-src 'self'",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "contextMenus",
+    "<all_urls>",
+    "tabs",
+    "alarms",
+    "notifications"
+  ],
+  "browser_action": {
+    "default_popup": "dist/popup.html"
+  },
+  "background": {
+    "page": "dist/bg.html",
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "images/Vector.svg",
+    "images/Vector 1.svg",
+    "images/Illustration.svg",
+    "images/Mask Group.svg",
+    "images/google.svg",
+    "images/giphy.gif",
+    "images/logo.png",
+    "images/menu.png",
+    "images/logo.svg"
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoiS5VhgCUY8S4WGnDamXCDKy/9C9Ix2d0FkwTk6jmucOhdv9jDdH9SwkcGCyZsGyTv3uRh+Sp7xXNqilPss1wIS/Ht1hXB4Wob6v4vWxwr+hd30MR8FOFeb8SUdmAjzGpCgjYquTE17R4xURyu67boUU5LaVAysxNvlA7IcaVexLi0VCsOXmCnRVCT4tOkpUPmXcIDXevUTvsLqtVZxxPaZooWVKRILbxvvm9jereS5M9caSLCM5x34yRxGHMorUyYwWUaJhbzheWFYaAYFsulYEz76gvxoFlk3+t6XiIOQjIUe4M9O/0pAEBETBBlf/yIpIPju5MNaQHepHhd41OwIDAQAB",
+  "oauth2": {
+    "client_id": "272763363329-otncr2l9anvue11ps66r8f6uvdr7cr4j.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/userinfo.email"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://vtop.vit.ac.in/*"],
+      "js": ["src/content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "images/logo.png",
+    "48": "images/logo.png",
+    "128": "images/logo.png"
+  },
+  "manifest_version": 2
+}
