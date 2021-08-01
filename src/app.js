@@ -1990,7 +1990,7 @@ const courseName = {
   MOC2053: 'Plastic Waste Management',
   MOC2054: 'Advanced Topics in the Science and Technology of Concrete',
   MOC2055: 'Applied Environmental Microbiology',
-  MOC2056: 'Digital Land Surveying And Mapping (DLS&amp;M)',
+  MOC2056: 'Digital Land Surveying And Mapping (DLS&M)',
   MOC2057: 'Earthquake Geology: A tool for Seismic Hazard Assessment',
   MOC2058: 'Introduction to Geographic Information Systems',
   MOC2059: 'Structural Dynamics',
@@ -2375,7 +2375,7 @@ const courseName = {
   EXC1134: 'Child Care and Education',
   EXC1135: 'Kannada Arts and Literature',
   EXC1157: 'Trekking Club',
-  EXC4097: 'Co/Extra Curricular',
+  EXC4097: 'Co/Extra Curricular'
 }
 
 const mon1 = {

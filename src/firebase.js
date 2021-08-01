@@ -2375,7 +2375,7 @@ const courseName = {
   EXC1134: 'Child Care and Education',
   EXC1135: 'Kannada Arts and Literature',
   EXC1157: 'Trekking Club',
-  EXC4097: 'Co/Extra Curricular',
+  EXC4097: 'Co/Extra Curricular'
 }
 
 const mon1 = {
