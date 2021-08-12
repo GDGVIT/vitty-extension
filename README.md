@@ -28,7 +28,7 @@
 	
 - Clone the repository on your local system
 ```bash
-git clone https://github.com/GDGVIT/vitty-frontend.git
+git clone https://github.com/GDGVIT/vitty-extension.git
 ```
 
 ### Directions to execute
