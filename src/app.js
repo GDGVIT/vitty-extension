@@ -2582,8 +2582,8 @@ const courseName = {
   BMAT101P: 'Calculus Lab',
   BPHY101L: 'Engineering Physics',
   BPHY101P: 'Engineering Physics Lab',
-  BSTS101P: 'Quantitative Skills Practice I',
   BECE101N: 'Introduction to Engineering',
+  BITE101N: 'Introduction to Engineering',
   BMAT100L: 'Mathematics'
 }
 
