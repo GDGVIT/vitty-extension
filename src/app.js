@@ -2567,14 +2567,24 @@ const courseName = {
   URE003: 'Undergraduate Research Experience',
   BCHY101L: 'Engineering Chemistry',
   BCHY101P: 'Engineering Chemistry Lab',
-  BCSE101E: 'Computer Programming: Python Embedded',
+  BCSE101E: 'Computer Programming: Python',
   BEEE101L: 'Basic Electrical Engineering',
   BEEE101P: 'Basic Electrical Engineering Lab',
   BENG101N: 'Effective English Communication',
   BMAT101L: 'Calculus',
   BMAT101P: 'Calculus Lab',
   BSTS101P: 'Quantitative Skills Practice I',
-  BCSE101N: 'Introduction to Engineering'
+  BCSE101N: 'Introduction to Engineering',
+  BECE101L: 'Basic Electronics',
+  BECE101P: 'Basic Electronics Lab',
+  BENG101N: 'Effective English Communication',
+  BMAT101L: 'Calculus',
+  BMAT101P: 'Calculus Lab',
+  BPHY101L: 'Engineering Physics',
+  BPHY101P: 'Engineering Physics Lab',
+  BSTS101P: 'Quantitative Skills Practice I',
+  BECE101N: 'Introduction to Engineering',
+  BMAT100L: 'Mathematics'
 }
 
 const mon1 = {
@@ -2867,7 +2877,7 @@ window.onload = function () {
   //   }
 }
 
-function remove () {
+function remove() {
   mon.removeAttribute('id')
   tue.removeAttribute('id')
   wed.removeAttribute('id')
@@ -2885,7 +2895,7 @@ fri.addEventListener('click', fridata)
 sat.addEventListener('click', satdata)
 sun.addEventListener('click', sundata)
 
-function mondata () {
+function mondata() {
   remove()
   mon.id = 'special'
   const monday = JSON.parse(window.localStorage.getItem('monday'))
@@ -3024,7 +3034,7 @@ function mondata () {
   }
 }
 
-function tuedata () {
+function tuedata() {
   remove()
   tue.id = 'special'
   const tuesday = JSON.parse(window.localStorage.getItem('tuesday'))
@@ -3162,7 +3172,7 @@ function tuedata () {
   }
 }
 
-function weddata () {
+function weddata() {
   remove()
   wed.id = 'special'
   const wednesday = JSON.parse(window.localStorage.getItem('wednesday'))
@@ -3303,7 +3313,7 @@ function weddata () {
   }
 }
 
-function thudata () {
+function thudata() {
   remove()
   thu.id = 'special'
   const thursday = JSON.parse(window.localStorage.getItem('thursday'))
@@ -3444,7 +3454,7 @@ function thudata () {
   }
 }
 
-function fridata () {
+function fridata() {
   remove()
   fri.id = 'special'
   const friday = JSON.parse(window.localStorage.getItem('friday'))
@@ -3582,7 +3592,7 @@ function fridata () {
   }
 }
 
-function satdata () {
+function satdata() {
   remove()
   sat.id = 'special'
   main.innerHTML = `
@@ -3595,7 +3605,7 @@ function satdata () {
   `
 }
 
-function sundata () {
+function sundata() {
   remove()
   sun.id = 'special'
   main.innerHTML = `
