@@ -2577,7 +2577,6 @@ const courseName = {
   BCSE101N: 'Introduction to Engineering',
   BECE101L: 'Basic Electronics',
   BECE101P: 'Basic Electronics Lab',
-  BENG101N: 'Effective English Communication',
   BPHY101L: 'Engineering Physics',
   BPHY101P: 'Engineering Physics Lab',
   BECE101N: 'Introduction to Engineering',
@@ -2752,7 +2751,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       //   when: time2.getTime(),
       //   periodInMinutes: 10080
       // })
-      function nullcheck(a) {
+      function nullcheck (a) {
         if (a == null) {
           return ''
         } else {
@@ -2797,7 +2796,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       //   when: time2.getTime(),
       //   periodInMinutes: 10080
       // })
-      function nullcheck(a) {
+      function nullcheck (a) {
         if (a == null) {
           return ''
         } else {
@@ -2842,7 +2841,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       //   when: time2.getTime(),
       //   periodInMinutes: 10080
       // })
-      function nullcheck(a) {
+      function nullcheck (a) {
         if (a == null) {
           return ''
         } else {
@@ -2887,7 +2886,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       //   when: time2.getTime(),
       //   periodInMinutes: 10080
       // })
-      function nullcheck(a) {
+      function nullcheck (a) {
         if (a == null) {
           return ''
         } else {
@@ -2932,7 +2931,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       //   when: time2.getTime(),
       //   periodInMinutes: 10080
       // })
-      function nullcheck(a) {
+      function nullcheck (a) {
         if (a == null) {
           return ''
         } else {
@@ -3159,7 +3158,7 @@ window.chrome.alarms.onAlarm.addListener((alarm) => {
 //   periodInMinutes: 1
 // })
 
-function alarms1() {
+function alarms1 () {
   window.chrome.alarms.clearAll()
   let count = 10
   if (window.localStorage.getItem('found') !== null) {
@@ -3294,7 +3293,7 @@ function alarms1() {
         })
         count = count + 1
       }
-      function gotAll(alarms) {
+      function gotAll (alarms) {
         console.log(alarms)
       }
       window.chrome.alarms.getAll(gotAll)
