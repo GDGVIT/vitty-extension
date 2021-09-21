@@ -2567,14 +2567,22 @@ const courseName = {
   URE003: 'Undergraduate Research Experience',
   BCHY101L: 'Engineering Chemistry',
   BCHY101P: 'Engineering Chemistry Lab',
-  BCSE101E: 'Computer Programming: Python Embedded',
+  BCSE101E: 'Computer Programming: Python',
   BEEE101L: 'Basic Electrical Engineering',
   BEEE101P: 'Basic Electrical Engineering Lab',
   BENG101N: 'Effective English Communication',
   BMAT101L: 'Calculus',
   BMAT101P: 'Calculus Lab',
   BSTS101P: 'Quantitative Skills Practice I',
-  BCSE101N: 'Introduction to Engineering'
+  BCSE101N: 'Introduction to Engineering',
+  BECE101L: 'Basic Electronics',
+  BECE101P: 'Basic Electronics Lab',
+  BENG101N: 'Effective English Communication',
+  BPHY101L: 'Engineering Physics',
+  BPHY101P: 'Engineering Physics Lab',
+  BECE101N: 'Introduction to Engineering',
+  BITE101N: 'Introduction to Engineering',
+  BMAT100L: 'Mathematics'
 }
 
 const mon1 = {
@@ -2744,7 +2752,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       //   when: time2.getTime(),
       //   periodInMinutes: 10080
       // })
-      function nullcheck (a) {
+      function nullcheck(a) {
         if (a == null) {
           return ''
         } else {
@@ -2789,7 +2797,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       //   when: time2.getTime(),
       //   periodInMinutes: 10080
       // })
-      function nullcheck (a) {
+      function nullcheck(a) {
         if (a == null) {
           return ''
         } else {
@@ -2834,7 +2842,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       //   when: time2.getTime(),
       //   periodInMinutes: 10080
       // })
-      function nullcheck (a) {
+      function nullcheck(a) {
         if (a == null) {
           return ''
         } else {
@@ -2879,7 +2887,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       //   when: time2.getTime(),
       //   periodInMinutes: 10080
       // })
-      function nullcheck (a) {
+      function nullcheck(a) {
         if (a == null) {
           return ''
         } else {
@@ -2924,7 +2932,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       //   when: time2.getTime(),
       //   periodInMinutes: 10080
       // })
-      function nullcheck (a) {
+      function nullcheck(a) {
         if (a == null) {
           return ''
         } else {
@@ -3151,7 +3159,7 @@ window.chrome.alarms.onAlarm.addListener((alarm) => {
 //   periodInMinutes: 1
 // })
 
-function alarms1 () {
+function alarms1() {
   window.chrome.alarms.clearAll()
   let count = 10
   if (window.localStorage.getItem('found') !== null) {
@@ -3286,7 +3294,7 @@ function alarms1 () {
         })
         count = count + 1
       }
-      function gotAll (alarms) {
+      function gotAll(alarms) {
         console.log(alarms)
       }
       window.chrome.alarms.getAll(gotAll)

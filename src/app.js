@@ -2578,8 +2578,6 @@ const courseName = {
   BECE101L: 'Basic Electronics',
   BECE101P: 'Basic Electronics Lab',
   BENG101N: 'Effective English Communication',
-  BMAT101L: 'Calculus',
-  BMAT101P: 'Calculus Lab',
   BPHY101L: 'Engineering Physics',
   BPHY101P: 'Engineering Physics Lab',
   BECE101N: 'Introduction to Engineering',
