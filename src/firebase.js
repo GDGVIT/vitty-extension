@@ -2564,7 +2564,24 @@ const courseName = {
   SWE4010: 'Artificial Intelligence',
   SWE4098: 'Comprehensive Examination',
   SWE4099: 'Co-op/Capstone Project',
-  URE003: 'Undergraduate Research Experience'
+  URE003: 'Undergraduate Research Experience',
+  BCHY101L: 'Engineering Chemistry',
+  BCHY101P: 'Engineering Chemistry Lab',
+  BCSE101E: 'Computer Programming: Python',
+  BEEE101L: 'Basic Electrical Engineering',
+  BEEE101P: 'Basic Electrical Engineering Lab',
+  BENG101N: 'Effective English Communication',
+  BMAT101L: 'Calculus',
+  BMAT101P: 'Calculus Lab',
+  BSTS101P: 'Quantitative Skills Practice I',
+  BCSE101N: 'Introduction to Engineering',
+  BECE101L: 'Basic Electronics',
+  BECE101P: 'Basic Electronics Lab',
+  BPHY101L: 'Engineering Physics',
+  BPHY101P: 'Engineering Physics Lab',
+  BECE101N: 'Introduction to Engineering',
+  BITE101N: 'Introduction to Engineering',
+  BMAT100L: 'Mathematics'
 }
 
 const mon1 = {
