@@ -136,7 +136,8 @@ const courseName = {
   BIT6001: 'Industrial Biotechnology',
   BIT6002: 'Nanobiotechnology',
   BIT6003: 'Protein Engineering and Technology',
-  BIT6004: 'Equipment Design, Optimization of Techniques and Bioprocess Economics',
+  BIT6004:
+    'Equipment Design, Optimization of Techniques and Bioprocess Economics',
   BIT6005: 'Programming for Biologists',
   BIT6006: 'Biomolecular Interactions and Informatics',
   BIT6007: 'Food Process Technology',
@@ -807,7 +808,8 @@ const courseName = {
   ECE2009: 'Fiber Optic Sensors and Applications',
   ECE2010: 'Control Systems',
   ECE2012: 'Control Systems Engineering',
-  ECE2013: 'Electromagnetic Interference and Compatibility in Electronic System Design',
+  ECE2013:
+    'Electromagnetic Interference and Compatibility in Electronic System Design',
   ECE2014: 'Basic Medical Instrumentation',
   ECE2015: 'Integrated Circuits',
   ECE2016: 'Control Systems in Medicine',
@@ -1072,7 +1074,8 @@ const courseName = {
   ECE6075: 'Soft Computing Techniques for Automotive Applications',
   ECE6076: 'Automotive EMI and EMC Standards',
   ECE6077: 'Vehicular Information and Communication Systems',
-  ECE6078: 'Parallel Programming using Multicores and Graphical Programming Units',
+  ECE6078:
+    'Parallel Programming using Multicores and Graphical Programming Units',
   ECE6079: 'Open Source Hardware and Software System Design',
   ECE6080: 'Machine Vision System for Automotive',
   ECE6081: 'Automotive Fault Diagnostics',
@@ -2027,13 +2030,15 @@ const courseName = {
   MOC1910: 'MCDM Techniques Using R and MARLAB',
   MOC1911: 'Perspectives on Neurolinguistic',
   MOC1912: 'Sociology of Science',
-  MOC1913: 'Contemporary Themes in India’s Economic Development and Economic Survey',
+  MOC1913:
+    'Contemporary Themes in India’s Economic Development and Economic Survey',
   MOC1919: 'Training of Trainers',
   MOC1920: 'Knowledge Management',
   MOC1921: 'Leadership',
   MOC1922: 'Educational Leadership',
   MOC1923: 'Cost Accounting',
-  MOC1924: 'Practitioners Course in Descriptive, Predictive and Prescriptive Analytics',
+  MOC1924:
+    'Practitioners Course in Descriptive, Predictive and Prescriptive Analytics',
   MOC1925: 'Decision-Making Under Uncertainty',
   MOC1926: 'Data Analysis and Decision Making - III',
   MOC1927: 'Business Analytics and Data Mining Modeling Using R Part II',
@@ -2050,10 +2055,13 @@ const courseName = {
   MOC1938: 'Patent Search for Engineers and Lawyers',
   MOC1942: 'Mapping Signal Processing Algorithms to Architectures',
   MOC1943: 'Introduction to Computer Vision',
-  MOC1944: 'Op-Amp Practical Applications: Design, Simulation and Implementation',
-  MOC1945: 'Fabrication Techniques for MEMs - based sensors: clinical Perspective',
+  MOC1944:
+    'Op-Amp Practical Applications: Design, Simulation and Implementation',
+  MOC1945:
+    'Fabrication Techniques for MEMs - based sensors: clinical Perspective',
   MOC1946: 'Linear System Theory',
-  MOC1947: 'Advanced Linear Continuous Control Systems: Applications with MATLAB Programming and Simulink',
+  MOC1947:
+    'Advanced Linear Continuous Control Systems: Applications with MATLAB Programming and Simulink',
   MOC1948: 'Introduction to Wireless and Cellular Communications',
   MOC1949: 'Digital Switching - I',
   MOC1950: 'Microelectronics: Devices To Circuits',
@@ -2090,7 +2098,8 @@ const courseName = {
   MOC1981: 'WildLife Conservation',
   MOC1982: 'Organic Chemistry in Biology and Drug Development',
   MOC1983: 'Bioinorganic Chemistry',
-  MOC1984: 'Spectroscopic Techniques for Pharmaceutical and Biopharmaceutical Industries',
+  MOC1984:
+    'Spectroscopic Techniques for Pharmaceutical and Biopharmaceutical Industries',
   MOC1985: 'Biophysical chemistry',
   MOC1986: 'Deep Learning',
   MOC1987: 'Blockchain Architecture Design and use Cases',
@@ -2121,7 +2130,8 @@ const courseName = {
   MOC2013: 'GPS Surveying',
   MOC2014: 'Sustainable Materials and Green Buildings',
   MOC2015: 'Geomorphic Processes: Landforms and Landscapes',
-  MOC2016: 'Introduction To Process Modeling in the Membrane Separation Process',
+  MOC2016:
+    'Introduction To Process Modeling in the Membrane Separation Process',
   MOC2017: 'Computational Geometry',
   MOC2018: 'Compiler Design',
   MOC2019: 'Embedded System Design with ARM',
@@ -2148,8 +2158,10 @@ const courseName = {
   MOC2040: 'Interactomics : Basics and Applications',
   MOC2041: 'Introduction to Professional Scientific Communication',
   MOC2042: 'Material and Energy Balances',
-  MOC2043: 'Thermodynamics for Biological Systems: Classical and Statistical Aspect',
-  MOC2044: 'Optical Spectroscopy and Microscopy : Fundamentals of Optical Measurements and Instrumentation',
+  MOC2043:
+    'Thermodynamics for Biological Systems: Classical and Statistical Aspect',
+  MOC2044:
+    'Optical Spectroscopy and Microscopy : Fundamentals of Optical Measurements and Instrumentation',
   MOC2045: 'Fundamentals of Semiconductor Devices',
   MOC2046: 'Characterization of Construction Materials',
   MOC2047: 'Introduction to Civil Engineering Profession',
@@ -2239,7 +2251,8 @@ const courseName = {
   MOC2131: 'Product Design and Innovation',
   MOC2132: 'Fundamentals of Automotive Systems',
   MOC2133: 'Electronics Equipment Integration and Prototype Building',
-  MOC2134: 'High Power Multilevel Converters-Analysis, Design and Operational Issues',
+  MOC2134:
+    'High Power Multilevel Converters-Analysis, Design and Operational Issues',
   MOC2135: 'Fuzzy Sets, Logic and Systems and Applications',
   MOC2136: 'Transmission Lines and Electromagnetic Waves',
   MOC2137: 'Digital IC Design',
@@ -2269,7 +2282,8 @@ const courseName = {
   MOC2161: 'Digital Electronic Circuits',
   MOC2162: 'Fundamentals of MIMO Wireless Communication',
   MOC2163: 'Spread Spectrum Communications and Jamming',
-  MOC2164: 'Basic Building Blocks of Microwave Engineering & Design Principles of RF and Microwave Filters and Amplifiers',
+  MOC2164:
+    'Basic Building Blocks of Microwave Engineering & Design Principles of RF and Microwave Filters and Amplifiers',
   MOC2165: 'Evolution of Air Interface towards 5G',
   MOC2166: 'Architectural Design of Digital Integrated Circuits',
   MOC2167: 'Electrical Machines - II',
@@ -2317,7 +2331,8 @@ const courseName = {
   MOC2209: 'Literature, Culture and Media',
   MOC2210: 'Introduction to Brain & Behaviour',
   MOC2211: 'Modern Indian Writing in Translation',
-  MOC2212: 'Introduction to Political Ideologies : Contexts, Ideas, and Practices',
+  MOC2212:
+    'Introduction to Political Ideologies : Contexts, Ideas, and Practices',
   MOC2213: 'Indian Business History',
   MOC2214: 'German - II',
   MOC2215: 'German - I',
@@ -2357,7 +2372,8 @@ const courseName = {
   MOC2249: 'Product Design and Manufacturing',
   MOC2250: 'Manufacturing Process Technology I & II',
   MOC2251: 'Introduction To Mechanical Micro Machining',
-  MOC2252: 'Non Traditional Abrasive Machining ProcessesUltrasonic, Abrasive Jet and Abrasive Water Jet Machining',
+  MOC2252:
+    'Non Traditional Abrasive Machining ProcessesUltrasonic, Abrasive Jet and Abrasive Water Jet Machining',
   MOC2253: 'Gear And Gear Unit Design : Theory And Practice',
   MOC2254: 'Conduction and Convection Heat Transfer',
   MOC2255: 'Laws of Thermodynamics',
@@ -2424,10 +2440,12 @@ const courseName = {
   MOC2316: 'Steel Quality: Role of Secondary Refining and Continuous Casting',
   MOC2317: 'Materials Science and Engineering',
   MOC2318: 'Surface Engineering of Nanomaterials',
-  MOC2319: 'Dealing with Materials Data: Collection, Analysis and Interpretation',
+  MOC2319:
+    'Dealing with Materials Data: Collection, Analysis and Interpretation',
   MOC2320: 'Friction and Wear of Materials: Principle and Case Studies',
   MOC2321: 'Material Characterization',
-  MOC2322: 'Offshore Structures Under Special Environmental Loads Including Fire Resistance',
+  MOC2322:
+    'Offshore Structures Under Special Environmental Loads Including Fire Resistance',
   MOC2323: 'Physics of Biological Systems',
   MOC2324: 'Group Theory methods in Physics',
   MOC2325: 'Experimental Physics - II',
@@ -2583,137 +2601,101 @@ const courseName = {
   BITE101N: 'Introduction to Engineering',
   BMAT100L: 'Mathematics'
 }
-
 const mon1 = {
   A1: '08:00',
   L1: '08:00',
   F1: '09:00',
-  // L2: '08:45',
   D1: '10:00',
   L3: '09:50',
   TB1: '11:00',
-  // L4: '10:45',
   TG1: '12:00',
   L5: '11:40',
-  // L6: '12:15',
   A2: '14:00',
   L31: '14:00',
   F2: '15:00',
-  // L32: '14:45',
   D2: '16:00',
   L33: '15:50',
   TB2: '17:00',
-  // L34: '16:45',
   TG2: '18:00',
   L35: '17:40',
   V3: '19:00'
-  // L36: '18:15'
 }
-
 const tue1 = {
   B1: '08:00',
   L7: '08:00',
   G1: '09:00',
-  // L8: '08:45',
   E1: '10:00',
   L9: '09:50',
   TC1: '11:00',
-  // L10: '10:45',
   TAA1: '12:00',
   L11: '11:40',
-  // L12: '12:15',
   B2: '14:00',
   L37: '14:00',
   G2: '15:00',
-  // L38: '14:45',
   E2: '16:00',
   L39: '15:50',
   TC2: '17:00',
-  // L40: '16:45',
   TAA2: '18:00',
   L41: '17:40',
   V4: '19:00'
-  // L42: '18:15'
 }
-
 const wed1 = {
   C1: '08:00',
   L13: '08:00',
   A1: '09:00',
-  // L14: '08:45',
   F1: '10:00',
   L15: '09:50',
   V1: '11:00',
-  // L16: '10:45',
   V2: '12:00',
   L17: '11:40',
-  // L18: '12:15',
   C2: '14:00',
   L43: '14:00',
   A2: '15:00',
-  // L44: '14:45',
   F2: '16:00',
   L45: '15:50',
   TD2: '17:00',
-  // L46: '16:45',
   TBB2: '18:00',
   L47: '17:40',
   V5: '19:00'
-  // L48: '18:15'
 }
-
 const thu1 = {
   D1: '08:00',
   L19: '08:00',
   B1: '09:00',
-  // L20: '08:45',
   G1: '10:00',
   L21: '09:50',
   TE1: '11:00',
-  // L22: '10:45',
   TCC1: '12:00',
   L23: '11:40',
-  // L24: '12:15',
   D2: '14:00',
   L49: '14:00',
   B2: '15:00',
-  // L50: '14:45',
   G2: '16:00',
   L51: '15:50',
   TE2: '17:00',
-  // L52: '16:45',
   TCC2: '18:00',
   L53: '17:40',
   V6: '19:00'
-  // L54: '18:15'
 }
-
 const fri1 = {
   E1: '08:00',
   L25: '08:00',
   C1: '09:00',
-  // L26: '08:45',
   TA1: '10:00',
   L27: '09:50',
   TF1: '11:00',
-  // L28: '10:45',
   TD1: '12:00',
   L29: '11:40',
-  // L30: '12:15',
   E2: '14:00',
   L55: '14:00',
   C2: '15:00',
-  // L56: '14:45',
   TA2: '16:00',
   L57: '15:50',
   TF2: '17:00',
-  // L58: '16:45',
   TDD2: '18:00',
   L59: '17:40',
   V7: '19:00'
-  // L60: '18:15'
 }
-
 window.onload = function () {
   const monday = JSON.parse(window.localStorage.getItem('monday'))
   const tuesday = JSON.parse(window.localStorage.getItem('tuesday'))
@@ -2753,127 +2735,7 @@ window.onload = function () {
   if (dayno === 6) {
     satdata()
   }
-  //   let text = ''
-  //   for (let i = 0; i < monday.length; i++) {
-  //     const stime = mon1[monday[i].Slot]
-  //     const time = new Date('April 1 2021 ' + mon1[monday[i].Slot] + ':00')
-  //     const addMinutes = function (dt, minutes) {
-  //       return new Date(dt.getTime() + minutes * 60000)
-  //     }
-  //     let time1
-  //     if (monday[i].Course_type === 'Lab') {
-  //       time1 = addMinutes(time, 90)
-  //     } else {
-  //       time1 = addMinutes(time, 45)
-  //     }
-  //     const eth = time1.getHours()
-  //     const rep = time1.getMinutes().toString().length % 2
-  //     let etm = ''
-  //     if (rep === 1) {
-  //       etm = '0' + time1.getMinutes().toString()
-  //     } else {
-  //       etm = time1.getMinutes().toString()
-  //     }
-  //     const etime = eth.toString() + ':' + etm
-  //     const fintime = stime.toString() + ' - ' + etime
-  //     let course
-  //     if (courseName[monday[i].Course_Name] === undefined) {
-  //       course = monday[i].Course_Name
-  //     } else {
-  //       course = courseName[monday[i].Course_Name]
-  //     }
-  //     text =
-  //       text +
-  //       `
-  //   <div class="main1">
-  //   <div class="details">
-  //       <div class="name">${course}</div>
-  //       <div class="time">${fintime}</div>
-  //       <div class="det">
-  //         <div class="detcont1">${monday[i].Slot}</div>
-  //         <div class="detcont2">${monday[i].Venue}</div>
-  //       </div>
-  //   </div>
-  //   <div class="edit">Edit</div>
-  // </div>
-  //   `
-  //   }
-  //   main.innerHTML = text
-
-  //   for (let j = 0; j < monday.length; j++) {
-  //     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
-  //       const det = window.prompt(
-  //         'Enter details',
-  //         'Eg. A1-CSE2011-ETH-SJT405-UGF'
-  //       )
-  //       console.log(det)
-  //       if (det !== null) {
-  //         const myHeaders = new Headers()
-  //         myHeaders.append('Accept', 'application/json')
-  //         myHeaders.append('Content-Type', 'application/x-www-form-urlencoded')
-
-  //         const urlencoded = new URLSearchParams()
-  //         urlencoded.append('request', det)
-
-  //         const requestOptions = {
-  //           method: 'POST',
-  //           headers: myHeaders,
-  //           body: urlencoded,
-  //           redirect: 'follow'
-  //         }
-
-  //         fetch('https://vittyapi.dscvit.com/uploadtext/', requestOptions)
-  //           .then((response) => response.json())
-  //           .then((result) => {
-  //             if (result.Slots.length !== 0) {
-  //               if (result.Slots[0].Slot in mon1) {
-  //                 monday[j] = result.Slots[0]
-  //                 console.log(monday)
-  //                 window.localStorage.setItem('monday', JSON.stringify(monday))
-  //                 const stime = mon1[monday[j].Slot]
-  //                 const time = new Date(
-  //                   'April 1 2021 ' + mon1[monday[j].Slot] + ':00'
-  //                 )
-  //                 const addMinutes = function (dt, minutes) {
-  //                   return new Date(dt.getTime() + minutes * 60000)
-  //                 }
-  //                 let time1
-  //                 if (monday[j].Course_type === 'Lab') {
-  //                   time1 = addMinutes(time, 90)
-  //                 } else {
-  //                   time1 = addMinutes(time, 45)
-  //                 }
-  //                 const eth = time1.getHours()
-  //                 const rep = time1.getMinutes().toString().length % 2
-  //                 let etm = ''
-  //                 if (rep === 1) {
-  //                   etm = '0' + time1.getMinutes().toString()
-  //                 } else {
-  //                   etm = time1.getMinutes().toString()
-  //                 }
-  //                 const etime = eth.toString() + ':' + etm
-  //                 const fintime = stime.toString() + ' - ' + etime
-  //                 let course
-  //                 if (courseName[monday[j].Course_Name] === undefined) {
-  //                   course = monday[j].Course_Name
-  //                 } else {
-  //                   course = courseName[monday[j].Course_Name]
-  //                 }
-  //                 document.querySelectorAll('.name')[j].innerHTML = course
-  //                 document.querySelectorAll('.time')[j].innerHTML = fintime
-  //                 document.querySelectorAll('.detcont1')[j].innerHTML =
-  //                   result.Slots[0].Slot
-  //                 document.querySelectorAll('.detcont2')[j].innerHTML =
-  //                   result.Slots[0].Venue
-  //               }
-  //             }
-  //           })
-  //           .catch((error) => console.log('error', error))
-  //       }
-  //     })
-  //   }
 }
-
 function remove () {
   mon.removeAttribute('id')
   tue.removeAttribute('id')
@@ -2883,7 +2745,6 @@ function remove () {
   sat.removeAttribute('id')
   sun.removeAttribute('id')
 }
-
 mon.addEventListener('click', mondata)
 tue.addEventListener('click', tuedata)
 wed.addEventListener('click', weddata)
@@ -2891,15 +2752,13 @@ thu.addEventListener('click', thudata)
 fri.addEventListener('click', fridata)
 sat.addEventListener('click', satdata)
 sun.addEventListener('click', sundata)
-
 function mondata () {
   remove()
   mon.id = 'special'
   const monday = JSON.parse(window.localStorage.getItem('monday'))
   let text = ''
   for (let i = 0; i < monday.length; i++) {
-    const stime = mon1[monday[i].Slot]
-    const time = new Date('April 1 2021 ' + mon1[monday[i].Slot] + ':00')
+    const time = new Date('April 1 2021 ' + mon1[monday[i].Slot] + ':00+05:30')
     const addMinutes = function (dt, minutes) {
       return new Date(dt.getTime() + minutes * 60000)
     }
@@ -2909,15 +2768,16 @@ function mondata () {
     } else {
       time1 = addMinutes(time, 50)
     }
-    const eth = time1.getHours()
-    const rep = time1.getMinutes().toString().length % 2
-    let etm = ''
-    if (rep === 1) {
-      etm = '0' + time1.getMinutes().toString()
-    } else {
-      etm = time1.getMinutes().toString()
-    }
-    const etime = eth.toString() + ':' + etm
+    const etime =
+      time1
+        .toLocaleTimeString()
+        .substr(0, time1.toLocaleTimeString().lastIndexOf(':')) +
+      time1.toLocaleTimeString().substr(time1.toLocaleTimeString().length - 3)
+    const stime =
+      time
+        .toLocaleTimeString()
+        .substr(0, time.toLocaleTimeString().lastIndexOf(':')) +
+      time.toLocaleTimeString().substr(time.toLocaleTimeString().length - 3)
     const fintime = stime.toString() + ' - ' + etime
     let course
     if (courseName[monday[i].Course_Name] === undefined) {
@@ -2925,7 +2785,6 @@ function mondata () {
     } else {
       course = courseName[monday[i].Course_Name]
     }
-
     text =
       text +
       `
@@ -2943,7 +2802,6 @@ function mondata () {
   `
   }
   main.innerHTML = text
-
   for (let j = 0; j < monday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt(
@@ -2955,17 +2813,14 @@ function mondata () {
         const myHeaders = new Headers()
         myHeaders.append('Accept', 'application/json')
         myHeaders.append('Content-Type', 'application/x-www-form-urlencoded')
-
         const urlencoded = new URLSearchParams()
         urlencoded.append('request', det)
-
         const requestOptions = {
           method: 'POST',
           headers: myHeaders,
           body: urlencoded,
           redirect: 'follow'
         }
-
         fetch('https://vittyapi.dscvit.com/uploadtext/', requestOptions)
           .then((response) => response.json())
           .then((result) => {
@@ -2975,9 +2830,8 @@ function mondata () {
                 monday[j] = result.Slots[0]
                 console.log(monday)
                 window.localStorage.setItem('monday', JSON.stringify(monday))
-                const stime = mon1[monday[j].Slot]
                 const time = new Date(
-                  'April 1 2021 ' + mon1[monday[j].Slot] + ':00'
+                  'April 1 2021 ' + mon1[monday[j].Slot] + ':00+05:30'
                 )
                 const addMinutes = function (dt, minutes) {
                   return new Date(dt.getTime() + minutes * 60000)
@@ -2988,15 +2842,20 @@ function mondata () {
                 } else {
                   time1 = addMinutes(time, 50)
                 }
-                const eth = time1.getHours()
-                const rep = time1.getMinutes().toString().length % 2
-                let etm = ''
-                if (rep === 1) {
-                  etm = '0' + time1.getMinutes().toString()
-                } else {
-                  etm = time1.getMinutes().toString()
-                }
-                const etime = eth.toString() + ':' + etm
+                const etime =
+                  time1
+                    .toLocaleTimeString()
+                    .substr(0, time1.toLocaleTimeString().lastIndexOf(':')) +
+                  time1
+                    .toLocaleTimeString()
+                    .substr(time1.toLocaleTimeString().length - 3)
+                const stime =
+                  time
+                    .toLocaleTimeString()
+                    .substr(0, time.toLocaleTimeString().lastIndexOf(':')) +
+                  time
+                    .toLocaleTimeString()
+                    .substr(time.toLocaleTimeString().length - 3)
                 const fintime = stime.toString() + ' - ' + etime
                 let course
                 if (courseName[monday[j].Course_Name] === undefined) {
@@ -3030,15 +2889,13 @@ function mondata () {
     }
   }
 }
-
 function tuedata () {
   remove()
   tue.id = 'special'
   const tuesday = JSON.parse(window.localStorage.getItem('tuesday'))
   let text = ''
   for (let i = 0; i < tuesday.length; i++) {
-    const stime = tue1[tuesday[i].Slot]
-    const time = new Date('April 1 2021 ' + tue1[tuesday[i].Slot] + ':00')
+    const time = new Date('April 1 2021 ' + tue1[tuesday[i].Slot] + ':00+05:30')
     const addMinutes = function (dt, minutes) {
       return new Date(dt.getTime() + minutes * 60000)
     }
@@ -3048,15 +2905,16 @@ function tuedata () {
     } else {
       time1 = addMinutes(time, 50)
     }
-    const eth = time1.getHours()
-    const rep = time1.getMinutes().toString().length % 2
-    let etm = ''
-    if (rep === 1) {
-      etm = '0' + time1.getMinutes().toString()
-    } else {
-      etm = time1.getMinutes().toString()
-    }
-    const etime = eth.toString() + ':' + etm
+    const etime =
+      time1
+        .toLocaleTimeString()
+        .substr(0, time1.toLocaleTimeString().lastIndexOf(':')) +
+      time1.toLocaleTimeString().substr(time1.toLocaleTimeString().length - 3)
+    const stime =
+      time
+        .toLocaleTimeString()
+        .substr(0, time.toLocaleTimeString().lastIndexOf(':')) +
+      time.toLocaleTimeString().substr(time.toLocaleTimeString().length - 3)
     const fintime = stime.toString() + ' - ' + etime
     let course
     if (courseName[tuesday[i].Course_Name] === undefined) {
@@ -3064,7 +2922,6 @@ function tuedata () {
     } else {
       course = courseName[tuesday[i].Course_Name]
     }
-
     text =
       text +
       `
@@ -3082,7 +2939,6 @@ function tuedata () {
   `
   }
   main.innerHTML = text
-
   for (let j = 0; j < tuesday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt(
@@ -3094,17 +2950,14 @@ function tuedata () {
         const myHeaders = new Headers()
         myHeaders.append('Accept', 'application/json')
         myHeaders.append('Content-Type', 'application/x-www-form-urlencoded')
-
         const urlencoded = new URLSearchParams()
         urlencoded.append('request', det)
-
         const requestOptions = {
           method: 'POST',
           headers: myHeaders,
           body: urlencoded,
           redirect: 'follow'
         }
-
         fetch('https://vittyapi.dscvit.com/uploadtext/', requestOptions)
           .then((response) => response.json())
           .then((result) => {
@@ -3113,9 +2966,8 @@ function tuedata () {
                 tuesday[j] = result.Slots[0]
                 console.log(tuesday)
                 window.localStorage.setItem('tuesday', JSON.stringify(tuesday))
-                const stime = tue1[tuesday[j].Slot]
                 const time = new Date(
-                  'April 1 2021 ' + tue1[tuesday[j].Slot] + ':00'
+                  'April 1 2021 ' + tue1[tuesday[j].Slot] + ':00+05:30'
                 )
                 const addMinutes = function (dt, minutes) {
                   return new Date(dt.getTime() + minutes * 60000)
@@ -3126,15 +2978,20 @@ function tuedata () {
                 } else {
                   time1 = addMinutes(time, 50)
                 }
-                const eth = time1.getHours()
-                const rep = time1.getMinutes().toString().length % 2
-                let etm = ''
-                if (rep === 1) {
-                  etm = '0' + time1.getMinutes().toString()
-                } else {
-                  etm = time1.getMinutes().toString()
-                }
-                const etime = eth.toString() + ':' + etm
+                const etime =
+                  time1
+                    .toLocaleTimeString()
+                    .substr(0, time1.toLocaleTimeString().lastIndexOf(':')) +
+                  time1
+                    .toLocaleTimeString()
+                    .substr(time1.toLocaleTimeString().length - 3)
+                const stime =
+                  time
+                    .toLocaleTimeString()
+                    .substr(0, time.toLocaleTimeString().lastIndexOf(':')) +
+                  time
+                    .toLocaleTimeString()
+                    .substr(time.toLocaleTimeString().length - 3)
                 const fintime = stime.toString() + ' - ' + etime
                 let course
                 if (courseName[tuesday[j].Course_Name] === undefined) {
@@ -3168,15 +3025,15 @@ function tuedata () {
     }
   }
 }
-
 function weddata () {
   remove()
   wed.id = 'special'
   const wednesday = JSON.parse(window.localStorage.getItem('wednesday'))
   let text = ''
   for (let i = 0; i < wednesday.length; i++) {
-    const stime = wed1[wednesday[i].Slot]
-    const time = new Date('April 1 2021 ' + wed1[wednesday[i].Slot] + ':00')
+    const time = new Date(
+      'April 1 2021 ' + wed1[wednesday[i].Slot] + ':00+05:30'
+    )
     const addMinutes = function (dt, minutes) {
       return new Date(dt.getTime() + minutes * 60000)
     }
@@ -3186,15 +3043,16 @@ function weddata () {
     } else {
       time1 = addMinutes(time, 50)
     }
-    const eth = time1.getHours()
-    const rep = time1.getMinutes().toString().length % 2
-    let etm = ''
-    if (rep === 1) {
-      etm = '0' + time1.getMinutes().toString()
-    } else {
-      etm = time1.getMinutes().toString()
-    }
-    const etime = eth.toString() + ':' + etm
+    const etime =
+      time1
+        .toLocaleTimeString()
+        .substr(0, time1.toLocaleTimeString().lastIndexOf(':')) +
+      time1.toLocaleTimeString().substr(time1.toLocaleTimeString().length - 3)
+    const stime =
+      time
+        .toLocaleTimeString()
+        .substr(0, time.toLocaleTimeString().lastIndexOf(':')) +
+      time.toLocaleTimeString().substr(time.toLocaleTimeString().length - 3)
     const fintime = stime.toString() + ' - ' + etime
     let course
     if (courseName[wednesday[i].Course_Name] === undefined) {
@@ -3202,7 +3060,6 @@ function weddata () {
     } else {
       course = courseName[wednesday[i].Course_Name]
     }
-
     text =
       text +
       `
@@ -3220,7 +3077,6 @@ function weddata () {
   `
   }
   main.innerHTML = text
-
   for (let j = 0; j < wednesday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt(
@@ -3232,17 +3088,14 @@ function weddata () {
         const myHeaders = new Headers()
         myHeaders.append('Accept', 'application/json')
         myHeaders.append('Content-Type', 'application/x-www-form-urlencoded')
-
         const urlencoded = new URLSearchParams()
         urlencoded.append('request', det)
-
         const requestOptions = {
           method: 'POST',
           headers: myHeaders,
           body: urlencoded,
           redirect: 'follow'
         }
-
         fetch('https://vittyapi.dscvit.com/uploadtext/', requestOptions)
           .then((response) => response.json())
           .then((result) => {
@@ -3254,9 +3107,8 @@ function weddata () {
                   'wednesday',
                   JSON.stringify(wednesday)
                 )
-                const stime = wed1[wednesday[j].Slot]
                 const time = new Date(
-                  'April 1 2021 ' + wed1[wednesday[j].Slot] + ':00'
+                  'April 1 2021 ' + wed1[wednesday[j].Slot] + ':00+05:30'
                 )
                 const addMinutes = function (dt, minutes) {
                   return new Date(dt.getTime() + minutes * 60000)
@@ -3267,15 +3119,20 @@ function weddata () {
                 } else {
                   time1 = addMinutes(time, 50)
                 }
-                const eth = time1.getHours()
-                const rep = time1.getMinutes().toString().length % 2
-                let etm = ''
-                if (rep === 1) {
-                  etm = '0' + time1.getMinutes().toString()
-                } else {
-                  etm = time1.getMinutes().toString()
-                }
-                const etime = eth.toString() + ':' + etm
+                const etime =
+                  time1
+                    .toLocaleTimeString()
+                    .substr(0, time1.toLocaleTimeString().lastIndexOf(':')) +
+                  time1
+                    .toLocaleTimeString()
+                    .substr(time1.toLocaleTimeString().length - 3)
+                const stime =
+                  time
+                    .toLocaleTimeString()
+                    .substr(0, time.toLocaleTimeString().lastIndexOf(':')) +
+                  time
+                    .toLocaleTimeString()
+                    .substr(time.toLocaleTimeString().length - 3)
                 const fintime = stime.toString() + ' - ' + etime
                 let course
                 if (courseName[wednesday[j].Course_Name] === undefined) {
@@ -3309,15 +3166,15 @@ function weddata () {
     }
   }
 }
-
 function thudata () {
   remove()
   thu.id = 'special'
   const thursday = JSON.parse(window.localStorage.getItem('thursday'))
   let text = ''
   for (let i = 0; i < thursday.length; i++) {
-    const stime = thu1[thursday[i].Slot]
-    const time = new Date('April 1 2021 ' + thu1[thursday[i].Slot] + ':00')
+    const time = new Date(
+      'April 1 2021 ' + thu1[thursday[i].Slot] + ':00+05:30'
+    )
     const addMinutes = function (dt, minutes) {
       return new Date(dt.getTime() + minutes * 60000)
     }
@@ -3327,15 +3184,16 @@ function thudata () {
     } else {
       time1 = addMinutes(time, 50)
     }
-    const eth = time1.getHours()
-    const rep = time1.getMinutes().toString().length % 2
-    let etm = ''
-    if (rep === 1) {
-      etm = '0' + time1.getMinutes().toString()
-    } else {
-      etm = time1.getMinutes().toString()
-    }
-    const etime = eth.toString() + ':' + etm
+    const etime =
+      time1
+        .toLocaleTimeString()
+        .substr(0, time1.toLocaleTimeString().lastIndexOf(':')) +
+      time1.toLocaleTimeString().substr(time1.toLocaleTimeString().length - 3)
+    const stime =
+      time
+        .toLocaleTimeString()
+        .substr(0, time.toLocaleTimeString().lastIndexOf(':')) +
+      time.toLocaleTimeString().substr(time.toLocaleTimeString().length - 3)
     const fintime = stime.toString() + ' - ' + etime
     let course
     if (courseName[thursday[i].Course_Name] === undefined) {
@@ -3343,7 +3201,6 @@ function thudata () {
     } else {
       course = courseName[thursday[i].Course_Name]
     }
-
     text =
       text +
       `
@@ -3361,7 +3218,6 @@ function thudata () {
   `
   }
   main.innerHTML = text
-
   for (let j = 0; j < thursday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt(
@@ -3373,17 +3229,14 @@ function thudata () {
         const myHeaders = new Headers()
         myHeaders.append('Accept', 'application/json')
         myHeaders.append('Content-Type', 'application/x-www-form-urlencoded')
-
         const urlencoded = new URLSearchParams()
         urlencoded.append('request', det)
-
         const requestOptions = {
           method: 'POST',
           headers: myHeaders,
           body: urlencoded,
           redirect: 'follow'
         }
-
         fetch('https://vittyapi.dscvit.com/uploadtext/', requestOptions)
           .then((response) => response.json())
           .then((result) => {
@@ -3395,9 +3248,8 @@ function thudata () {
                   'thursday',
                   JSON.stringify(thursday)
                 )
-                const stime = thu1[thursday[j].Slot]
                 const time = new Date(
-                  'April 1 2021 ' + thu1[thursday[j].Slot] + ':00'
+                  'April 1 2021 ' + thu1[thursday[j].Slot] + ':00+05:30'
                 )
                 const addMinutes = function (dt, minutes) {
                   return new Date(dt.getTime() + minutes * 60000)
@@ -3408,15 +3260,20 @@ function thudata () {
                 } else {
                   time1 = addMinutes(time, 50)
                 }
-                const eth = time1.getHours()
-                const rep = time1.getMinutes().toString().length % 2
-                let etm = ''
-                if (rep === 1) {
-                  etm = '0' + time1.getMinutes().toString()
-                } else {
-                  etm = time1.getMinutes().toString()
-                }
-                const etime = eth.toString() + ':' + etm
+                const etime =
+                  time1
+                    .toLocaleTimeString()
+                    .substr(0, time1.toLocaleTimeString().lastIndexOf(':')) +
+                  time1
+                    .toLocaleTimeString()
+                    .substr(time1.toLocaleTimeString().length - 3)
+                const stime =
+                  time
+                    .toLocaleTimeString()
+                    .substr(0, time.toLocaleTimeString().lastIndexOf(':')) +
+                  time
+                    .toLocaleTimeString()
+                    .substr(time.toLocaleTimeString().length - 3)
                 const fintime = stime.toString() + ' - ' + etime
                 let course
                 if (courseName[thursday[j].Course_Name] === undefined) {
@@ -3450,15 +3307,13 @@ function thudata () {
     }
   }
 }
-
 function fridata () {
   remove()
   fri.id = 'special'
   const friday = JSON.parse(window.localStorage.getItem('friday'))
   let text = ''
   for (let i = 0; i < friday.length; i++) {
-    const stime = fri1[friday[i].Slot]
-    const time = new Date('April 1 2021 ' + fri1[friday[i].Slot] + ':00')
+    const time = new Date('April 1 2021 ' + fri1[friday[i].Slot] + ':00+05:30')
     const addMinutes = function (dt, minutes) {
       return new Date(dt.getTime() + minutes * 60000)
     }
@@ -3468,15 +3323,16 @@ function fridata () {
     } else {
       time1 = addMinutes(time, 50)
     }
-    const eth = time1.getHours()
-    const rep = time1.getMinutes().toString().length % 2
-    let etm = ''
-    if (rep === 1) {
-      etm = '0' + time1.getMinutes().toString()
-    } else {
-      etm = time1.getMinutes().toString()
-    }
-    const etime = eth.toString() + ':' + etm
+    const etime =
+      time1
+        .toLocaleTimeString()
+        .substr(0, time1.toLocaleTimeString().lastIndexOf(':')) +
+      time1.toLocaleTimeString().substr(time1.toLocaleTimeString().length - 3)
+    const stime =
+      time
+        .toLocaleTimeString()
+        .substr(0, time.toLocaleTimeString().lastIndexOf(':')) +
+      time.toLocaleTimeString().substr(time.toLocaleTimeString().length - 3)
     const fintime = stime.toString() + ' - ' + etime
     let course
     if (courseName[friday[i].Course_Name] === undefined) {
@@ -3484,7 +3340,6 @@ function fridata () {
     } else {
       course = courseName[friday[i].Course_Name]
     }
-
     text =
       text +
       `
@@ -3502,7 +3357,6 @@ function fridata () {
   `
   }
   main.innerHTML = text
-
   for (let j = 0; j < friday.length; j++) {
     document.querySelectorAll('.edit')[j].addEventListener('click', () => {
       const det = window.prompt(
@@ -3514,17 +3368,14 @@ function fridata () {
         const myHeaders = new Headers()
         myHeaders.append('Accept', 'application/json')
         myHeaders.append('Content-Type', 'application/x-www-form-urlencoded')
-
         const urlencoded = new URLSearchParams()
         urlencoded.append('request', det)
-
         const requestOptions = {
           method: 'POST',
           headers: myHeaders,
           body: urlencoded,
           redirect: 'follow'
         }
-
         fetch('https://vittyapi.dscvit.com/uploadtext/', requestOptions)
           .then((response) => response.json())
           .then((result) => {
@@ -3533,9 +3384,8 @@ function fridata () {
                 friday[j] = result.Slots[0]
                 console.log(friday)
                 window.localStorage.setItem('friday', JSON.stringify(friday))
-                const stime = fri1[friday[j].Slot]
                 const time = new Date(
-                  'April 1 2021 ' + fri1[friday[j].Slot] + ':00'
+                  'April 1 2021 ' + fri1[friday[j].Slot] + ':00+05:30'
                 )
                 const addMinutes = function (dt, minutes) {
                   return new Date(dt.getTime() + minutes * 60000)
@@ -3546,15 +3396,20 @@ function fridata () {
                 } else {
                   time1 = addMinutes(time, 50)
                 }
-                const eth = time1.getHours()
-                const rep = time1.getMinutes().toString().length % 2
-                let etm = ''
-                if (rep === 1) {
-                  etm = '0' + time1.getMinutes().toString()
-                } else {
-                  etm = time1.getMinutes().toString()
-                }
-                const etime = eth.toString() + ':' + etm
+                const etime =
+                  time1
+                    .toLocaleTimeString()
+                    .substr(0, time1.toLocaleTimeString().lastIndexOf(':')) +
+                  time1
+                    .toLocaleTimeString()
+                    .substr(time1.toLocaleTimeString().length - 3)
+                const stime =
+                  time
+                    .toLocaleTimeString()
+                    .substr(0, time.toLocaleTimeString().lastIndexOf(':')) +
+                  time
+                    .toLocaleTimeString()
+                    .substr(time.toLocaleTimeString().length - 3)
                 const fintime = stime.toString() + ' - ' + etime
                 let course
                 if (courseName[friday[j].Course_Name] === undefined) {
@@ -3588,7 +3443,6 @@ function fridata () {
     }
   }
 }
-
 function satdata () {
   remove()
   sat.id = 'special'
@@ -3601,7 +3455,6 @@ function satdata () {
   </div>
   `
 }
-
 function sundata () {
   remove()
   sun.id = 'special'
@@ -3614,7 +3467,6 @@ function sundata () {
   </div>
   `
 }
-
 upload.addEventListener('click', function () {
   window.chrome.runtime.sendMessage('upload-data', (response) => {
     console.log('uploaded data ', response)
@@ -3633,7 +3485,6 @@ upload.addEventListener('click', function () {
     }
   })
 })
-
 change.addEventListener('click', function () {
   window.localStorage.setItem('found', 'false')
   window.localStorage.removeItem('monday')
@@ -3646,7 +3497,6 @@ change.addEventListener('click', function () {
     window.location.assign('instructions.html')
   })
 })
-
 change1.addEventListener('click', function () {
   window.localStorage.setItem('found', 'false')
   window.localStorage.removeItem('monday')
@@ -3659,7 +3509,6 @@ change1.addEventListener('click', function () {
     window.location.assign('instructions.html')
   })
 })
-
 logout.addEventListener('click', function () {
   window.localStorage.removeItem('uid')
   window.chrome.runtime.sendMessage('logout', (response) => {
@@ -3669,7 +3518,6 @@ logout.addEventListener('click', function () {
     }
   })
 })
-
 const dot = document.querySelector('.toggle')
 const menu = document.querySelector('.menu')
 dot.addEventListener('click', () => {
