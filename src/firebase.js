@@ -2728,7 +2728,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     const thursday = JSON.parse(window.localStorage.getItem('thursday'))
     const friday = JSON.parse(window.localStorage.getItem('friday'))
     for (let i = 0; i < monday.length; i++) {
-      const time = new Date('April 1 2021 ' + mon1[monday[i].Slot] + ':00')
+      const time = new Date('April 1 2021 ' + mon1[monday[i].Slot] + ':00+05:30')
       const addMinutes = function (dt, minutes) {
         return new Date(dt.getTime() + minutes * 60000)
       }
@@ -2744,7 +2744,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       } else {
         course = courseName[monday[i].Course_Name]
       }
-      // const timea = new Date('April 5 2021 ' + mon1[monday[i].Slot] + ':00')
+      // const timea = new Date('April 5 2021 ' + mon1[monday[i].Slot] + ':00+05:30')
       // const time2 = addMinutes(timea, -5)
       // console.log(time2)
       // window.chrome.alarms.create(course, {
@@ -2774,7 +2774,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         })
     }
     for (let i = 0; i < tuesday.length; i++) {
-      const time = new Date('April 1 2021 ' + tue1[tuesday[i].Slot] + ':00')
+      const time = new Date('April 1 2021 ' + tue1[tuesday[i].Slot] + ':00+05:30')
       const addMinutes = function (dt, minutes) {
         return new Date(dt.getTime() + minutes * 60000)
       }
@@ -2790,7 +2790,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       } else {
         course = courseName[tuesday[i].Course_Name]
       }
-      // const timea = new Date('April 6 2021 ' + tue1[tuesday[i].Slot] + ':00')
+      // const timea = new Date('April 6 2021 ' + tue1[tuesday[i].Slot] + ':00+05:30')
       // const time2 = addMinutes(timea, -5)
       // window.chrome.alarms.create(course, {
       //   when: time2.getTime(),
@@ -2819,7 +2819,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         })
     }
     for (let i = 0; i < wednesday.length; i++) {
-      const time = new Date('April 1 2021 ' + wed1[wednesday[i].Slot] + ':00')
+      const time = new Date('April 1 2021 ' + wed1[wednesday[i].Slot] + ':00+05:30')
       const addMinutes = function (dt, minutes) {
         return new Date(dt.getTime() + minutes * 60000)
       }
@@ -2835,7 +2835,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       } else {
         course = courseName[wednesday[i].Course_Name]
       }
-      // const timea = new Date('April 7 2021 ' + wed1[wednesday[i].Slot] + ':00')
+      // const timea = new Date('April 7 2021 ' + wed1[wednesday[i].Slot] + ':00+05:30')
       // const time2 = addMinutes(timea, -5)
       // window.chrome.alarms.create(course, {
       //   when: time2.getTime(),
@@ -2864,7 +2864,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         })
     }
     for (let i = 0; i < thursday.length; i++) {
-      const time = new Date('April 1 2021 ' + thu1[thursday[i].Slot] + ':00')
+      const time = new Date('April 1 2021 ' + thu1[thursday[i].Slot] + ':00+05:30')
       const addMinutes = function (dt, minutes) {
         return new Date(dt.getTime() + minutes * 60000)
       }
@@ -2880,7 +2880,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       } else {
         course = courseName[thursday[i].Course_Name]
       }
-      // const timea = new Date('April 8 2021 ' + thu1[thursday[i].Slot] + ':00')
+      // const timea = new Date('April 8 2021 ' + thu1[thursday[i].Slot] + ':00+05:30')
       // const time2 = addMinutes(timea, -5)
       // window.chrome.alarms.create(course, {
       //   when: time2.getTime(),
@@ -2909,7 +2909,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         })
     }
     for (let i = 0; i < friday.length; i++) {
-      const time = new Date('April 1 2021 ' + fri1[friday[i].Slot] + ':00')
+      const time = new Date('April 1 2021 ' + fri1[friday[i].Slot] + ':00+05:30')
       const addMinutes = function (dt, minutes) {
         return new Date(dt.getTime() + minutes * 60000)
       }
@@ -2925,7 +2925,7 @@ window.chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       } else {
         course = courseName[friday[i].Course_Name]
       }
-      // const timea = new Date('April 9 2021 ' + fri1[friday[i].Slot] + ':00')
+      // const timea = new Date('April 9 2021 ' + fri1[friday[i].Slot] + ':00+05:30')
       // const time2 = addMinutes(timea, -5)
       // window.chrome.alarms.create(course, {
       //   when: time2.getTime(),
@@ -3179,7 +3179,7 @@ function alarms1 () {
           course = courseName[monday[i].Course_Name]
         }
         const today = new Date()
-        const timea = new Date('April 5 2021 ' + mon1[monday[i].Slot] + ':00')
+        const timea = new Date('April 5 2021 ' + mon1[monday[i].Slot] + ':00+05:30')
         const time2 = addMinutes(timea, -5)
         let d = new Date(today.getFullYear(), today.getMonth(), today.getDate(), time2.getHours(), time2.getMinutes(), time2.getSeconds())
         d.setDate(d.getDate() + (1 + 7 - d.getDay()) % 7)
@@ -3204,7 +3204,7 @@ function alarms1 () {
           course = courseName[tuesday[i].Course_Name]
         }
         const today = new Date()
-        const timea = new Date('April 6 2021 ' + tue1[tuesday[i].Slot] + ':00')
+        const timea = new Date('April 6 2021 ' + tue1[tuesday[i].Slot] + ':00+05:30')
         const time2 = addMinutes(timea, -5)
         let d = new Date(today.getFullYear(), today.getMonth(), today.getDate(), time2.getHours(), time2.getMinutes(), time2.getSeconds())
         d.setDate(d.getDate() + (2 + 7 - d.getDay()) % 7)
@@ -3229,7 +3229,7 @@ function alarms1 () {
           course = courseName[wednesday[i].Course_Name]
         }
         const today = new Date()
-        const timea = new Date('April 7 2021 ' + wed1[wednesday[i].Slot] + ':00')
+        const timea = new Date('April 7 2021 ' + wed1[wednesday[i].Slot] + ':00+05:30')
         const time2 = addMinutes(timea, -5)
         let d = new Date(today.getFullYear(), today.getMonth(), today.getDate(), time2.getHours(), time2.getMinutes(), time2.getSeconds())
         d.setDate(d.getDate() + (3 + 7 - d.getDay()) % 7)
@@ -3254,7 +3254,7 @@ function alarms1 () {
           course = courseName[thursday[i].Course_Name]
         }
         const today = new Date()
-        const timea = new Date('April 8 2021 ' + thu1[thursday[i].Slot] + ':00')
+        const timea = new Date('April 8 2021 ' + thu1[thursday[i].Slot] + ':00+05:30')
         const time2 = addMinutes(timea, -5)
         let d = new Date(today.getFullYear(), today.getMonth(), today.getDate(), time2.getHours(), time2.getMinutes(), time2.getSeconds())
         d.setDate(d.getDate() + (4 + 7 - d.getDay()) % 7)
@@ -3279,7 +3279,7 @@ function alarms1 () {
           course = courseName[friday[i].Course_Name]
         }
         const today = new Date()
-        const timea = new Date('April 9 2021 ' + fri1[friday[i].Slot] + ':00')
+        const timea = new Date('April 9 2021 ' + fri1[friday[i].Slot] + ':00+05:30')
         const time2 = addMinutes(timea, -5)
         let d = new Date(today.getFullYear(), today.getMonth(), today.getDate(), time2.getHours(), time2.getMinutes(), time2.getSeconds())
         d.setDate(d.getDate() + (5 + 7 - d.getDay()) % 7)
@@ -3308,7 +3308,7 @@ alarms1()
 //   return new Date(dt.getTime() + minutes * 60000)
 // }
 // const today = new Date()
-// const timea = new Date('April 6 2021 ' + tue1.B2 + ':00')
+// const timea = new Date('April 6 2021 ' + tue1.B2 + ':00+05:30')
 // const time2 = addMinutes(timea, 13)
 // let d = new Date(today.getFullYear(), today.getMonth(), today.getDate(), time2.getHours(), time2.getMinutes(), time2.getSeconds())
 // d.setDate(d.getDate() + (2 + 7 - d.getDay()) % 7)
@@ -3326,4 +3326,4 @@ alarms1()
 //   return new Date(dt.getTime() + minutes * 60000)
 // }
 
-// const timea = new Date('April 6 2021 ' + tue1.B2 + ':00')
+// const timea = new Date('April 6 2021 ' + tue1.B2 + ':00+05:30')
