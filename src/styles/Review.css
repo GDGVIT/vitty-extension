@@ -1,0 +1,134 @@
+.review-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: var(--dimmer);
+  border: 1px solid var(--dim);
+}
+
+.day {
+  font-size: 0.9rem;
+  z-index: 1;
+  width: 20%;
+  height: 100%;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.day.active {
+  background: linear-gradient(60.27deg, #126afc -76.24%, rgba(18, 106, 252, 0.12) 93.19%);
+  border-radius: 0.5rem;
+}
+
+.course-wrapper {
+  width: 90%;
+  margin-top: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.course {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--dimmer);
+  color: var(--blue);
+}
+
+.course-deets {
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.course-name {
+  color: var(--light)
+}
+
+.course-time,
+.course-slot-loc {
+  font-size: 0.75rem;
+  margin: 0.25rem 0;
+}
+
+.course-slot-loc {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-loc svg {
+  font-size: 0.75rem;
+}
+
+.course-edit {
+  z-index: 1;
+  height: 1rem;
+  margin-left: 0.35rem;
+}
+
+.course-edit svg {
+  font-size: 1rem;
+}
+
+.course-edit:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.review-add,
+.review-confirm {
+  z-index: 1;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+  padding: 0.75rem 4.5rem;
+  border: none;
+  font-weight: bold;
+  color: var(--light);
+}
+
+.review-add {
+  background-color: var(--dark);
+  border: solid 1px var(--light);
+}
+
+.review-confirm {
+  background-color: var(--bright);
+}
+
+.review-add:focus,
+.review-confirm:focus {
+  outline: none;
+}
+
+.review-add:hover,
+.review-confirm:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}

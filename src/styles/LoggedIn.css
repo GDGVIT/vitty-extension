@@ -1,0 +1,136 @@
+.logged-in {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.upload-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-wrapper h1 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.upload {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.upload-divider {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  margin-bottom: 2rem;
+}
+
+.upload-divider div {
+  width: 100%;
+  height: 1px;
+  border: 1px white solid;
+}
+
+.upload-divider h2 {
+  margin: 0.5rem 1rem;
+}
+
+.upload-text,
+.upload-pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.upload-text,
+.upload-pic {
+  z-index: 1;
+  width: 100%;
+}
+
+.steps {
+  margin: 2rem 1rem;
+  list-style-type: decimal;
+}
+
+.steps li {
+  margin: 0.5rem 0;
+}
+
+.steps li span {
+  font-family: Monospace;
+  font-weight: bold;
+  color: var(--midblue);
+}
+
+#input-text,
+.input-file-label,
+.upload button {
+  font-size: 0.85rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 0.5rem;
+  color: var(--light);
+  padding: 0.75rem 1rem;
+  padding-left: 1rem;
+}
+
+#input-text {
+  border: solid 1px var(--blue);
+  background-color: var(--dark);
+  width: 100%;
+  text-overflow: ellipsis;
+  margin-bottom: 0.75rem;
+}
+
+.add-file {
+  /* margin: 0 auto; */
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+}
+
+#input-file {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+
+.input-file-label {
+  margin-right: 1.5rem;
+  background-color: var(--dark);
+  border: solid 1px var(--blue);
+  font-weight: bold;
+}
+
+.file-details {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.upload button {
+  background-color: var(--bright);
+  border: none;
+  font-weight: bold;
+}
+
+#input-text:focus,
+.upload button:focus {
+  outline: none;
+}
+
+.input-file-label:hover,
+.upload button:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}

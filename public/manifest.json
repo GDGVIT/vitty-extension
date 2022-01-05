@@ -1,0 +1,22 @@
+{
+  "short_name": "VITTY-d",
+  "name": "VITTY-dev",
+  "version": "2.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Open the popup"
+  },
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "64": "logo.png"
+  },
+  "permissions": [
+    "storage",
+    "https://vittyapi.dscvit.com/*",
+    "alarms",
+    "notifications"
+  ],
+  "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'"
+}
