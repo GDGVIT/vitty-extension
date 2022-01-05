@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { AppContext } from './../Context'
-import { isAvailable } from '../utils/firestoreCalls'
+import { getLists, isAvailable } from '../utils/firestoreCalls'
 import Upload from './Upload'
-import Review from './Review'
-import Finished from './Finished'
+import Timetable from './Timetable'
 import Loader from './Loader'
 import './../styles/LoggedIn.css'
 
@@ -19,8 +18,16 @@ const LoggedIn: React.FC<any> = ({ db, name }) => {
 
   useEffect(() => {
     isAvailable(user, db).then((bool) => {
-      if (bool) setStatus('finished')
-      else setStatus('upload')
+      if (bool) {
+        getLists(user, db).then((res) => {
+          setMonSlots(res[0])
+          setTueSlots(res[1])
+          setWedSlots(res[2])
+          setThuSlots(res[3])
+          setFriSlots(res[4])
+          setStatus('timetable')
+        }, () => { })
+      } else setStatus('upload')
     }, () => {})
   }, [])
 
@@ -28,37 +35,16 @@ const LoggedIn: React.FC<any> = ({ db, name }) => {
     <section className='logged-in'>
       {
         status === 'upload'
-          ? <Upload
-              setStatus={setStatus}
-              setMonSlots={setMonSlots}
-              setTueSlots={setTueSlots}
-              setWedSlots={setWedSlots}
-              setThuSlots={setThuSlots}
-              setFriSlots={setFriSlots}
-            />
-          : status === 'review'
-            ? <Review
-                setStatus={setStatus}
+          ? <Upload />
+          : status === 'timetable'
+            ? <Timetable
                 monSlots={monSlots}
                 tueSlots={tueSlots}
                 wedSlots={wedSlots}
                 thuSlots={thuSlots}
                 friSlots={friSlots}
-                setMonSlots={setMonSlots}
-                setTueSlots={setTueSlots}
-                setWedSlots={setWedSlots}
-                setThuSlots={setThuSlots}
-                setFriSlots={setFriSlots}
-                db={db}
               />
-            : status === 'finished'
-              ? <Finished
-                  setStatus={setStatus}
-                  name={name}
-                  userId={user}
-                  db={db}
-                />
-              : <Loader />
+            : <Loader />
       }
     </section>
   )

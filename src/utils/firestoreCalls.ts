@@ -19,6 +19,22 @@ export const isAvailable = async (userId: string, db: any): Promise<boolean> => 
   } else return false
 }
 
+export const getLists = async (userId: string, db: any): Promise<any> => {
+  const slots: any = [[], [], [], [], []]
+  const days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday']
+  for (let i = 0; i < days.length; i++) {
+    let j = 0
+    while (true) {
+      const ref = doc(db, 'users', userId, 'timetable', days[i], 'periods', `P${j++}`)
+      const docSnap = await getDoc(ref)
+      if (docSnap.exists()) {
+        slots[i].push({ ...docSnap.data() })
+      } else break
+    }
+  }
+  return slots
+}
+
 export const uploadDailySlots = (courses: CourseProps[], day: string, userId: string, db: any): void => {
   deleteDailySlots(day, userId, db).then(() => {
     for (let i = 0; i < courses.length; i++) {

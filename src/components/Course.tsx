@@ -7,25 +7,29 @@ interface CourseProps {
   courseType: string
   courseName: string
   location: string
-  startTime: Date
-  endTime: Date
+  startTime: any
+  endTime: any
 }
 
-const Course: React.FC<any> = ({ slots, setShowModal, setModalSlot, setModalStatus }) => {
+const Course: React.FC<any> = ({ slots }) => {
   return (
     <div className='course-wrapper'>
       {
         slots.map((course: CourseProps) => {
+          const startTime = new Date(0)
+          startTime.setUTCSeconds(course.startTime.seconds)
+          const endTime = new Date(0)
+          endTime.setUTCSeconds(course.endTime.seconds)
           const sTime: string =
-            course.startTime.toLocaleTimeString()
-              .slice(0, course.startTime.toLocaleTimeString().lastIndexOf(':')) +
-            course.startTime.toLocaleTimeString()
-              .slice(course.startTime.toLocaleTimeString().length - 3)
+            startTime.toLocaleTimeString()
+              .slice(0, startTime.toLocaleTimeString().lastIndexOf(':')) +
+            startTime.toLocaleTimeString()
+              .slice(startTime.toLocaleTimeString().length - 3)
           const eTime: string =
-            course.endTime.toLocaleTimeString()
-              .slice(0, course.endTime.toLocaleTimeString().lastIndexOf(':')) +
-            course.endTime.toLocaleTimeString()
-              .slice(course.endTime.toLocaleTimeString().length - 3)
+            endTime.toLocaleTimeString()
+              .slice(0, endTime.toLocaleTimeString().lastIndexOf(':')) +
+            endTime.toLocaleTimeString()
+              .slice(endTime.toLocaleTimeString().length - 3)
           return (
             <div key={course.slot} className='course'>
               <div className='course-deets'>
