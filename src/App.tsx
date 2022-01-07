@@ -73,7 +73,7 @@ const App: React.FC = () => {
                   <HomeCarousel />
                   <Auth />
                 </div>
-              : <LoggedIn db={db} name={name} />
+              : <LoggedIn db={db} />
         }
         <div className='ellipse ellipse-tr'><img src={EllipseTR} alt='Vitty' /></div>
         <div className='ellipse ellipse-bl'><img src={EllipseBL} alt='Vitty' /></div>

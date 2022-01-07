@@ -80,3 +80,20 @@ export const deleteTimetable = (userId: string, db: any): void => {
     isUpdated: true
   })
 }
+
+export const getVersion = async (userId: string, db: any): Promise<number> => {
+  const ref = doc(db, 'users', userId)
+  const docSnap = await getDoc(ref)
+  if (docSnap.exists()) {
+    const version = docSnap.data().timetableVersion
+    if (isNaN(version)) return -1
+    else return version
+  } else return -1
+}
+
+export const isUpdated = async (userId: string, db: any): Promise<boolean> => {
+  const ver = await getVersion(userId, db)
+  const localVer = Number(localStorage.getItem('timetableVersion')) ?? -1
+  if (ver !== localVer) return true
+  else return false
+}
