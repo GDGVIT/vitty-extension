@@ -1,9 +1,36 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Course from './Course'
 import './../styles/Review.css'
 
 const Timetable: React.FC<any> = ({ monSlots, tueSlots, wedSlots, thuSlots, friSlots }): JSX.Element => {
   const [activeSlots, setActiveSlots] = useState(monSlots)
+
+  useEffect(() => {
+    const d = new Date().getDay()
+    switch (d) {
+      case 0 :
+        setActiveSlots(monSlots)
+        break
+      case 1 :
+        setActiveSlots(monSlots)
+        break
+      case 2 :
+        setActiveSlots(tueSlots)
+        break
+      case 3 :
+        setActiveSlots(wedSlots)
+        break
+      case 4 :
+        setActiveSlots(thuSlots)
+        break
+      case 5 :
+        setActiveSlots(friSlots)
+        break
+      case 6 :
+        setActiveSlots(monSlots)
+        break
+    }
+  }, [])
 
   return (
     <>
