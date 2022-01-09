@@ -3,6 +3,10 @@
   "name": "VITTY-dev",
   "version": "2.0",
   "manifest_version": 2,
+  "background": {
+    "scripts": ["background/main.js"],
+    "persistent": false
+  },
   "browser_action": {
     "default_popup": "index.html",
     "default_title": "Open the popup"

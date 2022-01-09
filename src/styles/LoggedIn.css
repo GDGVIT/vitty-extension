@@ -50,6 +50,11 @@
   margin: 1rem;
 }
 
+button {
+  z-index: 1;
+
+}
+
 .upload-text,
 .upload-pic {
   z-index: 1;
