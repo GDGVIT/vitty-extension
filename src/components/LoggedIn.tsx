@@ -30,7 +30,7 @@ const LoggedIn: React.FC<any> = ({ db }) => {
     return new Date(dt.getTime() + minutes * 60000)
   }
 
-  const addAlarms = (courses: CourseProps[], uuid: number): number => {
+  const addAlarms = (courses: CourseProps[], dayCount: number, uuid: number): number => {
     courses.forEach((course) => {
       uuid += 1
       const today = new Date()
@@ -38,7 +38,7 @@ const LoggedIn: React.FC<any> = ({ db }) => {
       startTime.setUTCSeconds(course.startTime.seconds)
       startTime = addMinutes(startTime, -5)
       let date = new Date(today.getFullYear(), today.getMonth(), today.getDate(), startTime.getHours(), startTime.getMinutes(), startTime.getSeconds())
-      date.setDate(date.getDate() + (1 + 7 - date.getDay()) % 7)
+      date.setDate(date.getDate() + (dayCount + 7 - date.getDay()) % 7)
       if (date < today) date = addMinutes(date, 10080)
       window.chrome.alarms.create(uuid.toString() + course.courseName, {
         when: date.getTime(),
@@ -57,13 +57,12 @@ const LoggedIn: React.FC<any> = ({ db }) => {
               chrome.alarms.clearAll((wasCleared) => {
                 if (wasCleared) {
                   let uuid = 10
+                  let dayCount = 1
                   res.forEach((days: CourseProps[]) => {
-                    uuid = addAlarms(days, uuid)
+                    uuid = addAlarms(days, dayCount, uuid)
+                    dayCount++
                   })
                 }
-                chrome.alarms.getAll((alarms) => {
-                  console.log(alarms)
-                })
               })
               localStorage.setItem('monday', JSON.stringify(res[0]))
               localStorage.setItem('tuesday', JSON.stringify(res[1]))
