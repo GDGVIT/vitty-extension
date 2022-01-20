@@ -1,6 +1,7 @@
 {
-  "short_name": "VITTY-d",
-  "name": "VITTY-dev",
+  "short_name": "VITTY",
+  "name": "VITTY - VIT Timetable App",
+  "description": "With VITTY you can have easy access to your timetable no matter where you are! Simply upload your VIT timetable as text or image and never miss another class again!",
   "version": "2.0",
   "manifest_version": 2,
   "background": {
