@@ -56,6 +56,7 @@ const App: React.FC = () => {
       setEmail('')
       setName('')
       setPic('')
+      void chrome.alarms.clearAll()
     }).catch((error) => {
       console.error(error)
     })
