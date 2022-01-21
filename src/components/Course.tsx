@@ -34,6 +34,7 @@ const Course: React.FC<any> = ({ slots }) => {
             <div key={course.slot} className='course'>
               <div className='course-deets'>
                 <div className='course-name'>{course.courseName}</div>
+                <div className='course-time'>{course.courseCode}</div>
                 <div className='course-time'>
                   {sTime} - {eTime}
                 </div>
