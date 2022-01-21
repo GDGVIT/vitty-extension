@@ -119,11 +119,12 @@
   font-size: 0.7rem;
 }
 
-.modal-tip a {
+.modal-tip span {
   text-decoration: underline;
   color: var(--midblue);
+  cursor: pointer;
 }
 
-.modal-tip a:hover {
+.modal-tip span:hover {
   opacity: 0.7;
 }

@@ -3,6 +3,10 @@ import { FaTimes } from 'react-icons/fa'
 import './../styles/Modal.css'
 
 const Profile: React.FC<any> = ({ onClose, onLogOut, name, email }) => {
+  const handleClick = (): void => {
+    const newURL = 'https://vitty.dscvit.com'
+    void chrome.tabs.create({ url: newURL, active: true })
+  }
   return (
     <div className='modal' onClick={onClose}>
       <div className='modal-content' onClick={e => e.stopPropagation()}>
@@ -16,7 +20,7 @@ const Profile: React.FC<any> = ({ onClose, onLogOut, name, email }) => {
           <div className='modal-buttons'>
             <button className='modal-yes' onClick={onLogOut}>Log Out</button>
           </div>
-          <div className='modal-tip'>Tip: To edit timetable, go to <a href='https://vitty.dscvit.com'>vitty.dscvit.com</a></div>
+          <div className='modal-tip'>Tip: To edit timetable, go to <span onClick={handleClick}>vitty.dscvit.com</span></div>
         </div>
       </div>
     </div>
