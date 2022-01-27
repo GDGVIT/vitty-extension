@@ -1,0 +1,46 @@
+.logged-in {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.upload-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.upload-wrapper h1 {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.upload-wrapper h2 {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.upload-wrapper h2 span {
+  text-decoration: underline;
+  color: var(--midblue);
+  cursor: pointer;
+}
+
+.upload-wrapper h2 span:hover {
+  opacity: 0.7;
+}
+
+button {
+  z-index: 1;
+}

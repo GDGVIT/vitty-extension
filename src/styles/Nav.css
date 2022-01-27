@@ -1,0 +1,45 @@
+header {
+  width: 100%;
+  position: fixed;
+  height: 3rem;
+  padding: 1rem 2rem;
+  background-color: var(--dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.logo img {
+  margin-right: 0.5rem;
+  height: 1.25rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.user-pfp {
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--dimmer);
+  margin-right: 0.5rem;
+}
+
+.user-pfp img {
+  height: 100%;
+  border-radius: 50%;
+}
+
+.sign-out {
+  color: var(--blue);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.sign-out:hover {
+  opacity: 0.5;
+}

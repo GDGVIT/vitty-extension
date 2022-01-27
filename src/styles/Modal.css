@@ -1,0 +1,130 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  pointer-events: visible;
+  z-index: 10;
+}
+
+.modal-content {
+  width: 95vw;
+  max-width: 20rem;
+  padding: 0.75rem;
+  background-color: var(--dimmer);
+  transition: all 0.3s ease-in-out;
+  border-bottom: solid 0.25rem var(--dark);
+  border-top: solid 0.25rem var(--dark);
+  border-radius: 0.5rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-header svg {
+  width: 1rem;
+  height: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+  color: #ff2424;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 0.5rem 0;
+}
+
+.modal-message {
+  font-size: 0.9rem;
+}
+
+.modal-message span {
+  font-size: 0.85rem;
+  font-family: monospace;
+  font-weight: bold;
+  color: var(--midblue);
+}
+
+.modal-input {
+  font-size: 0.8rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 0.5rem;
+  color: var(--light);
+  padding: 0.5rem 1rem;
+  border: solid 1px var(--blue);
+  background-color: var(--dark);
+  width: 100%;
+  text-overflow: ellipsis;
+  margin-top: 0.75rem;
+}
+
+.modal-input:focus{
+  outline: none;
+}
+
+.modal-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.modal-buttons button {
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  margin-top: 1.5rem;
+  margin-right: 0;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: bold;
+  color: var(--light);
+}
+
+.modal-no {
+  background-color: var(--dimmer);
+  border: solid 1px var(--light) !important;
+}
+
+.modal-yes {
+  background-color: var(--bright);
+}
+
+.modal-buttons button:focus {
+  outline: none;
+}
+
+.modal-buttons button:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.modal-tip {
+  font-size: 0.7rem;
+}
+
+.modal-tip span {
+  text-decoration: underline;
+  color: var(--midblue);
+  cursor: pointer;
+}
+
+.modal-tip span:hover {
+  opacity: 0.7;
+}

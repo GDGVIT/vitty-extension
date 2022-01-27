@@ -1,0 +1,49 @@
+.auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.auth h1 {
+  margin-bottom: 1rem;
+}
+
+.auth h1 span {
+  font-weight: 500;
+}
+
+.google-sign-in,
+.apple-sign-in {
+  margin: 0.5rem 1rem;
+}
+
+.google-sign-in button,
+.apple-sign-in button {
+  background-color: var(--light);
+  width: 14.5rem;
+  border: 0;
+  border-radius: 0.5rem;
+  outline: none;
+  margin: 0.25rem 0;
+  padding: 0.75rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.google-sign-in button:hover,
+.apple-sign-in button:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.google-sign-in svg,
+.apple-sign-in svg {
+  font-size: 1.75rem;
+  margin-right: 0.75rem;
+}

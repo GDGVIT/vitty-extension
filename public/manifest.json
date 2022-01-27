@@ -1,0 +1,27 @@
+{
+  "short_name": "VITTY",
+  "name": "VITTY - VIT Timetable App",
+  "description": "With VITTY you can have easy access to your timetable no matter where you are! Simply upload your VIT timetable as text or image and never miss another class again!",
+  "version": "2.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background/main.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "Open the popup"
+  },
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "64": "logo.png"
+  },
+  "permissions": [
+    "storage",
+    "https://vittyapi.dscvit.com/*",
+    "alarms",
+    "notifications"
+  ],
+  "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'"
+}

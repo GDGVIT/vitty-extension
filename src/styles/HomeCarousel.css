@@ -1,0 +1,40 @@
+.carousel {
+  width: 25rem !important;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+.carousel-model {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-img {
+  height: 10rem;
+  margin: 1rem 0;
+}
+
+.carousel-model img {
+  max-height: 12.5rem;
+  max-width: 10rem;
+}
+
+.carousel-model h3 {
+  margin: 1rem 0;
+}
+
+.carousel-model p {
+  text-align: center;
+  font-size: 0.85rem;
+  width: 17.5rem;
+  color: var(--blue);
+}
+
+.carousel-dots {
+  margin: 2rem 0;
+}
+
+.BrainhubCarousel__dots .BrainhubCarousel__dot:before {
+  background: var(--light) !important;
+}
