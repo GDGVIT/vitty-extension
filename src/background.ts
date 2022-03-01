@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
+import { getAuth, signInWithPopup, GoogleAuthProvider, OAuthProvider } from 'firebase/auth'
 
 export {}
 
@@ -29,6 +29,17 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     const auth = getAuth()
     const googleProvider = new GoogleAuthProvider()
     signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        const userId = result.user.uid
+        sendResponse(userId)
+      }).catch(err => {
+        console.log(err)
+      })
+  }
+  if (message === 'loginApple') {
+    const auth = getAuth()
+    const appleProvider = new OAuthProvider('apple.com')
+    signInWithPopup(auth, appleProvider)
       .then((result) => {
         const userId = result.user.uid
         sendResponse(userId)
