@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from './../Context'
 import { getAuth, signOut } from 'firebase/auth'
 import VTLogo from './../assets/landing_logo.png'
+import userIcon from './../assets/icon.png'
 import './../styles/Nav.css'
 
 const Nav: React.FC<any> = ({ pic, onShow }) => {
@@ -30,7 +31,12 @@ const Nav: React.FC<any> = ({ pic, onShow }) => {
         <img src={VTLogo} alt='VITTY' />
         {/* <img src={Logo} alt='VITTY' /> */}
       </div>
-      {pic !== null && pic !== '' && <div className='user-pfp' onClick={onShow}><img src={pic} alt='DP' /></div>}
+      {
+        user !== null && user !== '' &&
+          <div className='user-pfp' onClick={onShow}>
+            <img src={(pic !== null && pic !== '') ? pic : userIcon} alt='DP' />
+          </div>
+      }
       {/* <div className='nav-right'>
         <div className='sign-out' onClick={() => logOut()}>{text}</div>
       </div> */}
