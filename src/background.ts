@@ -39,6 +39,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message === 'loginApple') {
     const auth = getAuth()
     const appleProvider = new OAuthProvider('apple.com')
+    appleProvider.addScope('email')
+    appleProvider.addScope('name')
     signInWithPopup(auth, appleProvider)
       .then((result) => {
         const userId = result.user.uid
